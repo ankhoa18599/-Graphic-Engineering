@@ -129,10 +129,10 @@ namespace KTDH
             }
         }
 
-        public void DDA_Line_ngat(Graphics g) // Ve duong thang co dinh dang mau
+        public void DDA_Line_ngat(Graphics g) // Ve duong thang đứt co dinh dang mau
         {
             Color m = color;
-            int Dx, Dy, count, temp_1, temp_2, dem = 1;
+            int Dx, Dy, count, temp_1, temp_2, dem = 0;
             //int temp_3, temp_4;
             Dx = Lpoint.getX() - Fpoint.getX();
             Dy = Lpoint.getY() - Fpoint.getY();
@@ -151,6 +151,14 @@ namespace KTDH
                 y = Fpoint.getY();
                 do
                 {
+                    if (dem == 3)
+                    {
+                        x += delta_X;
+                        y += delta_Y;
+                        --count;
+                        dem = 0;
+                        continue;
+                    }
                     temp.setX(Point.round(x));
                     temp.setY(Point.round(y));
                     Point.putpixel(temp.getX(), temp.getY(), g);
@@ -165,5 +173,110 @@ namespace KTDH
             }
         }
 
+        public void DDA_Line_ngat_1cham(Graphics g) // Ve duong thang 1 cham giữa co dinh dang mau
+        {
+            Color m = color;
+            int Dx, Dy, count, temp_1, temp_2, dem = 0;
+            //int temp_3, temp_4;
+            Dx = Lpoint.getX() - Fpoint.getX();
+            Dy = Lpoint.getY() - Fpoint.getY();
+            if (Math.Abs(Dy) > Math.Abs(Dx)) count = Math.Abs(Dy);
+            else count = Math.Abs(Dx);
+            float delta_X, delta_Y, x, y;
+            Point temp = new Point();
+            count /= 5;
+            if (count > 0)
+            {
+                delta_X = Dx;
+                delta_X /= count;
+                delta_Y = Dy;
+                delta_Y /= count;
+                x = Fpoint.getX();
+                y = Fpoint.getY();
+                do
+                {
+                    if (dem == 3)
+                    {
+                        Point.putpixel(temp.getX() + (int)(2 * delta_X), temp.getY() + (int)(2 * delta_Y), g);
+                        x += 3 * delta_X;
+                        if (x > 400 || x > Lpoint.getX())
+                        {
+                            break;
+                        }
+                        y += 3 * delta_Y;
+                        if (y > 400 || y > Lpoint.getY())
+                        {
+                            break;
+                        }
+                        count -= 3;
+                        dem = 0;
+                        continue;
+                    }
+                    temp.setX(Point.round(x));
+                    temp.setY(Point.round(y));
+                    Point.putpixel(temp.getX(), temp.getY(), g);
+                    // temp_3 = temp_1;
+                    // temp_4 = temp_2;
+                    x += delta_X;
+                    y += delta_Y;
+                    --count;
+                    dem++;
+                } while (count != -1);
+
+            }
+        }
+        public void DDA_Line_ngat_2cham(Graphics g) // Ve duong thang 2 cham giữa co dinh dang mau
+        {
+            Color m = color;
+            int Dx, Dy, count, temp_1, temp_2, dem = 0;
+            //int temp_3, temp_4;
+            Dx = Lpoint.getX() - Fpoint.getX();
+            Dy = Lpoint.getY() - Fpoint.getY();
+            if (Math.Abs(Dy) > Math.Abs(Dx)) count = Math.Abs(Dy);
+            else count = Math.Abs(Dx);
+            float delta_X, delta_Y, x, y;
+            Point temp = new Point();
+            count /= 5;
+            if (count > 0)
+            {
+                delta_X = Dx;
+                delta_X /= count;
+                delta_Y = Dy;
+                delta_Y /= count;
+                x = Fpoint.getX();
+                y = Fpoint.getY();
+                do
+                {
+                    if (dem == 3)
+                    {
+                        Point.putpixel(temp.getX() + (int)(2 * delta_X), temp.getY() + (int)(2 * delta_Y), g); // = -
+                        Point.putpixel(temp.getX() + (int)(4 * delta_X), temp.getY() + (int)(4 * delta_Y), g);//  = - -
+                        x += 5*delta_X; //giãn X ra 5 pixel
+                        if (x > 400 || x>Lpoint.getX())
+                        {
+                            break; // nếu vượt biên hoặc lớn hơn điểm cuối thì ngắt
+                        } 
+                        y += 5*delta_Y;
+                        if (y > 400 || y > Lpoint.getY())
+                        {
+                            break;
+                        }
+                        count -=5;
+                        dem = 0;
+                        continue;
+                    }
+                    temp.setX(Point.round(x));
+                    temp.setY(Point.round(y));
+                    Point.putpixel(temp.getX(), temp.getY(), g);
+                    // temp_3 = temp_1;
+                    // temp_4 = temp_2;
+                    x += delta_X;
+                    y += delta_Y;
+                    --count;
+                    dem++;
+                } while (count != -1);
+
+            }
+        }
     }
 }

@@ -94,7 +94,14 @@ namespace KTDH
             AB = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY(), Color.Red); //tao AB
             if (luachonNet == 0) // ve dut khuc
             {
-
+                AB.DDA_Line_ngat(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+            } else if (luachonNet == 1) // ve dut khuc
+            {
+                AB.DDA_Line_ngat_1cham(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+            }
+            else if (luachonNet == 2) // ve dut khuc
+            {
+                AB.DDA_Line_ngat_2cham(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
             }
             else
             {
@@ -131,7 +138,6 @@ namespace KTDH
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             Form1.hinh = -1;
-            luachonNet = -1;
             labelChange();
             this.Refresh();
         }
