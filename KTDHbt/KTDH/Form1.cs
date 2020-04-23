@@ -13,6 +13,7 @@ namespace KTDH
     {
         public static int hinh = -1; // Xác định in hình nào để in thông số tọa độ hình đó ra 
         Line AB;
+        private int luachonNet = -1;
         public Form1()
         {
             InitializeComponent();
@@ -37,7 +38,27 @@ namespace KTDH
 
         void labelChange()
         {
-            if (Form1.hinh == 1)
+            if (Form1.hinh == -1)
+            {
+                label5.Text = "";
+                label6.Text = "";
+                label7.Text = "";
+                label8.Text = "";
+                label9.Text = "";
+                label10.Text = "";
+                label11.Text = "";
+                label12.Text = "";
+                label13.Text = "";
+                label14.Text = "";
+                label15.Text = "";
+                label16.Text = "";
+                label17.Text = "";
+                label18.Text = "";
+                label19.Text = "";
+                label20.Text = "";
+                label21.Text = "";
+            }
+            else if(Form1.hinh == 1)
             {
                 label5.Text = "Đường Thẳng";
                 label6.Text = "xA:";
@@ -70,14 +91,49 @@ namespace KTDH
             yb = dt.yB;
             Point p1 = Point.FakeToReal(xa, ya); // gan toa do tren Oxy 
             Point p2 = Point.FakeToReal(xb, yb);
-            AB = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY(), Color.Red); //tao AB 
-            AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+            AB = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY(), Color.Red); //tao AB
+            if (luachonNet == 0) // ve dut khuc
+            {
+
+            }
+            else
+            {
+                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+            }
             labelChange(); // reset bang 
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            luachonNet = 0;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            luachonNet = 1;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            luachonNet = 2;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            luachonNet = 3;
+        }
+
+        private void jbtnXoa_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = -1;
+            luachonNet = -1;
+            labelChange();
+            this.Refresh();
         }
     }
 }

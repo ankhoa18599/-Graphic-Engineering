@@ -61,10 +61,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.JpnLuoiGiaoDien = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -337,6 +337,7 @@
             this.jbtnXoa.TabIndex = 47;
             this.jbtnXoa.Text = " Xóa";
             this.jbtnXoa.UseVisualStyleBackColor = false;
+            this.jbtnXoa.Click += new System.EventHandler(this.jbtnXoa_Click);
             // 
             // label2
             // 
@@ -365,56 +366,63 @@
             this.JpnLuoiGiaoDien.TabIndex = 44;
             this.JpnLuoiGiaoDien.Paint += new System.Windows.Forms.PaintEventHandler(this.JpnLuoiGiaoDien_Paint);
             // 
-            // checkBox1
+            // radioButton1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(145, 12);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 17);
-            this.checkBox1.TabIndex = 86;
-            this.checkBox1.Text = "Đứt đoạn";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(145, 13);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(71, 17);
+            this.radioButton1.TabIndex = 86;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Đứt Đoạn";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // checkBox2
+            // radioButton2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(231, 12);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(76, 17);
-            this.checkBox2.TabIndex = 86;
-            this.checkBox2.Text = "Chấm giữa";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(145, 47);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(60, 17);
+            this.radioButton2.TabIndex = 86;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Mũi tên";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // checkBox3
+            // radioButton3
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(231, 47);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(87, 17);
-            this.checkBox3.TabIndex = 86;
-            this.checkBox3.Text = "2 Chấm Giữa";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(222, 47);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(90, 17);
+            this.radioButton3.TabIndex = 86;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Đứt Hai chấm";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // checkBox4
+            // radioButton4
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(145, 47);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(61, 17);
-            this.checkBox4.TabIndex = 86;
-            this.checkBox4.Text = "Mũi tên";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(222, 13);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(92, 17);
+            this.radioButton4.TabIndex = 86;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Đứt Một chấm";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 511);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -493,10 +501,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel JpnLuoiGiaoDien;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
     }
 }
 
