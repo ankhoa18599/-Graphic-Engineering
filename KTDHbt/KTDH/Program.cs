@@ -14,6 +14,7 @@ namespace KTDH
         static void Main()
         {
             //khoa test code
+            //test code master
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
