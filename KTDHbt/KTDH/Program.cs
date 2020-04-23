@@ -15,6 +15,7 @@ namespace KTDH
         {
             //khoa test code
             //test code master
+            //Khoa test push branch
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
