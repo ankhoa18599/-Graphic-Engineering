@@ -138,6 +138,11 @@ namespace KTDH
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             Form1.hinh = -1;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+            luachonNet = -1;
             labelChange();
             this.Refresh();
         }
