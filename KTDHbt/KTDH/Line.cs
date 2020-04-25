@@ -151,21 +151,21 @@ namespace KTDH
                 y = Fpoint.getY();
                 do
                 {
-                    //if (dem == 3)
-                    //{
-                    //    x += delta_X;
-                    //    y += delta_Y;
-                    //    --count;
-                    //    dem = 0;
-                    //    continue;
-                    //}
-                    if(x%4 == 0)
+                    if (dem == 3)
                     {
                         x += delta_X;
                         y += delta_Y;
                         --count;
+                        dem = 0;
                         continue;
                     }
+                    //if(x%4 == 0)
+                    //{
+                    //    x += delta_X;
+                    //    y += delta_Y;
+                    //    --count;
+                    //    continue;
+                    //}
                     temp.setX(Point.round(x));
                     temp.setY(Point.round(y));
                     Point.putpixel(temp.getX(), temp.getY(), g);
@@ -202,30 +202,30 @@ namespace KTDH
                 y = Fpoint.getY();
                 do
                 {
-                    //if (dem == 3)
-                    //{
-                    //    Point.putpixel(temp.getX() + (int)(2 * delta_X), temp.getY() + (int)(2 * delta_Y), g);
-                    //    x += 3 * delta_X;
-                    //    if (x > 400 || x > Lpoint.getX())
-                    //    {
-                    //        break;
-                    //    }
-                    //    y += 3 * delta_Y;
-                    //    if (y > 400 || y > Lpoint.getY())
-                    //    {
-                    //        break;
-                    //    }
-                    //    count -= 3;
-                    //    dem = 0;
-                    //    continue;
-                    //}
-                    if (x % 6 == 4 || x % 6 == 0)
+                    if (dem == 3)
                     {
-                        x += delta_X;
-                        y += delta_Y;
-                        --count;
+                        Point.putpixel(temp.getX() + (int)(2 * delta_X), temp.getY() + (int)(2 * delta_Y), g);
+                        x += 3 * delta_X;
+                        if (x > 400 || x > Lpoint.getX())
+                        {
+                            break;
+                        }
+                        y += 3 * delta_Y;
+                        if (y > 400 || y > Lpoint.getY())
+                        {
+                            break;
+                        }
+                        count -= 3;
+                        dem = 0;
                         continue;
                     }
+                    //if (x % 6 == 4 || x % 6 == 0)
+                    //{
+                    //    x += delta_X;
+                    //    y += delta_Y;
+                    //    --count;
+                    //    continue;
+                    //}
                     temp.setX(Point.round(x));
                     temp.setY(Point.round(y));
                     Point.putpixel(temp.getX(), temp.getY(), g);
