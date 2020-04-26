@@ -255,6 +255,7 @@
             this.JbntHInhChuNhat.TabIndex = 59;
             this.JbntHInhChuNhat.Text = "Hình Chữ Nhật";
             this.JbntHInhChuNhat.UseVisualStyleBackColor = false;
+            this.JbntHInhChuNhat.Click += new System.EventHandler(this.JbntHInhChuNhat_Click);
             // 
             // jbtnTamO
             // 

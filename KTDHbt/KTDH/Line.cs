@@ -25,7 +25,7 @@ namespace KTDH
             return this.Lpoint;
         }
 
-        public void getFpoint(Point f)
+        public void setFpoint(Point f)
         {
             this.Fpoint = f;
 
@@ -117,6 +117,7 @@ namespace KTDH
                 {
                     temp.setX(Point.round(x));
                     temp.setY(Point.round(y));
+                    System.Threading.Thread.Sleep(20);
                     Point.putpixel(temp.getX(), temp.getY(), g);
                     // temp_3 = temp_1;
                     // temp_4 = temp_2;

@@ -28,3 +28,4 @@ G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.csproj.GenerateResourc
 G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs.cache
 G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.exe
 G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.pdb
+G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.HinhChuNhat.resources
