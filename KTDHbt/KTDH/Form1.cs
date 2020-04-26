@@ -179,6 +179,7 @@ namespace KTDH
             hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
+            //test 1:
         }
     }
 }
