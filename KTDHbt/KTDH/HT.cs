@@ -75,6 +75,7 @@ namespace KTDH
         public void Midpoint_htron_dut(Graphics g)
         {
             int x, y, cx, cy, p, r;
+            int dem = 0;
             Color m = this.mau;
             cx = this.tam.getX(); cy = this.tam.getY();
             x = 0;
@@ -88,6 +89,7 @@ namespace KTDH
                 if (p < 0) p += 2 * x + 3;
                 else { p += 2 * (x - y) + 5; y -= 5; }
                 x += 5;
+                dem++;
                 put8pitxel(x, y, cx, cy, g);
             }
 

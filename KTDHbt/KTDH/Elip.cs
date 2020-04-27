@@ -35,7 +35,6 @@ namespace KTDH
         public void MidPoint_Elip(Graphics g)
         {
             int x, y, kx, ky, a, b;
-
             kx = tam.getX();
             ky = tam.getY();
 

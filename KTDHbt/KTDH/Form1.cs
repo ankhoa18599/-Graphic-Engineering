@@ -204,7 +204,7 @@ namespace KTDH
             hinhtron = new HinhTron();
             hinhtron.ShowDialog();
             if (hinhtron.checkchange == false) return;
-            hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhtron.ht.Midpoint_htron_dut(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
 

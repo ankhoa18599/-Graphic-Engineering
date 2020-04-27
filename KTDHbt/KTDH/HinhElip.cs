@@ -35,7 +35,7 @@ namespace KTDH
             else
             {
                 A = Point.FakeToReal(x, y);
-                hinhelip = new Elip(A.getX(), A.getY(), a, b);
+                hinhelip = new Elip(A.getX(), A.getY(), a*5, b*5);
                 this.checkchange = true;
                 this.Close();
             }
