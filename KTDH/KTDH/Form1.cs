@@ -15,6 +15,7 @@ namespace KTDH
         Line AB,CD,BC,AD;
         HinhChuNhat hcn;
         HinhTamGiac htg;
+        HinhTron hinhtron;
         public Form1()
         {
             InitializeComponent();
@@ -120,6 +121,8 @@ namespace KTDH
                 label21.Text = "";
             }
         }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form1.hinh = 1;
@@ -160,6 +163,15 @@ namespace KTDH
             htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 4;
+            hinhtron = new HinhTron();
+            hinhtron.ShowDialog();
+            if (hinhtron.checkchange == false) return;
+            hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
     }
