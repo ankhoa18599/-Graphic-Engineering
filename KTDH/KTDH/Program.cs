@@ -13,6 +13,7 @@ namespace KTDH
         [STAThread]
         static void Main()
         {
+            //namtesst
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
