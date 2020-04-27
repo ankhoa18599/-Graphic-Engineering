@@ -246,6 +246,7 @@
             this.jbtnHinhElip.TabIndex = 64;
             this.jbtnHinhElip.Text = "Hình Elip";
             this.jbtnHinhElip.UseVisualStyleBackColor = false;
+            this.jbtnHinhElip.Click += new System.EventHandler(this.jbtnHinhElip_Click);
             // 
             // JbntHInhChuNhat
             // 

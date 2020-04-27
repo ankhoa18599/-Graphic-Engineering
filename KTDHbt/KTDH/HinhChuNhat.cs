@@ -13,7 +13,7 @@ namespace KTDH
     {
         public int xA, yA, a, b; //a dài, b rộng
         public Line AB, BC, CD, AD;
-
+        public Boolean checkchange = false;
        
 
         private void HinhChuNhat_Load(object sender, EventArgs e)
@@ -51,6 +51,7 @@ namespace KTDH
             BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), Color.Red);
             CD = new Line(C.getX(), C.getY(), D.getX(), D.getY(), Color.Red);
             AD = new Line(A.getX(), A.getY(), D.getX(), D.getY(), Color.Red);
+            this.checkchange = true;
             this.Close();
         }
 
