@@ -18,3 +18,4 @@ G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.GenerateResource.
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs.cache
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.exe
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
+G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhChuNhat.resources
