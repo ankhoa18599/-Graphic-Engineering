@@ -293,6 +293,7 @@
             this.jbtnHinhTamGiac.TabIndex = 61;
             this.jbtnHinhTamGiac.Text = "Hình Tam Giác";
             this.jbtnHinhTamGiac.UseVisualStyleBackColor = false;
+            this.jbtnHinhTamGiac.Click += new System.EventHandler(this.jbtnHinhTamGiac_Click);
             // 
             // jbtnHinhVuong
             // 
