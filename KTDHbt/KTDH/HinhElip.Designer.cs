@@ -74,6 +74,7 @@
             // 
             // numericUpDown2
             // 
+            this.numericUpDown2.Hexadecimal = true;
             this.numericUpDown2.Location = new System.Drawing.Point(286, 26);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown2.Name = "numericUpDown2";

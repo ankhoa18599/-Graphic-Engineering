@@ -15,6 +15,7 @@ namespace KTDH
         Line AB, BC, CD, DA;
         HinhChuNhat hcn;
         HinhElip elips;
+        HinhTron hinhtron;
         private int luachonNet = -1;
         public Form1()
         {
@@ -173,6 +174,17 @@ namespace KTDH
             this.Refresh();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 4;
+            hinhtron = new HinhTron();
+            hinhtron.ShowDialog();
+            if (hinhtron.checkchange == false) return;
+            hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+
+        //ở đây khoa sẽ code một cái dòng lol gì đó để test xem nếu commit có bị đè code không
         private void JbntHInhChuNhat_Click(object sender, EventArgs e)
         {
             Form1.hinh = 2;
@@ -195,7 +207,7 @@ namespace KTDH
             elips.hinhelip.MidPoint_Elip(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
-
+//Lại một dòng code lol test code
         private void Test(Line AB)
         {
             //Khoảng cách DX,DY
@@ -264,7 +276,7 @@ namespace KTDH
 //test commit code
 //test commit code
 
-
+//Và ở đây cũng thế. Sẽ có một dòng code lol
 //test commit code2
 //test commit code2
 //test commit code2
