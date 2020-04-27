@@ -37,6 +37,7 @@ namespace KTDH
 
         void labelChange()
         {
+<<<<<<< Updated upstream
             if (Form1.hinh == 1)
             {
                 label5.Text = "Đường Thẳng";
@@ -57,6 +58,68 @@ namespace KTDH
                 label20.Text = "";
                 label21.Text = "";
             }
+=======
+                if (Form1.hinh == -1)
+                {
+                    label5.Text = "";
+                    label6.Text = "";
+                    label7.Text = "";
+                    label8.Text = "";
+                    label9.Text = "";
+                    label10.Text = "";
+                    label11.Text = "";
+                    label12.Text = "";
+                    label13.Text = "";
+                    label14.Text = "";
+                    label15.Text = "";
+                    label16.Text = "";
+                    label17.Text = "";
+                    label18.Text = "";
+                    label19.Text = "";
+                    label20.Text = "";
+                    label21.Text = "";
+                }
+                else if (Form1.hinh == 1)
+                {
+                    label5.Text = "Đường Thẳng";
+                    label6.Text = "xA:";
+                    label7.Text = "yA:";
+                    label8.Text = ((AB.getFpoint().getX() - 200) / 5).ToString();
+                    label9.Text = (-(AB.getFpoint().getY() - 200) / 5).ToString();
+                    label10.Text = "xB:";
+                    label11.Text = "yB:";
+                    label12.Text = ((AB.getLpoint().getX() - 200) / 5).ToString();
+                    label13.Text = (-(AB.getLpoint().getY() - 200) / 5).ToString();
+                    label14.Text = "";
+                    label15.Text = "";
+                    label16.Text = "";
+                    label17.Text = "";
+                    label18.Text = "";
+                    label19.Text = "";
+                    label20.Text = "";
+                    label21.Text = "";
+                }
+                else if (Form1.hinh == 2)
+                {
+                    label5.Text = "Hình chữ nhật";
+                    label6.Text = "xA:";
+                    label7.Text = "yA:";
+                    label8.Text = ((hcn.AB.getFpoint().getX() - 200) / 5).ToString();
+                    label9.Text = (-(hcn.AB.getFpoint().getY() - 200) / 5).ToString();
+                    label10.Text = "xB:";
+                    label11.Text = "yB:";
+                    label12.Text = ((hcn.AB.getLpoint().getX() - 200) / 5).ToString();
+                    label13.Text = (-(hcn.AB.getLpoint().getY() - 200) / 5).ToString();
+                    label14.Text = "xC";
+                    label15.Text = "yC";
+                    label16.Text = ((hcn.BC.getLpoint().getX() - 200) / 5).ToString();
+                    label17.Text = (-(hcn.BC.getLpoint().getY() - 200) / 5).ToString();
+                    label18.Text = "xD";
+                    label19.Text = "yD";
+                    label20.Text = ((hcn.CD.getLpoint().getX() - 200) / 5).ToString();
+                    label21.Text = ((hcn.BC.getLpoint().getY() - 200) / 5).ToString();
+                }
+>>>>>>> Stashed changes
         }
         private void button1_Click(object sender, EventArgs e)
         {
