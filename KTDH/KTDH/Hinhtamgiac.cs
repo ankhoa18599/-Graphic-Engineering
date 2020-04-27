@@ -13,6 +13,7 @@ namespace KTDH
     {
         public int xA, yA, cao, rong; // dai cạnh, rộng đáy
         public Line AB, BC, AC;
+        public Boolean checkchange = false;
         private void jbntVeHTG_Click(object sender, EventArgs e)
         {
             xA = Int32.Parse(ToadoXa.Value.ToString());
@@ -34,6 +35,7 @@ namespace KTDH
             AB = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Red);
             BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), Color.Red);
             AC = new Line(C.getX(), C.getY(), A.getX(), A.getY(), Color.Red);
+            this.checkchange = true;
             this.Close();
         }
 

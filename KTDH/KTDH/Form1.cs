@@ -159,7 +159,7 @@ namespace KTDH
             Form1.hinh = 3;
             htg = new HinhTamGiac();
             htg.ShowDialog();
-
+            if (htg.checkchange == false) return;
             htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
