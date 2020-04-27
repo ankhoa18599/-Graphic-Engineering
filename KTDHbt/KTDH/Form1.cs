@@ -205,7 +205,7 @@ namespace KTDH
             elips = new HinhElip();
             elips.ShowDialog();
             if (elips.checkchange == false) return;
-            elips.hinhelip.MidPoint_Elip1(this.JpnLuoiGiaoDien.CreateGraphics());
+            elips.hinhelip.MidPoint_Elip(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
         private void Test(Line AB)

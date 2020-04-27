@@ -24,6 +24,7 @@ namespace KTDH
             Point.putpixel(kx + x, ky - y, g);
             Point.putpixel(kx - x, ky - y, g);
         }
+//thêm putpixel đặc biệt
         public void put4pixel1(int x, int y, int kx, int ky, int dem, Graphics g)
         {
             Point.putpixel(kx + x, ky + y, g);
