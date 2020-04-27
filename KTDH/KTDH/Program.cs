@@ -7,6 +7,8 @@ namespace KTDH
 {
     static class Program
     {
+        //Nam test
+        //Ahihi
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
