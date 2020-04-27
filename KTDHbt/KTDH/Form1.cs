@@ -102,6 +102,7 @@ namespace KTDH
                 label21.Text = ((hcn.BC.getLpoint().getY() - 200) / 5).ToString();
             }
         }
+        //Một dòng code đại diện cho việc vừa thêm module và chỉnh sửa
         private void button1_Click(object sender, EventArgs e)
         {
             Form1.hinh = 1;
@@ -207,7 +208,6 @@ namespace KTDH
             elips.hinhelip.MidPoint_Elip1(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
-//Lại một dòng code lol test code
         private void Test(Line AB)
         {
             //Khoảng cách DX,DY
@@ -276,7 +276,6 @@ namespace KTDH
 //test commit code
 //test commit code
 
-//Và ở đây cũng thế. Sẽ có một dòng code lol
 //test commit code2
 //test commit code2
 //test commit code2
