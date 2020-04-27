@@ -90,6 +90,11 @@ namespace KTDH
                 else { p += 2 * (x - y) + 5; y -= 5; }
                 x += 5;
                 dem++;
+                if (dem == 3)
+                {
+                    dem = 0;
+                    continue;
+                }
                 put8pitxel(x, y, cx, cy, g);
             }
 
