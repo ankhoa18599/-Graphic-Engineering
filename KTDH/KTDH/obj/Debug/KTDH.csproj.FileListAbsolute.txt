@@ -31,3 +31,15 @@ E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.GenerateResource.
 E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs.cache
 E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.exe
 E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.DuongThang.resources
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Form1.resources
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhChuNhat.resources
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhElip.resources
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.exe
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\bin\Debug\KTDH.exe
+C:\Users\LENOVO\Desktop\-Graphic-Engineering\KTDH\KTDH\bin\Debug\KTDH.pdb

@@ -79,5 +79,6 @@ namespace KTDH
 
             return new Point((x + 40) * 5, (40 - y) * 5);
         }
+
     }
 }

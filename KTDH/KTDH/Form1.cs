@@ -43,7 +43,7 @@ namespace KTDH
             elips = new HinhElip();
             elips.ShowDialog();
 
-            elips.hinhelip.MidPoint_Elip(this.JpnLuoiGiaoDien.CreateGraphics());
+            elips.hinhelip.VeElip(this.JpnLuoiGiaoDien.CreateGraphics());
 
             labelChange();
 
@@ -74,7 +74,7 @@ namespace KTDH
             Form1.hinh = 3;
             this.Refresh();
             elips.hinhelip.tam = TinhDiemTinhTien(elips.hinhelip.tam);
-            elips.hinhelip.MidPoint_Elip(this.JpnLuoiGiaoDien.CreateGraphics());
+            elips.hinhelip.VeElip(this.JpnLuoiGiaoDien.CreateGraphics());
         }
 
         private void jbtnTinhTien_Click(object sender, EventArgs e)
@@ -151,7 +151,7 @@ namespace KTDH
                 label6.Text = "xTam: ";
                 label7.Text = "yTam: ";
                 label8.Text = ((elips.hinhelip.tam.getX()-200)/5).ToString();
-                label9.Text = (-(elips.hinhelip.tam.getY() - 200) / 5).ToString();
+                label9.Text = (-(elips.hinhelip.tam.getY() - 200) /5).ToString();
 
             }
         }

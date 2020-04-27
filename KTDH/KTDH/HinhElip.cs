@@ -19,8 +19,8 @@ namespace KTDH
             
             int x = Int32.Parse(numericUpDown1.Value.ToString());
             int y = Int32.Parse(numericUpDown2.Value.ToString());
-            a = Int32.Parse(numericUpDown3.Value.ToString());
-            b = Int32.Parse(numericUpDown4.Value.ToString());
+            a = Int32.Parse(numericUpDown3.Value.ToString())*5;
+            b = Int32.Parse(numericUpDown4.Value.ToString())*5;
 
             if (a == 0)
             {
