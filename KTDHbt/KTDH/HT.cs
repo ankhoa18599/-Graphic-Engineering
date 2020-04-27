@@ -72,6 +72,7 @@ namespace KTDH
             }
 
         }
+        //test
         public void Midpoint_htron_dut(Graphics g)
         {
             int x, y, cx, cy, p, r;
