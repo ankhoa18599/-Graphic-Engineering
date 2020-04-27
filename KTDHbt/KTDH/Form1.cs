@@ -123,11 +123,13 @@ namespace KTDH
             else if (luachonNet == 2) // ve dut khuc
             {
                 AB.DDA_Line_ngat_2cham(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+            }else if (luachonNet == 3)
+            {
+                Test(AB);
             }
             else
             {
                 AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
-                Test(AB);
             }
             labelChange(); // reset bang 
         }
