@@ -32,7 +32,7 @@ namespace KTDH
         public static void putpixel(int x, int y, Graphics grfx)
         {
             if (x < 0 || x > 400 || y < 0 || y > 400) return;
-            Pen p = new Pen(Color.Red);
+            Pen p = new Pen(Color.Black);
             SolidBrush b = new SolidBrush(Color.Black);// Brush dùng để tô vùng bên trong của một hình 
             // Lớp Brush là một lớp Abstract • Các lớp kế thừ từ lớp Brush 
             //Một Solid Brush là một brush dùng để tô một vùng với một màu đơn.

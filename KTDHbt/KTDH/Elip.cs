@@ -24,7 +24,7 @@ namespace KTDH
             Point.putpixel(kx + x, ky - y, g);
             Point.putpixel(kx - x, ky - y, g);
         }
-        public void put4pixel1(int x, int y, int kx, int ky, Graphics g)
+        public void put4pixel1(int x, int y, int kx, int ky, int dem, Graphics g)
         {
             Point.putpixel(kx + x, ky + y, g);
             Point.putpixel(kx - x, ky + y, g);
@@ -92,6 +92,7 @@ namespace KTDH
         public void MidPoint_Elip1(Graphics g)
         {
             int x, y, kx, ky, a, b;
+            int dem =0;
 
             kx = tam.getX();
             ky = tam.getY();
@@ -111,7 +112,7 @@ namespace KTDH
 
             int Dx = 0;
             int Dy = 2 * A * y;
-            put4pixel1(x, y, kx, ky, g);
+            put4pixel1(x, y, kx, ky,dem, g);
 
             while (Dx < Dy)
             {
@@ -127,7 +128,7 @@ namespace KTDH
                     p += B * (2 * x + 3) + A * (2 - 2 * y);
                     Dy -= 2 * A;
                 }
-                put4pixel1(x, y, kx, ky, g);
+                put4pixel1(x, y, kx, ky,dem, g);
             }
 
             while (y > 0)
@@ -144,7 +145,7 @@ namespace KTDH
                     Dx += 2 * B;
                     p += B * (2 * x + 2) + A * (3 - 2 * y);
                 }
-                put4pixel1(x, y, kx, ky, g);
+                put4pixel1(x, y, kx, ky,dem, g);
             }
         }
     }

@@ -1,42 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace KTDH
 {
-    class HinhTron
+    public partial class HinhTron : Form
     {
-        public int R;
-        public Point tam;
-        public Color mau;
-        public int b;
-
-        public Point getTam()
+        public int x, y, r;
+        public HT ht;
+        public Boolean checkchange = false;
+        private void jbtnVe_Click(object sender, EventArgs e)
         {
-            return this.tam;
-        }
-        public void setTam(Point a)
-        {
-            this.tam = a;
-
-        }
-        public int getR()
-        {
-            return this.R;
-        }
-        public void setR(int r)
-        {
-            this.R = r;
-
+            x = Int32.Parse(numericUpDown1.Value.ToString());
+            y = Int32.Parse(numericUpDown2.Value.ToString());
+            r = Int32.Parse(numericUpDown3.Value.ToString());
+            r = r * 5;
+            Point A = Point.FakeToReal(x, y);
+            //MessageBox.Show(r.ToString());
+            ht = new HT(A.getX(), A.getY(), r);
+            this.checkchange = true;
+            this.Close();
         }
 
-        public HinhTron(int x1, int y1, int r)
+        
+        public HinhTron()
         {
-            tam = new Point(x1, y1);
-            R = r;
-
+            InitializeComponent();
         }
     }
 }
