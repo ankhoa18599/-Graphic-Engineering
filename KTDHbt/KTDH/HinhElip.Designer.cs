@@ -94,6 +94,7 @@
             // 
             // numericUpDown2
             // 
+            this.numericUpDown2.Hexadecimal = true;
             this.numericUpDown2.Location = new System.Drawing.Point(286, 26);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown2.Maximum = new decimal(new int[] {
@@ -109,11 +110,6 @@
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(90, 20);
             this.numericUpDown2.TabIndex = 17;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            40,
-            0,
-            0,
-            -2147483648});
             // 
             // numericUpDown1
             // 
