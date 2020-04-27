@@ -145,7 +145,7 @@ namespace KTDH
             Form1.hinh = 2;
             hcn = new HinhChuNhat();
             hcn.ShowDialog();
-
+            if (hcn.checkchange == false) return;
             hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
