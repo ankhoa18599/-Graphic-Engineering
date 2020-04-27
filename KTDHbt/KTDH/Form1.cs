@@ -103,44 +103,8 @@ namespace KTDH
             }
         }
         //Một dòng code đại diện cho việc vừa thêm module và chỉnh sửa
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1.hinh = 1;
-            DuongThang dt = new DuongThang();
-            dt.ShowDialog();
-            int xa, xb, ya, yb;
-            xa = dt.xA;
-            ya = dt.yA;
-            xb = dt.xB;
-            yb = dt.yB;
-            Point p1 = Point.FakeToReal(xa, ya); // gan toa do tren Oxy 
-            Point p2 = Point.FakeToReal(xb, yb);
-            AB = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY(), Color.Red); //tao AB
-            if (luachonNet == 0) // ve dut khuc
-            {
-                AB.DDA_Line_ngat(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
-            } else if (luachonNet == 1) // ve dut khuc
-            {
-                AB.DDA_Line_ngat_1cham(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
-            }
-            else if (luachonNet == 2) // ve dut khuc
-            {
-                AB.DDA_Line_ngat_2cham(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
-            }else if (luachonNet == 3)
-            {
-                Test(AB);
-            }
-            else
-            {
-                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
-            }
-            labelChange(); // reset bang 
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+       
+        
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -175,14 +139,40 @@ namespace KTDH
             this.Refresh();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Form1.hinh = 4;
-            hinhtron = new HinhTron();
-            hinhtron.ShowDialog();
-            if (hinhtron.checkchange == false) return;
-            hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
-            labelChange();
+            Form1.hinh = 1;
+            DuongThang dt = new DuongThang();
+            dt.ShowDialog();
+            int xa, xb, ya, yb;
+            xa = dt.xA;
+            ya = dt.yA;
+            xb = dt.xB;
+            yb = dt.yB;
+            Point p1 = Point.FakeToReal(xa, ya); // gan toa do tren Oxy 
+            Point p2 = Point.FakeToReal(xb, yb);
+            AB = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY(), Color.Red); //tao AB
+            if (luachonNet == 0) // ve dut khuc
+            {
+                AB.DDA_Line_ngat(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+            }
+            else if (luachonNet == 1) // ve dut khuc
+            {
+                AB.DDA_Line_ngat_1cham(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+            }
+            else if (luachonNet == 2) // ve dut khuc
+            {
+                AB.DDA_Line_ngat_2cham(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+            }
+            else if (luachonNet == 3)
+            {
+                Test(AB);
+            }
+            else
+            {
+                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+            }
+            labelChange(); // reset bang 
         }
 
         //ở đây khoa sẽ code một cái dòng lol gì đó để test xem nếu commit có bị đè code không
@@ -208,6 +198,16 @@ namespace KTDH
             elips.hinhelip.MidPoint_Elip(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 4;
+            hinhtron = new HinhTron();
+            hinhtron.ShowDialog();
+            if (hinhtron.checkchange == false) return;
+            hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+
         private void Test(Line AB)
         {
             //Khoảng cách DX,DY

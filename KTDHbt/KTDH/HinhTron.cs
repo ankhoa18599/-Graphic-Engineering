@@ -14,6 +14,42 @@ namespace KTDH
         public int x, y, r;
         public HT ht;
         public Boolean checkchange = false;
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void jbtnVe_Click(object sender, EventArgs e)
         {
             x = Int32.Parse(numericUpDown1.Value.ToString());

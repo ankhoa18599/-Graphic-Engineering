@@ -67,6 +67,7 @@
             0,
             0,
             0});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // numericUpDown1
             // 
@@ -89,6 +90,7 @@
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label4
             // 
@@ -98,6 +100,7 @@
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 19;
             this.label4.Text = "Bán kính";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -107,6 +110,7 @@
             this.label3.Size = new System.Drawing.Size(19, 13);
             this.label3.TabIndex = 18;
             this.label3.Text = "yA";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -116,6 +120,7 @@
             this.label2.Size = new System.Drawing.Size(19, 13);
             this.label2.TabIndex = 17;
             this.label2.Text = "xA";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -125,6 +130,7 @@
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 16;
             this.label1.Text = "Tọa độ A";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // numericUpDown2
             // 
@@ -147,6 +153,7 @@
             0,
             0,
             0});
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // HinhTron
             // 
