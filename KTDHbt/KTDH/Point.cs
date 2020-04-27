@@ -57,6 +57,14 @@ namespace KTDH
             grfx.FillRectangle(b, x - 2, y, 2, 2);
             // và ta đã có 1 điểm pixel "fake" cấu thành từ 4 pixel nhỏ.
         }
+
+        public static void putpixel_1real(int x, int y, Graphics grfx) // put trên 1 pixel máy
+        {
+            if (x < 0 || x > 400 || y < 0 || y > 400) return;
+            Pen p = new Pen(Color.Black);
+            SolidBrush b = new SolidBrush(Color.Black);
+            grfx.DrawEllipse(p, x, y, 1, 1);
+        }
         public static int round(double inP)
         {
             int outP;
