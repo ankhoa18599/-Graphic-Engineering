@@ -60,6 +60,11 @@
             // 
             this.numericUpDown4.Location = new System.Drawing.Point(286, 72);
             this.numericUpDown4.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(90, 20);
             this.numericUpDown4.TabIndex = 19;
@@ -68,6 +73,11 @@
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(156, 72);
             this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(90, 20);
             this.numericUpDown3.TabIndex = 18;
