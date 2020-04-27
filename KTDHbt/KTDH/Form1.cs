@@ -14,6 +14,7 @@ namespace KTDH
         public static int hinh = -1; // Xác định in hình nào để in thông số tọa độ hình đó ra 
         Line AB, BC, CD, DA;
         HinhChuNhat hcn;
+        HinhElip elips;
         private int luachonNet = -1;
         public Form1()
         {
@@ -159,6 +160,7 @@ namespace KTDH
             luachonNet = 3;
         }
 
+        
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             Form1.hinh = -1;
@@ -176,13 +178,22 @@ namespace KTDH
             Form1.hinh = 2;
             hcn = new HinhChuNhat();
             hcn.ShowDialog();
-
+            if (hcn.checkchange == false) return;
             hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
             //test 1:
+        }
+        private void jbtnHinhElip_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 3;
+            elips = new HinhElip();
+            elips.ShowDialog();
+            if (elips.checkchange == false) return;
+            elips.hinhelip.MidPoint_Elip(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
         }
 
         private void Test(Line AB)
