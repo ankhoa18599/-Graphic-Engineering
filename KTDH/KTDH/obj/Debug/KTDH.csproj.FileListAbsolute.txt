@@ -19,3 +19,15 @@ G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.exe
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhChuNhat.resources
+E:\Github\-Graphic-Engineering\KTDH\KTDH\bin\Debug\KTDH.exe
+E:\Github\-Graphic-Engineering\KTDH\KTDH\bin\Debug\KTDH.pdb
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csprojAssemblyReference.cache
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.DuongThang.resources
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Form1.resources
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhChuNhat.resources
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhElip.resources
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Properties.Resources.resources
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.GenerateResource.cache
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs.cache
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.exe
+E:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb

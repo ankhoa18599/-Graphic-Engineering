@@ -14,6 +14,7 @@ namespace KTDH
         public static int hinh = -1; // Xác định in hình nào để in thông số tọa độ hình đó ra 
         Line AB,CD,BC,AD;
         HinhChuNhat hcn;
+        HinhElip elips;
         public Form1()
         {
             InitializeComponent();
@@ -34,6 +35,52 @@ namespace KTDH
 
             g.DrawLine(new Pen(Color.Black), 0, 200, 400, 200);
             g.DrawLine(new Pen(Color.Black), 200, 0, 200, 400);
+        }
+
+        private void jbtnHinhElip_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 3;
+            elips = new HinhElip();
+            elips.ShowDialog();
+
+            elips.hinhelip.MidPoint_Elip(this.JpnLuoiGiaoDien.CreateGraphics());
+
+            labelChange();
+
+            //Nam xu li hinh thoi
+        }
+
+        private void jbtnXoa_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = -1;
+            labelChange();
+            this.Refresh();
+
+            //Nam xu li nut xoa
+
+        }
+
+        public Point TinhDiemTinhTien(Point tam)
+        {
+            int xA = tam.getX() + Int32.Parse(numericUpDown1.Value.ToString())*5;
+            int yA = tam.getY() + Int32.Parse(numericUpDown2.Value.ToString())*-5;
+
+            Point A = new Point(xA, yA);
+            return A;
+        }
+
+        public void TinhTienElip()
+        {
+            Form1.hinh = 3;
+            this.Refresh();
+            elips.hinhelip.tam = TinhDiemTinhTien(elips.hinhelip.tam);
+            elips.hinhelip.MidPoint_Elip(this.JpnLuoiGiaoDien.CreateGraphics());
+        }
+
+        private void jbtnTinhTien_Click(object sender, EventArgs e)
+        {
+            TinhTienElip();
+            labelChange();
         }
 
         void labelChange()
@@ -97,6 +144,15 @@ namespace KTDH
                 label19.Text = "yD";
                 label20.Text = ((hcn.CD.getLpoint().getX() - 200) / 5).ToString();
                 label21.Text = ((hcn.BC.getLpoint().getY() - 200) / 5).ToString();
+            }
+            else if (Form1.hinh==3)
+            {
+                label5.Text = "Hình Elip";
+                label6.Text = "xTam: ";
+                label7.Text = "yTam: ";
+                label8.Text = ((elips.hinhelip.tam.getX()-200)/5).ToString();
+                label9.Text = (-(elips.hinhelip.tam.getY() - 200) / 5).ToString();
+
             }
         }
         private void button1_Click(object sender, EventArgs e)
