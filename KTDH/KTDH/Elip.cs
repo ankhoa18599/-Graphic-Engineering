@@ -109,33 +109,33 @@ namespace KTDH
 
             while (Dx < Dy)
             {
-                x++;
-                Dx += 2 * B;
+                x+=5;
+                Dx += 10 * B;
                 if (p < 0)
                 {
                     p += B * (2 * x + 3);
                 }
                 else
                 {
-                    y--;
+                    y-=5;
                     p += B * (2 * x + 3) + A * (2 - 2 * y);
-                    Dy -= 2 * A;
+                    Dy -= 10 * A;
                 }
                 put4pixel(x, y, kx, ky, g);
             }
 
             while (y > 0)
             {
-                y--;
-                Dy -= 2 * A;
+                y-=5;
+                Dy -= 10 * A;
                 if (p >= 0)
                 {
                     p += A * (3 - 2 * y);
                 }
                 else
                 {
-                    x++;
-                    Dx += 2 * B;
+                    x+=5;
+                    Dx += 10 * B;
                     p += B * (2 * x + 2) + A * (3 - 2 * y);
                 }
                 put4pixel(x, y, kx, ky, g);

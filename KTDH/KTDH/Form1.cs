@@ -17,6 +17,7 @@ namespace KTDH
         HinhTamGiac htg;
         HinhTron hinhtron;
         HinhVuong hinhvuong;
+        HinhElip elip;
         public Form1()
         {
             InitializeComponent();
@@ -121,6 +122,14 @@ namespace KTDH
                 label20.Text = "";
                 label21.Text = "";
             }
+            else if (Form1.hinh == 7)
+            {
+                label5.Text = "Hình Elip";
+                label6.Text = "xTam: ";
+                label7.Text = "yTam: ";
+                label8.Text = ((elip.hinhelip.tam.getX() - 200) / 5).ToString();
+                label9.Text = (-(elip.hinhelip.tam.getY() - 200) / 5).ToString();
+            }
         }
 
 
@@ -141,6 +150,22 @@ namespace KTDH
             labelChange(); // reset bang 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jbtnHinhElip_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 7;
+            elip = new HinhElip();
+            elip.ShowDialog();
+            if (elip.checkchange == false) return;
+            elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+
+            labelChange();
+            //Nam code
+        }
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             Form1.hinh = -1;
