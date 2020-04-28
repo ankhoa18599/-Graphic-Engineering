@@ -49,3 +49,4 @@ D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.GenerateResource.cache
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs.cache
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.exe
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
+G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhElip.resources
