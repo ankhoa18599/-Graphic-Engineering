@@ -71,6 +71,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.JpnLuoiGiaoDien = new System.Windows.Forms.Panel();
             this.btnVeNha = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -88,7 +89,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(308, 50);
+            this.button2.Location = new System.Drawing.Point(232, 50);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 39);
@@ -266,7 +267,7 @@
             // jbtnVe3D
             // 
             this.jbtnVe3D.BackColor = System.Drawing.Color.White;
-            this.jbtnVe3D.Location = new System.Drawing.Point(1077, 11);
+            this.jbtnVe3D.Location = new System.Drawing.Point(1166, 10);
             this.jbtnVe3D.Margin = new System.Windows.Forms.Padding(4);
             this.jbtnVe3D.Name = "jbtnVe3D";
             this.jbtnVe3D.Size = new System.Drawing.Size(140, 79);
@@ -277,7 +278,7 @@
             // jbtnHinhElip
             // 
             this.jbtnHinhElip.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.jbtnHinhElip.Location = new System.Drawing.Point(708, 50);
+            this.jbtnHinhElip.Location = new System.Drawing.Point(593, 50);
             this.jbtnHinhElip.Margin = new System.Windows.Forms.Padding(4);
             this.jbtnHinhElip.Name = "jbtnHinhElip";
             this.jbtnHinhElip.Size = new System.Drawing.Size(152, 39);
@@ -288,8 +289,8 @@
             // 
             // jbtnHinhTron
             // 
-            this.jbtnHinhTron.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.jbtnHinhTron.Location = new System.Drawing.Point(899, 50);
+            this.jbtnHinhTron.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.jbtnHinhTron.Location = new System.Drawing.Point(771, 51);
             this.jbtnHinhTron.Margin = new System.Windows.Forms.Padding(4);
             this.jbtnHinhTron.Name = "jbtnHinhTron";
             this.jbtnHinhTron.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -303,7 +304,7 @@
             // jbtnHinhThoi
             // 
             this.jbtnHinhThoi.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.jbtnHinhThoi.Location = new System.Drawing.Point(708, 11);
+            this.jbtnHinhThoi.Location = new System.Drawing.Point(593, 10);
             this.jbtnHinhThoi.Margin = new System.Windows.Forms.Padding(4);
             this.jbtnHinhThoi.Name = "jbtnHinhThoi";
             this.jbtnHinhThoi.Size = new System.Drawing.Size(152, 39);
@@ -314,7 +315,7 @@
             // jbtnHinhTamGiac
             // 
             this.jbtnHinhTamGiac.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.jbtnHinhTamGiac.Location = new System.Drawing.Point(511, 11);
+            this.jbtnHinhTamGiac.Location = new System.Drawing.Point(423, 10);
             this.jbtnHinhTamGiac.Margin = new System.Windows.Forms.Padding(4);
             this.jbtnHinhTamGiac.Name = "jbtnHinhTamGiac";
             this.jbtnHinhTamGiac.Size = new System.Drawing.Size(152, 39);
@@ -326,7 +327,7 @@
             // jbtnHinhVuong
             // 
             this.jbtnHinhVuong.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.jbtnHinhVuong.Location = new System.Drawing.Point(511, 50);
+            this.jbtnHinhVuong.Location = new System.Drawing.Point(423, 50);
             this.jbtnHinhVuong.Margin = new System.Windows.Forms.Padding(4);
             this.jbtnHinhVuong.Name = "jbtnHinhVuong";
             this.jbtnHinhVuong.Size = new System.Drawing.Size(152, 39);
@@ -338,7 +339,7 @@
             // JbntHInhChuNhat
             // 
             this.JbntHInhChuNhat.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.JbntHInhChuNhat.Location = new System.Drawing.Point(308, 11);
+            this.JbntHInhChuNhat.Location = new System.Drawing.Point(232, 10);
             this.JbntHInhChuNhat.Margin = new System.Windows.Forms.Padding(4);
             this.JbntHInhChuNhat.Name = "JbntHInhChuNhat";
             this.JbntHInhChuNhat.Size = new System.Drawing.Size(161, 39);
@@ -515,7 +516,7 @@
             // btnVeNha
             // 
             this.btnVeNha.BackColor = System.Drawing.Color.White;
-            this.btnVeNha.Location = new System.Drawing.Point(899, 11);
+            this.btnVeNha.Location = new System.Drawing.Point(771, 11);
             this.btnVeNha.Margin = new System.Windows.Forms.Padding(4);
             this.btnVeNha.Name = "btnVeNha";
             this.btnVeNha.Size = new System.Drawing.Size(152, 39);
@@ -523,11 +524,23 @@
             this.btnVeNha.Text = "None";
             this.btnVeNha.UseVisualStyleBackColor = false;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(974, 13);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(152, 39);
+            this.button3.TabIndex = 86;
+            this.button3.Text = "None2";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 629);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -628,6 +641,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel JpnLuoiGiaoDien;
         public System.Windows.Forms.Button btnVeNha;
+        public System.Windows.Forms.Button button3;
     }
 }
 
