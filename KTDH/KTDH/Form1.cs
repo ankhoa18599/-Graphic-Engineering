@@ -16,6 +16,7 @@ namespace KTDH
         HinhChuNhat hcn;
         HinhTamGiac htg;
         HinhTron hinhtron;
+        HinhVuong hinhvuong;
         HinhElip elip;
         public Form1()
         {
@@ -154,17 +155,6 @@ namespace KTDH
 
         }
 
-        private void jbtnHinhElip_Click(object sender, EventArgs e)
-        {
-            Form1.hinh = 7;
-            elip = new HinhElip();
-            elip.ShowDialog();
-            if (elip.checkchange == false) return;
-            elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
-
-            labelChange();
-            //Nam code
-        }
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             Form1.hinh = -1;
@@ -206,5 +196,28 @@ namespace KTDH
             hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
+        private void jbtnHinhVuong_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 5;
+            hinhvuong = new HinhVuong();
+            hinhvuong.ShowDialog();
+            if (hinhvuong.checkchange == false) return;
+            hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+        private void jbtnHinhElip_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 7;
+            elip = new HinhElip();
+            elip.ShowDialog();
+            if (elip.checkchange == false) return;
+            elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+            //Nam code
+        }
+
     }
 }
