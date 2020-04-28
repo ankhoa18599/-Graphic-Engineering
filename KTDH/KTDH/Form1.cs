@@ -14,7 +14,12 @@ namespace KTDH
         public static int hinh = -1; // Xác định in hình nào để in thông số tọa độ hình đó ra 
         Line AB,CD,BC,AD;
         HinhChuNhat hcn;
+<<<<<<< HEAD
         HinhElip elips;
+=======
+        HinhTamGiac htg;
+        HinhTron hinhtron;
+>>>>>>> master
         public Form1()
         {
             InitializeComponent();
@@ -145,6 +150,7 @@ namespace KTDH
                 label20.Text = ((hcn.CD.getLpoint().getX() - 200) / 5).ToString();
                 label21.Text = ((hcn.BC.getLpoint().getY() - 200) / 5).ToString();
             }
+<<<<<<< HEAD
             else if (Form1.hinh==3)
             {
                 label5.Text = "Hình Elip";
@@ -153,8 +159,31 @@ namespace KTDH
                 label8.Text = ((elips.hinhelip.tam.getX()-200)/5).ToString();
                 label9.Text = (-(elips.hinhelip.tam.getY() - 200) /5).ToString();
 
+=======
+            else if (Form1.hinh == 3)
+            {
+                label5.Text = "Hình tam giác";
+                label6.Text = "xA:";
+                label7.Text = "yA:";
+                label8.Text = ((htg.AB.getFpoint().getX() - 200) / 5).ToString();
+                label9.Text = (-(htg.AB.getFpoint().getY() - 200) / 5).ToString();
+                label10.Text = "xB:";
+                label11.Text = "yB:";
+                label12.Text = ((htg.AB.getLpoint().getX() - 200) / 5).ToString();
+                label13.Text = (-(htg.AB.getLpoint().getY() - 200) / 5).ToString();
+                label14.Text = "xC";
+                label15.Text = "yC";
+                label16.Text = ((htg.BC.getLpoint().getX() - 200) / 5).ToString();
+                label17.Text = (-(htg.BC.getLpoint().getY() - 200) / 5).ToString();
+                label18.Text = "";
+                label19.Text = "";
+                label20.Text = "";
+                label21.Text = "";
+>>>>>>> master
             }
         }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form1.hinh = 1;
@@ -177,13 +206,34 @@ namespace KTDH
             Form1.hinh = 2;
             hcn = new HinhChuNhat();
             hcn.ShowDialog();
-
+            if (hcn.checkchange == false) return;
             hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
             //test 1:
+        }
+
+        private void jbtnHinhTamGiac_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 3;
+            htg = new HinhTamGiac();
+            htg.ShowDialog();
+            if (htg.checkchange == false) return;
+            htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 4;
+            hinhtron = new HinhTron();
+            hinhtron.ShowDialog();
+            if (hinhtron.checkchange == false) return;
+            hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
         }
     }
 }

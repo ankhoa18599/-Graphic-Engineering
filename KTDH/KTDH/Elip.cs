@@ -6,6 +6,10 @@ using System.Text;
 
 namespace KTDH
 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     public class Elip
     {
         public Point tam;
@@ -18,6 +22,7 @@ namespace KTDH
             this.b = b;
         }
 
+<<<<<<< HEAD
         //Hàm putpixel giống như bên đường thẳng
         public void putpixel(int x, int y, Graphics g)
         {
@@ -63,6 +68,73 @@ namespace KTDH
         }
 
         public void MidPoint_Elip(Graphics g)
+=======
+        //Hàm put4pixel để vẽ elip(hàm trong slice word của GV)
+        public void put4pixel(int x, int y, int kx, int ky, Graphics g)
+        {
+            Point.putpixel(kx + x, ky + y, g);
+            Point.putpixel(kx - x, ky + y, g);
+            Point.putpixel(kx + x, ky - y, g);
+            Point.putpixel(kx - x, ky - y, g);
+        }
+
+
+       public void VeElip(Graphics g)
+        {
+            int x, y, cx, cy, a, b;
+            cx = tam.getX(); cy = tam.getY();
+            a = this.a; b = this.b;
+
+            x = 0; y = b;
+            int A, B;
+            A = a * a;
+            B = b * b;
+            double p = B + A / 4 - A * b;
+            x = 0;
+            y = b;
+            int Dx = 0;
+            int Dy = 2 * A * y;
+            put4pixel(x, y, cx, cy, g);
+
+            while (Dx < Dy)
+            {
+                x++;
+                Dx += 2 * B;
+                if (p < 0)
+                    p += B + Dx;
+                else
+                {
+                    y--;
+                    Dy -= 2 * A;
+                    p += B + Dx - Dy;
+                }
+               
+                if (x % 5 == 0) put4pixel(x, Point.round(y), cx, cy, g);
+
+
+            }
+            p = Math.Round(B * (x + 0.5f) * (x + 0.5f) + A * (y - 1) * (y - 1) - A * B);
+            while (y > 0)
+            {
+                y--;
+                Dy -= A * 2;
+                if (p > 0)
+                    p += A - Dy;
+                else
+                {
+                    x++;
+                    Dx += B * 2;
+                    p += A - Dy + Dx;
+                }
+              
+                if (x % 5 == 0) put4pixel(x, Point.round(y), cx, cy, g);
+
+            }
+
+        }
+
+        public void VeElip2(Graphics g)
+>>>>>>> master
         {
             int x, y, kx, ky, a, b;
 
@@ -80,7 +152,11 @@ namespace KTDH
             A = a * a;
             B = b * b;
             double p = B + A / 4 - A * b;
+<<<<<<< HEAD
             p = LamTron(p);
+=======
+            p = Point.round(p);
+>>>>>>> master
 
             int Dx = 0;
             int Dy = 2 * A * y;
@@ -120,6 +196,7 @@ namespace KTDH
                 put4pixel(x, y, kx, ky, g);
             }
         }
+<<<<<<< HEAD
 
         //Ham bien toa do tu nho sang lon
         public static Point ToaDo(int x, int y)
@@ -130,3 +207,9 @@ namespace KTDH
     }
 }
 
+=======
+    }
+}
+
+
+>>>>>>> master

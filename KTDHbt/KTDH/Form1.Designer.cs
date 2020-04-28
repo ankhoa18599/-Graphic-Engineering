@@ -88,6 +88,7 @@
             this.button2.TabIndex = 84;
             this.button2.Text = "Hình Tròn";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -246,6 +247,7 @@
             this.jbtnHinhElip.TabIndex = 64;
             this.jbtnHinhElip.Text = "Hình Elip";
             this.jbtnHinhElip.UseVisualStyleBackColor = false;
+            this.jbtnHinhElip.Click += new System.EventHandler(this.jbtnHinhElip_Click);
             // 
             // JbntHInhChuNhat
             // 

@@ -95,6 +95,7 @@
             this.button2.TabIndex = 84;
             this.button2.Text = "Hình Tròn";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -319,6 +320,7 @@
             this.jbtnHinhTamGiac.TabIndex = 61;
             this.jbtnHinhTamGiac.Text = "Hình Tam Giác";
             this.jbtnHinhTamGiac.UseVisualStyleBackColor = false;
+            this.jbtnHinhTamGiac.Click += new System.EventHandler(this.jbtnHinhTamGiac_Click);
             // 
             // jbtnHinhVuong
             // 
