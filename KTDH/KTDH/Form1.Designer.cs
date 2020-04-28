@@ -305,6 +305,7 @@
             this.jbtnHinhVuong.TabIndex = 60;
             this.jbtnHinhVuong.Text = "Hình Vuông";
             this.jbtnHinhVuong.UseVisualStyleBackColor = false;
+            this.jbtnHinhVuong.Click += new System.EventHandler(this.jbtnHinhVuong_Click);
             // 
             // JbntHInhChuNhat
             // 

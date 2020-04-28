@@ -34,3 +34,4 @@ H:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhTamGiac.resources
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhTron.resources
 H:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhTron.resources
+G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhVuong.resources
