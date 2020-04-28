@@ -14,6 +14,10 @@ namespace KTDH
         public static int hinh = -1; // Xác định in hình nào để in thông số tọa độ hình đó ra 
         Line AB,CD,BC,AD;
         HinhChuNhat hcn;
+        HinhTamGiac htg;
+        HinhTron hinhtron;
+        HinhVuong hinhvuong;
+        HinhElip elip;
         public Form1()
         {
             InitializeComponent();
@@ -98,7 +102,37 @@ namespace KTDH
                 label20.Text = ((hcn.CD.getLpoint().getX() - 200) / 5).ToString();
                 label21.Text = ((hcn.BC.getLpoint().getY() - 200) / 5).ToString();
             }
+            else if (Form1.hinh == 3)
+            {
+                label5.Text = "Hình tam giác";
+                label6.Text = "xA:";
+                label7.Text = "yA:";
+                label8.Text = ((htg.AB.getFpoint().getX() - 200) / 5).ToString();
+                label9.Text = (-(htg.AB.getFpoint().getY() - 200) / 5).ToString();
+                label10.Text = "xB:";
+                label11.Text = "yB:";
+                label12.Text = ((htg.AB.getLpoint().getX() - 200) / 5).ToString();
+                label13.Text = (-(htg.AB.getLpoint().getY() - 200) / 5).ToString();
+                label14.Text = "xC";
+                label15.Text = "yC";
+                label16.Text = ((htg.BC.getLpoint().getX() - 200) / 5).ToString();
+                label17.Text = (-(htg.BC.getLpoint().getY() - 200) / 5).ToString();
+                label18.Text = "";
+                label19.Text = "";
+                label20.Text = "";
+                label21.Text = "";
+            }
+            else if (Form1.hinh == 7)
+            {
+                label5.Text = "Hình Elip";
+                label6.Text = "xTam: ";
+                label7.Text = "yTam: ";
+                label8.Text = ((elip.hinhelip.tam.getX() - 200) / 5).ToString();
+                label9.Text = (-(elip.hinhelip.tam.getY() - 200) / 5).ToString();
+            }
         }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form1.hinh = 1;
@@ -116,12 +150,24 @@ namespace KTDH
             labelChange(); // reset bang 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jbtnXoa_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = -1;
+            labelChange();
+            this.Refresh();
+        }
+
         private void JbntHInhChuNhat_Click(object sender, EventArgs e)
         {
             Form1.hinh = 2;
             hcn = new HinhChuNhat();
             hcn.ShowDialog();
-
+            if (hcn.checkchange == false) return;
             hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
@@ -129,5 +175,49 @@ namespace KTDH
             labelChange();
             //test 1:
         }
+
+        private void jbtnHinhTamGiac_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 3;
+            htg = new HinhTamGiac();
+            htg.ShowDialog();
+            if (htg.checkchange == false) return;
+            htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 4;
+            hinhtron = new HinhTron();
+            hinhtron.ShowDialog();
+            if (hinhtron.checkchange == false) return;
+            hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+        private void jbtnHinhVuong_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 5;
+            hinhvuong = new HinhVuong();
+            hinhvuong.ShowDialog();
+            if (hinhvuong.checkchange == false) return;
+            hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+        private void jbtnHinhElip_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 7;
+            elip = new HinhElip();
+            elip.ShowDialog();
+            if (elip.checkchange == false) return;
+            elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+            //Nam code
+        }
+
     }
 }

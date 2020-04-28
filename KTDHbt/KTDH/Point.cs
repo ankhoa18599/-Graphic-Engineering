@@ -32,7 +32,7 @@ namespace KTDH
         public static void putpixel(int x, int y, Graphics grfx)
         {
             if (x < 0 || x > 400 || y < 0 || y > 400) return;
-            Pen p = new Pen(Color.Red);
+            Pen p = new Pen(Color.Black);
             SolidBrush b = new SolidBrush(Color.Black);// Brush dùng để tô vùng bên trong của một hình 
             // Lớp Brush là một lớp Abstract • Các lớp kế thừ từ lớp Brush 
             //Một Solid Brush là một brush dùng để tô một vùng với một màu đơn.
@@ -56,6 +56,18 @@ namespace KTDH
             ////////////////////////////////////         tô ở đây        | tô ở đây
             grfx.FillRectangle(b, x - 2, y, 2, 2);
             // và ta đã có 1 điểm pixel "fake" cấu thành từ 4 pixel nhỏ.
+        }
+        public static void putpixel_1real(int x, int y, Graphics grfx)
+        {
+            if (x < 0 || x > 400 || y < 0 || y > 400) return;
+            Pen p = new Pen(Color.Black);
+            SolidBrush b = new SolidBrush(Color.Black);// Brush dùng để tô vùng bên trong của một hình 
+            // Lớp Brush là một lớp Abstract • Các lớp kế thừ từ lớp Brush 
+            //Một Solid Brush là một brush dùng để tô một vùng với một màu đơn.
+            grfx.DrawRectangle(p, x, y, 2, 2);//        |
+            ////////////////////////////////////---điểm click ---
+            ////////////////////////////////////        | tô ở đây
+            grfx.FillRectangle(b, x, y, 2, 2);
         }
         public static int round(double inP)
         {
