@@ -55,3 +55,5 @@ H:\Github\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.csproj.GenerateResourc
 H:\Github\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs.cache
 H:\Github\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.exe
 H:\Github\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.pdb
+D:\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.HinhElip.resources
+D:\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.HinhTron.resources
