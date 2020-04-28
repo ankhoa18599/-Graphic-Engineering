@@ -160,7 +160,7 @@ namespace KTDH
             elip = new HinhElip();
             elip.ShowDialog();
             if (elip.checkchange == false) return;
-            elip.hinhelip.VeElip(this.JpnLuoiGiaoDien.CreateGraphics());
+            elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
 
             labelChange();
             //Nam code
