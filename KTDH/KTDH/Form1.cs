@@ -140,6 +140,13 @@ namespace KTDH
             labelChange(); // reset bang 
         }
 
+        private void jbtnXoa_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = -1;
+            labelChange();
+            this.Refresh();
+        }
+
         private void JbntHInhChuNhat_Click(object sender, EventArgs e)
         {
             Form1.hinh = 2;
