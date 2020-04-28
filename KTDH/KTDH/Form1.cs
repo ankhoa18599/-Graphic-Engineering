@@ -150,6 +150,7 @@ namespace KTDH
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -166,11 +167,16 @@ namespace KTDH
             labelChange();
             //Nam code
 =======
+=======
+>>>>>>> 76ce4857fab145aa7863f004e1a6a34a16d461cf
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             Form1.hinh = -1;
             labelChange();
             this.Refresh();
+<<<<<<< HEAD
+>>>>>>> 76ce4857fab145aa7863f004e1a6a34a16d461cf
+=======
 >>>>>>> 76ce4857fab145aa7863f004e1a6a34a16d461cf
         }
 
