@@ -303,6 +303,16 @@ namespace KTDH
 
         public void DrawArrow(Graphics g)
         {
+            //tạo 2 điểm 2 bên tam giác mũi tên
+            Point MT1 = new Point();
+            Point MT2 = new Point();
+            //tọa độ 2 điểm 2 bên tam giác mũi tên
+            double x1=0, x2=0, y1=0, y2=0;
+            //2 đoạn thẳng để vẽ mũi tên
+            Line Arrow1, Arrow2;
+            //Khoảng cách dy dx của 2 điểm 2 bên tam giác ở mũi tên
+            double Dx1, Dy1, Dx2, Dy2;
+
             //Khoảng cách DX,DY
             double ABDx = Math.Abs(this.getLpoint().getX() - this.getFpoint().getX());
             double ABDy = Math.Abs(this.getLpoint().getY() - this.getFpoint().getY());
@@ -310,98 +320,116 @@ namespace KTDH
             double DAB = Math.Sqrt(Math.Pow(ABDx, 2) + Math.Pow(ABDy, 2));
 
             //chiều cao và cạnh đáy,góc tam giác cân (mũi tên 40-20)
-            double HArrTri = 40;  //DAB / 5;  
-            double DayArrTri = 20;  //1.6;
+            double HArrTri = 40;//DAB / 5;   //40;  //DAB / 5;  
+            double DayArrTri = 20; //HArrTri/2;  //1.6;
             double CanhBArrTri = Math.Sqrt(Math.Pow(HArrTri, 2) + Math.Pow(DayArrTri / 2, 2));
             double G_Anpha = Math.Atan(DayArrTri / 2 / HArrTri) * 2 * 180 / Math.PI;
             // Tính chất tam giác cân;
             double G_Anpha1, G_Anpha2;
             G_Anpha1 = G_Anpha2 = G_Anpha / 2;
 
-            //Góc B1 &B2
-            double G_B1 = Math.Atan(ABDy / ABDx) * 180 / Math.PI;
-            double G_B2 = Math.Atan(ABDx / ABDy) * 180 / Math.PI;
-
-            //Góc Beta
-            double G_Beta1, G_Beta2;
-            G_Beta1 = Math.Abs(G_B1 - G_Anpha1);
-            G_Beta2 = Math.Abs(G_B2 - G_Anpha2);
-
-            //Khoảng cách dy dx của 2 điểm 2 bên tam giác ở mũi tên
-            double Dx1, Dy1, Dx2, Dy2;
-            Dy1 = Math.Sin(G_Beta1 * Math.PI / 180) * CanhBArrTri;
-            Dx1 = Math.Sqrt(Math.Pow(CanhBArrTri, 2) - Math.Pow(Dy1, 2));
-            Dx2 = Math.Sin(G_Beta2 * Math.PI / 180) * CanhBArrTri;
-            Dy2 = Math.Sqrt(Math.Pow(CanhBArrTri, 2) - Math.Pow(Dx2, 2));
-
-            //tạo 2 điểm 2 bên tam giác mũi tên
-            Point MT1 = new Point();
-            Point MT2 = new Point();
-
-            if (G_Anpha1 > G_B1 && G_Anpha2 > G_B2)
+            if (ABDx == 0)
             {
-                //Dx1 = Dx1;
-                Dx2 = -Dx2;
-                Dy1 = -Dy1;
-                //Dy2 = Dy2;
+                Dx1 = Dx2 = DayArrTri / 2;
+                Dy1 = Dy2 = HArrTri;
+                if (this.getLpoint().getY() > this.getFpoint().getY())
+                    Dy1 = -Dy1;
+                x1 = Math.Round(this.getLpoint().getX() - Dx1);
+                x2 = Math.Round(this.getLpoint().getX() + Dx2);
+                y1 = Math.Round(this.getLpoint().getY() + Dy1);
+                y2 = y1;
             }
-            else if (G_Anpha1 < G_B1 && G_Anpha2 < G_B2)
+            else if (ABDy == 0)
             {
-                // Dx1 = Dx1;
-                // Dx2 = Dx2;
-                // Dy1 = Dy1;
-                // Dy2 = Dy2;
+                Dx1 = Dx2 = HArrTri;
+                Dy1 = Dy2 = DayArrTri / 2;
+                if (this.getLpoint().getX() > this.getFpoint().getX())
+                    Dx1 = -Dx1;
+                x1 = Math.Round(this.getLpoint().getX() + Dx1);
+                x2 = x1;
+                y1 = Math.Round(this.getLpoint().getY() + Dy1);
+                y2 = Math.Round(this.getLpoint().getY() - Dy2);
             }
-            else if (G_Anpha1 > G_B1 && G_Anpha2 < G_B2)
+            else
             {
-                // Dx1 = Dx1;
-                // Dx2 = Dx2;
-                Dy1 = -Dy1;
-                // Dy2 = Dy2;
-            }
-            else if (G_Anpha1 < G_B1 && G_Anpha2 > G_B2)
-            {
-                // Dx1 = Dx1;
-                Dx2 = -Dx2;
-                // Dy1 = Dy1;
-                // Dy2 = Dy2;
-            }
+                //Góc B1 &B2
+                double G_B1 = Math.Atan(ABDy / ABDx) * 180 / Math.PI;
+                double G_B2 = Math.Atan(ABDx / ABDy) * 180 / Math.PI;
 
-            if (this.getLpoint().getX() > this.getFpoint().getX() && this.getLpoint().getY() < this.getFpoint().getY())
-            {
-                Dx1 = -Dx1;
-                Dx2 = -Dx2;
-            }
-            else if (this.getLpoint().getX() > this.getFpoint().getX() && this.getLpoint().getY() > this.getFpoint().getY())
-            {
-                Dx1 = -Dx1;
-                Dx2 = -Dx2;
-                Dy1 = -Dy1;
-                Dy2 = -Dy2;
-            }
-            else if (this.getLpoint().getX() < this.getFpoint().getX() && this.getLpoint().getY() > this.getFpoint().getY())
-            {
-                Dy1 = -Dy1;
-                Dy2 = -Dy2;
-            }
+                //Góc Beta
+                double G_Beta1, G_Beta2;
+                G_Beta1 = Math.Abs(G_B1 - G_Anpha1);
+                G_Beta2 = Math.Abs(G_B2 - G_Anpha2);
 
-            double x1, x2, y1, y2;
-            x1 = Math.Round(this.getLpoint().getX() + Dx1);
-            y1 = Math.Round(this.getLpoint().getY() + Dy1);
-            x2 = Math.Round(this.getLpoint().getX() + Dx2);
-            y2 = Math.Round(this.getLpoint().getY() + Dy2);
+                Dy1 = Math.Sin(G_Beta1 * Math.PI / 180) * CanhBArrTri;
+                Dx1 = Math.Sqrt(Math.Pow(CanhBArrTri, 2) - Math.Pow(Dy1, 2));
+                Dx2 = Math.Sin(G_Beta2 * Math.PI / 180) * CanhBArrTri;
+                Dy2 = Math.Sqrt(Math.Pow(CanhBArrTri, 2) - Math.Pow(Dx2, 2));
 
+                if (G_Anpha1 > G_B1 && G_Anpha2 > G_B2)
+                {
+                    //Dx1 = Dx1;
+                    Dx2 = -Dx2;
+                    Dy1 = -Dy1;
+                    //Dy2 = Dy2;
+                }
+                else if (G_Anpha1 < G_B1 && G_Anpha2 < G_B2)
+                {
+                    // Dx1 = Dx1;
+                    // Dx2 = Dx2;
+                    // Dy1 = Dy1;
+                    // Dy2 = Dy2;
+                }
+                else if (G_Anpha1 > G_B1 && G_Anpha2 < G_B2)
+                {
+                    // Dx1 = Dx1;
+                    // Dx2 = Dx2;
+                    Dy1 = -Dy1;
+                    // Dy2 = Dy2;
+                }
+                else if (G_Anpha1 < G_B1 && G_Anpha2 > G_B2)
+                {
+                    // Dx1 = Dx1;
+                    Dx2 = -Dx2;
+                    // Dy1 = Dy1;
+                    // Dy2 = Dy2;
+                }
+
+                if (this.getLpoint().getX() > this.getFpoint().getX() && this.getLpoint().getY() < this.getFpoint().getY())
+                {
+                    Dx1 = -Dx1;
+                    Dx2 = -Dx2;
+                }
+                else if (this.getLpoint().getX() > this.getFpoint().getX() && this.getLpoint().getY() > this.getFpoint().getY())
+                {
+                    Dx1 = -Dx1;
+                    Dx2 = -Dx2;
+                    Dy1 = -Dy1;
+                    Dy2 = -Dy2;
+                }
+                else if (this.getLpoint().getX() < this.getFpoint().getX() && this.getLpoint().getY() > this.getFpoint().getY())
+                {
+                    Dy1 = -Dy1;
+                    Dy2 = -Dy2;
+                }
+
+                //làm tròn sau khi tính toán khoảng cách để lấy tọa độ nguyên
+                x1 = Math.Round(this.getLpoint().getX() + Dx1);
+                y1 = Math.Round(this.getLpoint().getY() + Dy1);
+                x2 = Math.Round(this.getLpoint().getX() + Dx2);
+                y2 = Math.Round(this.getLpoint().getY() + Dy2);
+            }
+            //Làm tròn để khớp với hệ tọa độ
             x1 = Point.round(x1);
             x2 = Point.round(x2);
             y1 = Point.round(y1);
             y2 = Point.round(y2);
 
-
             MT1.setPoint((int)x1, (int)y1);
             MT2.setPoint((int)x2, (int)y2);
 
-            Line Arrow1 = new Line(this.getLpoint().getX(), this.getLpoint().getY(), MT1.getX(), MT1.getY(), Color.HotPink);
-            Line Arrow2 = new Line(this.getLpoint().getX(), this.getLpoint().getY(), MT2.getX(), MT2.getY(), Color.HotPink);
+            Arrow1 = new Line(this.getLpoint().getX(), this.getLpoint().getY(), MT1.getX(), MT1.getY(), Color.HotPink);
+            Arrow2 = new Line(this.getLpoint().getX(), this.getLpoint().getY(), MT2.getX(), MT2.getY(), Color.HotPink);
 
             Arrow1.DDA_Line(g);
             Arrow2.DDA_Line(g);
