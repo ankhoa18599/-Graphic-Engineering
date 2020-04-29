@@ -52,3 +52,4 @@ D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhElip.resources
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhVuong.resources
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhBinhHanh.resources
+G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhBinhHanh.resources

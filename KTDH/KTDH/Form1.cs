@@ -16,20 +16,6 @@ namespace KTDH
         HinhChuNhat hcn;
         HinhTamGiac htg;
         HinhTron hinhtron;
-
-        private void jbtnHinhbh_Click(object sender, EventArgs e)
-        {
-            Form1.hinh = 9;
-            hbh = new HinhBinhHanh();
-            hbh.ShowDialog();
-            if (hbh.checkchange == false) return;
-            hbh.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-            hbh.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-            hbh.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-            hbh.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-            labelChange();
-        }
-
         HinhVuong hinhvuong;
         HinhElip elip;
         HinhBinhHanh hbh;
@@ -258,6 +244,18 @@ namespace KTDH
             elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
             //Nam code
+        }
+        private void jbtnHinhbh_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 9;
+            hbh = new HinhBinhHanh();
+            hbh.ShowDialog();
+            if (hbh.checkchange == false) return;
+            hbh.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hbh.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hbh.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hbh.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
         }
 
     }
