@@ -187,6 +187,7 @@ namespace KTDH
             htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Form1.hinh = 4;
@@ -218,6 +219,59 @@ namespace KTDH
             labelChange();
             //Nam code
         }
+        private void jbntQuay_Click(object sender, EventArgs e)
+        {
+            if (Form1.hinh == 1)
+            {
+                this.Refresh();
+                AB.QuayDT();
+                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 2)
+            {
+                this.Refresh();
+                hcn.AB.QuayDT();
+                hcn.BC.QuayDT();
+                hcn.CD.QuayDT();
+                hcn.AD.QuayDT();
 
+                hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 3)
+            {
+                this.Refresh();
+                htg.AB.QuayDT();
+                htg.AC.QuayDT();
+                htg.BC.QuayDT();
+                htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 4)
+            {
+                this.Refresh();
+                //hình tròn để sau
+                labelChange();
+            }
+            if (Form1.hinh == 5)
+            {
+                this.Refresh();
+                hinhvuong.AB.QuayDT();
+                hinhvuong.BC.QuayDT();
+                hinhvuong.CD.QuayDT();
+                hinhvuong.AD.QuayDT();
+                hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+        }
     }
 }
