@@ -24,6 +24,8 @@ namespace KTDH
             InitializeComponent();
         }
 
+        
+
         private void JpnLuoiGiaoDien_Paint(object sender, PaintEventArgs e)
         {
             heToaDo();
@@ -258,5 +260,144 @@ namespace KTDH
             labelChange();
         }
 
+        //Nam code phần tịnh tiến các hình
+        public void PhepTinhTien()
+        {
+            //Tịnh tiến đường thẳng
+            if (Form1.hinh == 1)
+            {
+                this.Refresh();
+
+                AB = TinhTienDT(AB);
+
+                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+            }
+            //Tịnh tiến hình chữ nhật
+            else if (Form1.hinh == 2)
+            {
+                this.Refresh();
+
+                hcn.AB = TinhTienDT(hcn.AB);
+                hcn.BC = TinhTienDT(hcn.BC);
+                hcn.CD = TinhTienDT(hcn.CD);
+                hcn.AD = TinhTienDT(hcn.AD);
+
+                hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+            }
+            //Tịnh tiến hình tam giác
+            else if (Form1.hinh == 3)
+            {
+                this.Refresh();
+
+                htg.AB = TinhTienDT(htg.AB);
+                htg.AC = TinhTienDT(htg.AC);
+                htg.BC = TinhTienDT(htg.BC);
+
+                htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+            }
+            //Tịnh tiến hình tròn
+            else if (Form1.hinh == 4)
+            {
+                this.Refresh();
+
+                hinhtron.ht.tam = TinhTienDiem(hinhtron.ht.tam);
+
+                hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+            }
+            //Tịnh tiến hình vuông
+            else if (Form1.hinh == 5)
+            {
+                this.Refresh();
+
+                hinhvuong.AB = TinhTienDT(hinhvuong.AB);
+                hinhvuong.BC = TinhTienDT(hinhvuong.BC);
+                hinhvuong.CD = TinhTienDT(hinhvuong.CD);
+                hinhvuong.AD = TinhTienDT(hinhvuong.AD);
+
+                hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            }
+            //TỊnh tiến Elip
+            else if (Form1.hinh == 7)
+            {
+                this.Refresh();
+
+                elip.hinhelip.tam = TinhTienDiem(elip.hinhelip.tam);
+
+                elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+            }
+            else if(Form1.hinh==9)
+            {
+                this.Refresh();
+
+                hbh.AB = TinhTienDT(hbh.AB);
+                hbh.BC = TinhTienDT(hbh.BC);
+                hbh.CD = TinhTienDT(hbh.CD);
+                hbh.AD = TinhTienDT(hbh.AD);
+
+                hbh.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hbh.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hbh.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hbh.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+            }
+        }
+
+        //Tịnh tiến đường thẳng
+        public Line TinhTienDT(Line ab)
+        {
+            int xA = ab.getFpoint().getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
+            int yA = ab.getFpoint().getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
+            int xB = ab.getLpoint().getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
+            int yB = ab.getLpoint().getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
+
+            Point p1 = new Point(xA, yA);
+            Point p2 = new Point(xB, yB);
+
+            Line dt = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY(), Color.Red);
+            return dt;
+
+            //Nam code
+        }
+
+        //Tịnh tiến điểm
+        public Point TinhTienDiem(Point a)
+        {
+            int xA = a.getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
+            int yA = a.getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
+
+            Point b = new Point(xA, yA);
+            return b;
+
+            //Nam code
+        }
+
+        private void jbtnTinhTien_Click(object sender, EventArgs e)
+        {
+            //Nam code
+            int x = Int32.Parse(numericUpDown1.Value.ToString());
+            int y = Int32.Parse(numericUpDown2.Value.ToString());
+            if (x == 0 && y == 0)
+            {
+                MessageBox.Show("Bạn chưa nhập giá trị tịnh tiến","Cảnh báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                PhepTinhTien();
+                labelChange();
+            }
+            
+        }
     }
 }
