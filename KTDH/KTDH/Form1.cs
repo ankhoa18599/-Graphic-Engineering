@@ -18,7 +18,11 @@ namespace KTDH
         HinhTron hinhtron;
         HinhVuong hinhvuong;
         HinhElip elip;
+<<<<<<< HEAD
         HinhBinhHanh hbh;
+=======
+        FormHinhThoi formHT;
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
         public Form1()
         {
             InitializeComponent();
@@ -173,10 +177,6 @@ namespace KTDH
             labelChange(); // reset bang 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
@@ -247,6 +247,7 @@ namespace KTDH
             labelChange();
             //Nam code
         }
+<<<<<<< HEAD
         private void jbtnHinhbh_Click(object sender, EventArgs e)
         {
             Form1.hinh = 9;
@@ -397,6 +398,15 @@ namespace KTDH
                 PhepTinhTien();
                 labelChange();
             }
+=======
+        private void jbtnHinhThoi_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 6;
+            FormHinhThoi formHT = new FormHinhThoi();
+            formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
+            formHT.ShowDialog();
+            if (formHT.getcheckchange() == false) return;
+>>>>>>> master
             
         }
     }
