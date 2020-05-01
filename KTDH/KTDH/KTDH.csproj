@@ -57,11 +57,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="HinhBinhHanh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HinhBinhHanh.Designer.cs">
       <DependentUpon>HinhBinhHanh.cs</DependentUpon>
+=======
+    <Compile Include="FormHinhThoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHinhThoi.Designer.cs">
+      <DependentUpon>FormHinhThoi.cs</DependentUpon>
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
     </Compile>
     <Compile Include="HinhChuNhat.cs">
       <SubType>Form</SubType>
@@ -81,6 +89,7 @@
     <Compile Include="Hinhtamgiac.Designer.cs">
       <DependentUpon>Hinhtamgiac.cs</DependentUpon>
     </Compile>
+    <Compile Include="HinhThoi.cs" />
     <Compile Include="HinhTron.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,8 +113,13 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="HinhBinhHanh.resx">
       <DependentUpon>HinhBinhHanh.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="FormHinhThoi.resx">
+      <DependentUpon>FormHinhThoi.cs</DependentUpon>
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
     </EmbeddedResource>
     <EmbeddedResource Include="HinhChuNhat.resx">
       <DependentUpon>HinhChuNhat.cs</DependentUpon>
