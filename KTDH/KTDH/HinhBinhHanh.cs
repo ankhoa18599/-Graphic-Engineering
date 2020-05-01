@@ -11,7 +11,14 @@ namespace KTDH
 {
     public partial class HinhBinhHanh : Form
     {
-        public int xa, ya, xb, yb, xc, yc, xd, yd;
+        public int xa, ya, xb,yb,xc,yc,xd,yd;
+        public Line AB, BC, CD, AD;
+        public Boolean checkchange = false;
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void Ve(object sender, EventArgs e)
         {
@@ -21,28 +28,31 @@ namespace KTDH
             yb = Int32.Parse(numericUpDown4.Value.ToString());
             xc = Int32.Parse(numericUpDown5.Value.ToString());
             yc = Int32.Parse(numericUpDown6.Value.ToString());
+            if ((xa == xb && ya == yb) || (xa == xc && ya == yc) || (xb == xc && yb == yc))
+            {
+                MessageBox.Show("Sai thông số đầu vào", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                xd = xc - xb + xa;
+                yd = yc - yb + ya;
 
-            xd = xc - (xb - xa);
-            if (xd > 40 || xd < -40) xd = xd-40;
-            yd = yc - (yb - ya);
-            if (yd > 40 || yd < -40) yd = yd-40;
+                Point A = Point.FakeToReal(xa, ya);
+                Point B = Point.FakeToReal(xb, yb);
+                Point C = Point.FakeToReal(xc, yc);
+                Point D = Point.FakeToReal(xd, yd);
 
-            Point A = Point.FakeToReal(xa, ya);
-            Point B = Point.FakeToReal(xb, yb);
-            Point C = Point.FakeToReal(xc, yc);
-            Point D = Point.FakeToReal(xd, yd);
+                AB = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Red);
+                BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), Color.Red);
+                CD = new Line(C.getX(), C.getY(), D.getX(), D.getY(), Color.Red);
+                AD = new Line(A.getX(), A.getY(), D.getX(), D.getY(), Color.Red);
 
-            AB = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Red);
-            BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), Color.Red);
-            CD = new Line(C.getX(), C.getY(), D.getX(), D.getY(), Color.Red);
-            AD = new Line(A.getX(), A.getY(), D.getX(), D.getY(), Color.Red);
-            this.checkchange = true;
-            this.Close();
-
+                this.checkchange = true;
+                this.Close();
+            }
         }
 
-        public Line AB, BC, CD, AD;
-        public Boolean checkchange = false;
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
