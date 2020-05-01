@@ -122,6 +122,26 @@ namespace KTDH
                 label20.Text = "";
                 label21.Text = "";
             }
+            else if (Form1.hinh == 4)
+            {
+                label5.Text = "HÌNH TRÒN";
+                label6.Text = "xTam:";
+                label7.Text = "yTam:";
+                label8.Text = ((hinhtron.ht.tam.getX() - 200) / 5).ToString();
+                label9.Text = (-(hinhtron.ht.tam.getY() - 200) / 5).ToString();
+                label10.Text = "Bán kính:";
+                label11.Text = "";
+                label12.Text = (hinhtron.ht.getR()/5).ToString();
+                label13.Text = "";
+                label14.Text = "";
+                label15.Text = "";
+                label16.Text = "";
+                label17.Text = "";
+                label18.Text = "";
+                label19.Text = "";
+                label20.Text = "";
+                label21.Text = "";
+            }
             else if (Form1.hinh == 7)
             {
                 label5.Text = "Hình Elip";
@@ -256,7 +276,8 @@ namespace KTDH
             if (Form1.hinh == 4)
             {
                 this.Refresh();
-                //hình tròn để sau
+                hinhtron.ht.tam.QuayDiem();
+                hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
             if (Form1.hinh == 5)
@@ -270,6 +291,13 @@ namespace KTDH
                 hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                 hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                 hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 7)
+            {
+                this.Refresh();
+                elip.hinhelip.tam.QuayDiem();
+                elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
         }
