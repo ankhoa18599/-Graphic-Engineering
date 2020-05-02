@@ -325,6 +325,15 @@ namespace KTDH
                 hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
+            if (Form1.hinh == 6)
+            {
+                this.Refresh();
+                formHT.GetHinhThoi().getTam().QuayDiem();
+                formHT.GetHinhThoi().getCheoA().QuayDT();
+                formHT.GetHinhThoi().getCheoB().QuayDT();
+                formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
             if (Form1.hinh == 7)
             {
                 this.Refresh();
