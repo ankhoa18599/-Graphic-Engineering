@@ -105,16 +105,16 @@ namespace KTDH
             // 
             // TamX_TextBox
             // 
-            this.TamX_TextBox.Location = new System.Drawing.Point(156, 32);
+            this.TamX_TextBox.Location = new System.Drawing.Point(181, 32);
             this.TamX_TextBox.Name = "TamX_TextBox";
-            this.TamX_TextBox.Size = new System.Drawing.Size(37, 20);
+            this.TamX_TextBox.Size = new System.Drawing.Size(26, 20);
             this.TamX_TextBox.TabIndex = 0;
             // 
             // TamY_TextBox
             // 
-            this.TamY_TextBox.Location = new System.Drawing.Point(199, 32);
+            this.TamY_TextBox.Location = new System.Drawing.Point(213, 32);
             this.TamY_TextBox.Name = "TamY_TextBox";
-            this.TamY_TextBox.Size = new System.Drawing.Size(37, 20);
+            this.TamY_TextBox.Size = new System.Drawing.Size(26, 20);
             this.TamY_TextBox.TabIndex = 1;
             // 
             // a_TextBox
@@ -192,6 +192,10 @@ namespace KTDH
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+        internal HinhThoi GetHinhThoi()
+        {
+            return this.hinhthoi;
         }
 
     }
