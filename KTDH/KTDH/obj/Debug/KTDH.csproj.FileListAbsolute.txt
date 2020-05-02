@@ -51,11 +51,14 @@ D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.exe
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhElip.resources
 <<<<<<< HEAD
+<<<<<<< HEAD
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhVuong.resources
 <<<<<<< HEAD
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhBinhHanh.resources
 =======
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhThoi.resources
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
 >>>>>>> parent of 9f943ce... Hình Thoi

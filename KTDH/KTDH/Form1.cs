@@ -34,10 +34,13 @@ namespace KTDH
         HinhElip elip;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         HinhBinhHanh hbh;
 =======
         FormHinhThoi formHT;
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
 >>>>>>> parent of 9f943ce... Hình Thoi
         public Form1()
