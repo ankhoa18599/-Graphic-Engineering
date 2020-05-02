@@ -16,6 +16,7 @@ namespace KTDH
         HinhChuNhat hcn;
         HinhTamGiac htg;
         HinhTron hinhtron;
+        HinhVuong hinhvuong;
         HinhElip elip;
         public Form1()
         {
@@ -41,53 +42,6 @@ namespace KTDH
 
         void labelChange()
         {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-            if (Form1.hinh == 1)
-=======
-            if (Form1.hinh == -1)
-            {
-                label5.Text = "";
-                label6.Text = "";
-                label7.Text = "";
-                label8.Text = "";
-                label9.Text = "";
-                label10.Text = "";
-                label11.Text = "";
-                label12.Text = "";
-                label13.Text = "";
-                label14.Text = "";
-                label15.Text = "";
-                label16.Text = "";
-                label17.Text = "";
-                label18.Text = "";
-                label19.Text = "";
-                label20.Text = "";
-                label21.Text = "";
-            }
-            else if (Form1.hinh == 1)
->>>>>>> master
-            {
-                label5.Text = "Đường Thẳng";
-                label6.Text = "xA:";
-                label7.Text = "yA:";
-                label8.Text = ((AB.getFpoint().getX() - 200) / 5).ToString();
-                label9.Text = (-(AB.getFpoint().getY() - 200) / 5).ToString();
-                label10.Text = "xB:";
-                label11.Text = "yB:";
-                label12.Text = ((AB.getLpoint().getX() - 200) / 5).ToString();
-                label13.Text = (-(AB.getLpoint().getY() - 200) / 5).ToString();
-                label14.Text = "";
-                label15.Text = "";
-                label16.Text = "";
-                label17.Text = "";
-                label18.Text = "";
-                label19.Text = "";
-                label20.Text = "";
-                label21.Text = "";
-            }
-<<<<<<< HEAD
-=======
                 if (Form1.hinh == -1)
                 {
                     label5.Text = "";
@@ -148,8 +102,6 @@ namespace KTDH
                     label20.Text = ((hcn.CD.getLpoint().getX() - 200) / 5).ToString();
                     label21.Text = ((hcn.BC.getLpoint().getY() - 200) / 5).ToString();
                 }
->>>>>>> Stashed changes
-=======
             else if (Form1.hinh == 2)
             {
                 label5.Text = "Hình chữ nhật";
@@ -190,9 +142,26 @@ namespace KTDH
                 label20.Text = "";
                 label21.Text = "";
             }
-<<<<<<< HEAD
->>>>>>> master
-=======
+            else if (Form1.hinh == 4)
+            {
+                label5.Text = "HÌNH TRÒN";
+                label6.Text = "xTam:";
+                label7.Text = "yTam:";
+                label8.Text = ((hinhtron.ht.tam.getX() - 200) / 5).ToString();
+                label9.Text = (-(hinhtron.ht.tam.getY() - 200) / 5).ToString();
+                label10.Text = "Bán kính:";
+                label11.Text = "";
+                label12.Text = (hinhtron.ht.getR()/5).ToString();
+                label13.Text = "";
+                label14.Text = "";
+                label15.Text = "";
+                label16.Text = "";
+                label17.Text = "";
+                label18.Text = "";
+                label19.Text = "";
+                label20.Text = "";
+                label21.Text = "";
+            }
             else if (Form1.hinh == 7)
             {
                 label5.Text = "Hình Elip";
@@ -201,7 +170,6 @@ namespace KTDH
                 label8.Text = ((elip.hinhelip.tam.getX() - 200) / 5).ToString();
                 label9.Text = (-(elip.hinhelip.tam.getY() - 200) / 5).ToString();
             }
->>>>>>> master
         }
 
 
@@ -227,17 +195,6 @@ namespace KTDH
 
         }
 
-        private void jbtnHinhElip_Click(object sender, EventArgs e)
-        {
-            Form1.hinh = 7;
-            elip = new HinhElip();
-            elip.ShowDialog();
-            if (elip.checkchange == false) return;
-            elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
-
-            labelChange();
-            //Nam code
-        }
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             Form1.hinh = -1;
@@ -270,6 +227,7 @@ namespace KTDH
             htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Form1.hinh = 4;
@@ -278,6 +236,90 @@ namespace KTDH
             if (hinhtron.checkchange == false) return;
             hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
+        }
+        private void jbtnHinhVuong_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 5;
+            hinhvuong = new HinhVuong();
+            hinhvuong.ShowDialog();
+            if (hinhvuong.checkchange == false) return;
+            hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+        private void jbtnHinhElip_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 7;
+            elip = new HinhElip();
+            elip.ShowDialog();
+            if (elip.checkchange == false) return;
+            elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+            //Nam code
+        }
+        private void jbntQuay_Click(object sender, EventArgs e)
+        {
+            if (Form1.hinh == 1)
+            {
+                this.Refresh();
+                AB.QuayDT();
+                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 2)
+            {
+                this.Refresh();
+                hcn.AB.QuayDT();
+                hcn.BC.QuayDT();
+                hcn.CD.QuayDT();
+                hcn.AD.QuayDT();
+
+                hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 3)
+            {
+                this.Refresh();
+                htg.AB.QuayDT();
+                htg.AC.QuayDT();
+                htg.BC.QuayDT();
+                htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 4)
+            {
+                this.Refresh();
+                hinhtron.ht.tam.QuayDiem();
+                hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 5)
+            {
+                this.Refresh();
+                hinhvuong.AB.QuayDT();
+                hinhvuong.BC.QuayDT();
+                hinhvuong.CD.QuayDT();
+                hinhvuong.AD.QuayDT();
+                hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 7)
+            {
+                this.Refresh();
+                elip.hinhelip.tam.QuayDiem();
+                elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
         }
     }
 }

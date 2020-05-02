@@ -81,6 +81,12 @@
     <Compile Include="HinhTron.Designer.cs">
       <DependentUpon>HinhTron.cs</DependentUpon>
     </Compile>
+    <Compile Include="HinhVuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HinhVuong.Designer.cs">
+      <DependentUpon>HinhVuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="HT.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="Point.cs" />
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HinhTron.resx">
       <DependentUpon>HinhTron.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HinhVuong.resx">
+      <DependentUpon>HinhVuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -128,41 +128,24 @@ namespace KTDH
 
             }
         }
-        public static void  DDA_Line(Color color,Point Lpoint,Point Fpoint,Graphics g) // Ve duong thang co dinh dang mau
+
+        public void QuayDT()
         {
-            Color m = color;
-            int Dx, Dy, count;
-            //int temp_3, temp_4;
-            Dx = Lpoint.getX() - Fpoint.getX();
-            Dy = Lpoint.getY() - Fpoint.getY();
-            if (Math.Abs(Dy) > Math.Abs(Dx)) count = Math.Abs(Dy);
-            else count = Math.Abs(Dx);
-            float delta_X, delta_Y, x, y;
-            Point temp = new Point();
-            count /= 5;
-            if (count > 0)
-            {
-                delta_X = Dx;
-                delta_X /= count;
-                delta_Y = Dy;
-                delta_Y /= count;
-                x = Fpoint.getX();
-                y = Fpoint.getY();
-                do
-                {
-                    temp.setX(Point.round(x));
-                    temp.setY(Point.round(y));
-                    Point.putpixel(temp.getX(), temp.getY(), g);
-                    // temp_3 = temp_1;
-                    // temp_4 = temp_2;
-                    x += delta_X;
-                    y += delta_Y;
-                    --count;
-                    //dem++;
-                } while (count != -1);
-
-            }
+            double sin = Math.Sin(Math.PI * 60.0 / 180.0);
+            double cos = Math.Cos(Math.PI * 60.0 / 180.0);
+            //Tọa độ trước khi truyền vào là real.
+            //Sau 2 dòng này sẽ thành fake ( thực ra cũng không cần thêm biến có điều hơi rối thôi
+            Point pF = Point.RealToFake(this.Fpoint.getX(), this.Fpoint.getY());
+            Point pL = Point.RealToFake(this.Lpoint.getX(), this.Lpoint.getY());
+            //Quay nó :V 
+            this.Fpoint.setX(Convert.ToInt32(pF.getX() * cos - sin * pF.getY()));
+            this.Fpoint.setY(Convert.ToInt32(pF.getX() * sin + cos * pF.getY()));
+            this.Lpoint.setX(Convert.ToInt32(pL.getX() * cos - sin * pL.getY()));
+            this.Lpoint.setY(Convert.ToInt32(pL.getX() * sin + cos * pL.getY()));
+            
+            //Dổi về tọa độ Real
+            this.Fpoint = Point.FakeToReal(this.Fpoint.getX(),this.Fpoint.getY());
+            this.Lpoint = Point.FakeToReal(this.Lpoint.getX(), this.Lpoint.getY());
         }
-
     }
 }
