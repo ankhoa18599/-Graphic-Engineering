@@ -328,10 +328,11 @@ namespace KTDH
             if (Form1.hinh == 6)
             {
                 this.Refresh();
+                formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
                 formHT.GetHinhThoi().getTam().QuayDiem();
                 formHT.GetHinhThoi().getCheoA().QuayDT();
                 formHT.GetHinhThoi().getCheoB().QuayDT();
-                formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
+                formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
             if (Form1.hinh == 7)
