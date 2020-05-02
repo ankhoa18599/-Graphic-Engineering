@@ -48,10 +48,11 @@ namespace KTDH
         public void Draw(Graphics g)
         {
             Line a1b1, b1a2, a2b2, b2a1;
-            Point AF = Point.FakeToReal(CheoA.getFpoint().getX(), CheoA.getFpoint().getY());
-            Point AL = Point.FakeToReal(CheoA.getLpoint().getX(), CheoA.getLpoint().getY());
-            Point BF = Point.FakeToReal(CheoB.getFpoint().getX(), CheoB.getFpoint().getY());
-            Point BL = Point.FakeToReal(CheoB.getLpoint().getX(), CheoB.getLpoint().getY());
+            Point AF, AL, BF, BL;
+            AF = new Point(CheoA.getFpoint().getX(), CheoA.getFpoint().getY());
+            AL = new Point(CheoA.getLpoint().getX(), CheoA.getLpoint().getY());
+            BF = new Point(CheoB.getFpoint().getX(), CheoB.getFpoint().getY());
+            BL = new Point(CheoB.getLpoint().getX(), CheoB.getLpoint().getY());
 
             AF.setPoint(Point.round(AF.getX()), Point.round(AF.getY()));
             AL.setPoint(Point.round(AL.getX()), Point.round(AL.getY()));

@@ -76,14 +76,22 @@ namespace KTDH
         {
             hinhthoi = new HinhThoi();
             Point Tam = new Point(Int32.Parse(this.TamX_TextBox.Text), Int32.Parse(this.TamY_TextBox.Text));
-            hinhthoi.setTam(Tam);
             int Cheoa = Int32.Parse(this.a_TextBox.Text);
             int Cheob = Int32.Parse(this.b_TextBox.Text);
+
             Point a1, a2, b1, b2;
             a1 = new Point(Tam.getX(), Tam.getY() + Cheoa / 2);
             a2 = new Point(Tam.getX(), Tam.getY() - Cheoa / 2);
             b1 = new Point(Tam.getX() - Cheob / 2, Tam.getY());
             b2 = new Point(Tam.getX() + Cheob / 2, Tam.getY());
+
+            a1 = Point.FakeToReal(a1.getX(), a1.getY());
+            a2 = Point.FakeToReal(a2.getX(), a2.getY());
+            b1 = Point.FakeToReal(b1.getX(), b1.getY());
+            b2 = Point.FakeToReal(b2.getX(), b2.getY());
+            Tam = Point.FakeToReal(Tam.getX(), Tam.getY());
+            hinhthoi.setTam(Tam);
+
             Line DCA = new Line(a1.getX(), a1.getY(), a2.getX(), a2.getY(), Color.Black);
             Line DCB = new Line(b1.getX(), b1.getY(), b2.getX(), b2.getY(), Color.Black);
             hinhthoi.setCheo(DCA, DCB);
