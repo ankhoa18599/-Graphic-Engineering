@@ -156,20 +156,20 @@ namespace KTDH
                 label5.Text = "Hình thoi";
                 label6.Text = "xA1:";
                 label7.Text = "yA1:";
-                label8.Text = formHT.GetHinhThoi().getCheoA().getFpoint().getX().ToString();
-                label9.Text = formHT.GetHinhThoi().getCheoA().getFpoint().getY().ToString();
+                label8.Text = ((formHT.GetHinhThoi().getCheoA().getFpoint().getX() - 200) / 5).ToString();
+                label9.Text = ((formHT.GetHinhThoi().getCheoA().getFpoint().getY() - 200) / 5).ToString();
                 label10.Text = "xA2:";
                 label11.Text = "yA2:";
-                label12.Text = formHT.GetHinhThoi().getCheoA().getLpoint().getX().ToString();
-                label13.Text = formHT.GetHinhThoi().getCheoA().getLpoint().getY().ToString();
+                label12.Text = ((formHT.GetHinhThoi().getCheoA().getLpoint().getX() - 200) / 5).ToString();
+                label13.Text = ((formHT.GetHinhThoi().getCheoA().getLpoint().getY() - 200) / 5).ToString();
                 label14.Text = "xB1";
                 label15.Text = "yB1";
-                label16.Text = formHT.GetHinhThoi().getCheoB().getFpoint().getX().ToString();
-                label17.Text = formHT.GetHinhThoi().getCheoB().getFpoint().getY().ToString();
+                label16.Text = ((formHT.GetHinhThoi().getCheoB().getFpoint().getX() - 200) / 5).ToString();
+                label17.Text = ((formHT.GetHinhThoi().getCheoB().getFpoint().getY() - 200) / 5).ToString();
                 label18.Text = "xB2";
                 label19.Text = "yB2";
-                label20.Text = formHT.GetHinhThoi().getCheoB().getLpoint().getX().ToString();
-                label21.Text = formHT.GetHinhThoi().getCheoB().getLpoint().getY().ToString();
+                label20.Text = ((formHT.GetHinhThoi().getCheoB().getLpoint().getX() - 200) / 5).ToString();
+                label21.Text = ((formHT.GetHinhThoi().getCheoB().getLpoint().getY() - 200) / 5).ToString();
             }
         }
 
