@@ -32,8 +32,11 @@ namespace KTDH
 
         HinhVuong hinhvuong;
         HinhElip elip;
+<<<<<<< HEAD
         HinhBinhHanh hbh;
         FormHinhThoi formHT;
+=======
+>>>>>>> parent of 9f943ce... Hình Thoi
         public Form1()
         {
             InitializeComponent();
@@ -205,6 +208,10 @@ namespace KTDH
             labelChange(); // reset bang 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
@@ -275,6 +282,7 @@ namespace KTDH
             labelChange();
             //Nam code
         }
+<<<<<<< HEAD
         private void jbtnHinhThoi_Click(object sender, EventArgs e)
         {
             Form1.hinh = 6;
@@ -284,5 +292,8 @@ namespace KTDH
             if (formHT.getcheckchange() == false) return;
             labelChange();
         }
+=======
+
+>>>>>>> parent of 9f943ce... Hình Thoi
     }
 }
