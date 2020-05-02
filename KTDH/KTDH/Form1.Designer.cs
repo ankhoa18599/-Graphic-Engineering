@@ -91,11 +91,16 @@
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.button2.Location = new System.Drawing.Point(232, 50);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.button2.Location = new System.Drawing.Point(231, 41);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.button2.Location = new System.Drawing.Point(308, 50);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.button2.Location = new System.Drawing.Point(308, 50);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -112,11 +117,16 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.button1.Location = new System.Drawing.Point(45, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.button1.Location = new System.Drawing.Point(34, 9);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.button1.Location = new System.Drawing.Point(45, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.button1.Location = new System.Drawing.Point(45, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -287,11 +297,16 @@
             this.jbtnVe3D.BackColor = System.Drawing.Color.White;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnVe3D.Location = new System.Drawing.Point(1166, 10);
             this.jbtnVe3D.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnVe3D.Location = new System.Drawing.Point(808, 9);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnVe3D.Location = new System.Drawing.Point(1077, 11);
+            this.jbtnVe3D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnVe3D.Location = new System.Drawing.Point(1077, 11);
             this.jbtnVe3D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -307,11 +322,16 @@
             this.jbtnHinhElip.BackColor = System.Drawing.SystemColors.ActiveCaption;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnHinhElip.Location = new System.Drawing.Point(593, 50);
             this.jbtnHinhElip.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnHinhElip.Location = new System.Drawing.Point(531, 41);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnHinhElip.Location = new System.Drawing.Point(708, 50);
+            this.jbtnHinhElip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnHinhElip.Location = new System.Drawing.Point(708, 50);
             this.jbtnHinhElip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -332,8 +352,13 @@
 =======
             this.jbtnHinhTron.BackColor = System.Drawing.Color.White;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnHinhTron.Location = new System.Drawing.Point(674, 41);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnHinhTron.Location = new System.Drawing.Point(899, 50);
+            this.jbtnHinhTron.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnHinhTron.Location = new System.Drawing.Point(899, 50);
             this.jbtnHinhTron.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -352,11 +377,16 @@
             this.jbtnHinhThoi.BackColor = System.Drawing.SystemColors.ActiveCaption;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnHinhThoi.Location = new System.Drawing.Point(593, 10);
             this.jbtnHinhThoi.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnHinhThoi.Location = new System.Drawing.Point(531, 9);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnHinhThoi.Location = new System.Drawing.Point(708, 11);
+            this.jbtnHinhThoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnHinhThoi.Location = new System.Drawing.Point(708, 11);
             this.jbtnHinhThoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -372,11 +402,16 @@
             this.jbtnHinhTamGiac.BackColor = System.Drawing.SystemColors.ActiveCaption;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnHinhTamGiac.Location = new System.Drawing.Point(423, 10);
             this.jbtnHinhTamGiac.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnHinhTamGiac.Location = new System.Drawing.Point(383, 9);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnHinhTamGiac.Location = new System.Drawing.Point(511, 11);
+            this.jbtnHinhTamGiac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnHinhTamGiac.Location = new System.Drawing.Point(511, 11);
             this.jbtnHinhTamGiac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -393,11 +428,16 @@
             this.jbtnHinhVuong.BackColor = System.Drawing.SystemColors.ActiveCaption;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnHinhVuong.Location = new System.Drawing.Point(423, 50);
             this.jbtnHinhVuong.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnHinhVuong.Location = new System.Drawing.Point(383, 41);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnHinhVuong.Location = new System.Drawing.Point(511, 50);
+            this.jbtnHinhVuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnHinhVuong.Location = new System.Drawing.Point(511, 50);
             this.jbtnHinhVuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -414,11 +454,16 @@
             this.JbntHInhChuNhat.BackColor = System.Drawing.SystemColors.ActiveCaption;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.JbntHInhChuNhat.Location = new System.Drawing.Point(232, 10);
             this.JbntHInhChuNhat.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.JbntHInhChuNhat.Location = new System.Drawing.Point(231, 9);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.JbntHInhChuNhat.Location = new System.Drawing.Point(308, 11);
+            this.JbntHInhChuNhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.JbntHInhChuNhat.Location = new System.Drawing.Point(308, 11);
             this.JbntHInhChuNhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -435,11 +480,16 @@
             this.jbtnTamO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnTamO.Location = new System.Drawing.Point(308, 144);
             this.jbtnTamO.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnTamO.Location = new System.Drawing.Point(231, 117);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnTamO.Location = new System.Drawing.Point(308, 144);
+            this.jbtnTamO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnTamO.Location = new System.Drawing.Point(308, 144);
             this.jbtnTamO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -455,11 +505,16 @@
             this.jbtnOx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnOx.Location = new System.Drawing.Point(308, 191);
             this.jbtnOx.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnOx.Location = new System.Drawing.Point(231, 155);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnOx.Location = new System.Drawing.Point(308, 191);
+            this.jbtnOx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnOx.Location = new System.Drawing.Point(308, 191);
             this.jbtnOx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -475,11 +530,16 @@
             this.jbtnOy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnOy.Location = new System.Drawing.Point(308, 238);
             this.jbtnOy.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnOy.Location = new System.Drawing.Point(231, 193);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnOy.Location = new System.Drawing.Point(308, 238);
+            this.jbtnOy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnOy.Location = new System.Drawing.Point(308, 238);
             this.jbtnOy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -495,11 +555,16 @@
             this.numericUpDown3.BackColor = System.Drawing.Color.White;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.numericUpDown3.Location = new System.Drawing.Point(212, 191);
             this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.numericUpDown3.Location = new System.Drawing.Point(159, 155);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.numericUpDown3.Location = new System.Drawing.Point(212, 191);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.numericUpDown3.Location = new System.Drawing.Point(212, 191);
             this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -513,11 +578,16 @@
             this.jbtntiLe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtntiLe.Location = new System.Drawing.Point(45, 187);
             this.jbtntiLe.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtntiLe.Location = new System.Drawing.Point(34, 152);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtntiLe.Location = new System.Drawing.Point(45, 187);
+            this.jbtntiLe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtntiLe.Location = new System.Drawing.Point(45, 187);
             this.jbtntiLe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -533,11 +603,16 @@
             this.jbntQuay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbntQuay.Location = new System.Drawing.Point(308, 97);
             this.jbntQuay.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbntQuay.Location = new System.Drawing.Point(231, 79);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbntQuay.Location = new System.Drawing.Point(308, 97);
+            this.jbntQuay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbntQuay.Location = new System.Drawing.Point(308, 97);
             this.jbntQuay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -573,11 +648,16 @@
             this.numericUpDown2.BackColor = System.Drawing.Color.White;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.numericUpDown2.Location = new System.Drawing.Point(216, 139);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.numericUpDown2.Location = new System.Drawing.Point(162, 113);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.numericUpDown2.Location = new System.Drawing.Point(216, 139);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.numericUpDown2.Location = new System.Drawing.Point(216, 139);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -596,11 +676,16 @@
             this.numericUpDown1.BackColor = System.Drawing.Color.White;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.numericUpDown1.Location = new System.Drawing.Point(216, 113);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.numericUpDown1.Location = new System.Drawing.Point(162, 92);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.numericUpDown1.Location = new System.Drawing.Point(216, 113);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.numericUpDown1.Location = new System.Drawing.Point(216, 113);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -619,11 +704,16 @@
             this.jbtnTinhTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnTinhTien.Location = new System.Drawing.Point(47, 107);
             this.jbtnTinhTien.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnTinhTien.Location = new System.Drawing.Point(35, 87);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnTinhTien.Location = new System.Drawing.Point(47, 107);
+            this.jbtnTinhTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnTinhTien.Location = new System.Drawing.Point(47, 107);
             this.jbtnTinhTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -639,11 +729,16 @@
             this.jbtnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.jbtnXoa.Location = new System.Drawing.Point(216, 305);
             this.jbtnXoa.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.jbtnXoa.Location = new System.Drawing.Point(162, 248);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.jbtnXoa.Location = new System.Drawing.Point(216, 305);
+            this.jbtnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.jbtnXoa.Location = new System.Drawing.Point(216, 305);
             this.jbtnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -680,11 +775,16 @@
             this.JpnLuoiGiaoDien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.JpnLuoiGiaoDien.Location = new System.Drawing.Point(620, 112);
             this.JpnLuoiGiaoDien.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.JpnLuoiGiaoDien.Location = new System.Drawing.Point(465, 91);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.JpnLuoiGiaoDien.Location = new System.Drawing.Point(620, 112);
+            this.JpnLuoiGiaoDien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.JpnLuoiGiaoDien.Location = new System.Drawing.Point(620, 112);
             this.JpnLuoiGiaoDien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -699,11 +799,16 @@
             this.btnVeNha.BackColor = System.Drawing.Color.White;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnVeNha.Location = new System.Drawing.Point(771, 11);
             this.btnVeNha.Margin = new System.Windows.Forms.Padding(4);
 =======
             this.btnVeNha.Location = new System.Drawing.Point(674, 9);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.btnVeNha.Location = new System.Drawing.Point(899, 11);
+            this.btnVeNha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.btnVeNha.Location = new System.Drawing.Point(899, 11);
             this.btnVeNha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -731,11 +836,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1312, 629);
             this.Controls.Add(this.button3);
 =======
             this.ClientSize = new System.Drawing.Size(963, 511);
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.ClientSize = new System.Drawing.Size(1312, 629);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.ClientSize = new System.Drawing.Size(1312, 629);
 >>>>>>> parent of 9f943ce... Hình Thoi
@@ -784,9 +893,13 @@
             this.Controls.Add(this.btnVeNha);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(4);
 =======
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 >>>>>>> parent of 9f943ce... Hình Thoi
@@ -848,10 +961,13 @@
         public System.Windows.Forms.Button btnVeNha;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public System.Windows.Forms.Button button3;
 =======
 
 >>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
+=======
+>>>>>>> parent of 9f943ce... Hình Thoi
 =======
 >>>>>>> parent of 9f943ce... Hình Thoi
     }
