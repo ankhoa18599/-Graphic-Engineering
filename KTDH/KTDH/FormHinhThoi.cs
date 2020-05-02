@@ -53,6 +53,10 @@ namespace KTDH
                 return true;
             }return false;
         }
+        internal HinhThoi GetHinhThoi()
+        {
+            return this.hinhthoi;
+        }
         private void Draw_Button_Click(object sender, EventArgs e)
         {
             checkchange = true;

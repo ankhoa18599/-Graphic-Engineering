@@ -131,6 +131,26 @@ namespace KTDH
                 label8.Text = ((elip.hinhelip.tam.getX() - 200) / 5).ToString();
                 label9.Text = (-(elip.hinhelip.tam.getY() - 200) / 5).ToString();
             }
+            else if(Form1.hinh == 6)
+            {
+                label5.Text = "Hình thoi";
+                label6.Text = "xA1:";
+                label7.Text = "yA1:";
+                label8.Text = formHT.GetHinhThoi().getCheoA().getFpoint().getX().ToString();
+                label9.Text = formHT.GetHinhThoi().getCheoA().getFpoint().getY().ToString();
+                label10.Text = "xA2:";
+                label11.Text = "yA2:";
+                label12.Text = formHT.GetHinhThoi().getCheoA().getLpoint().getX().ToString();
+                label13.Text = formHT.GetHinhThoi().getCheoA().getLpoint().getY().ToString();
+                label14.Text = "xB1";
+                label15.Text = "yB1";
+                label16.Text = formHT.GetHinhThoi().getCheoB().getFpoint().getX().ToString();
+                label17.Text = formHT.GetHinhThoi().getCheoB().getFpoint().getY().ToString();
+                label18.Text = "xB2";
+                label19.Text = "yB2";
+                label20.Text = formHT.GetHinhThoi().getCheoB().getLpoint().getX().ToString();
+                label21.Text = formHT.GetHinhThoi().getCheoB().getLpoint().getY().ToString();
+            }
         }
 
 
@@ -218,11 +238,11 @@ namespace KTDH
         private void jbtnHinhThoi_Click(object sender, EventArgs e)
         {
             Form1.hinh = 6;
-            FormHinhThoi formHT = new FormHinhThoi();
+            formHT = new FormHinhThoi();
             formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
             formHT.ShowDialog();
             if (formHT.getcheckchange() == false) return;
-            
+            labelChange();
         }
     }
 }
