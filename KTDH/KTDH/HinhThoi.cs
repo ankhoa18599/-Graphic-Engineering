@@ -33,18 +33,6 @@ namespace KTDH
             setCheoA(a);
             setCheoB(b);
         }
-        public Point getTam()
-        {
-            return this.Tam;
-        }
-        public Line getCheoA()
-        {
-            return this.CheoA;
-        }
-        public Line getCheoB()
-        {
-            return this.CheoB;
-        }
         public void Draw(Graphics g)
         {
             Line a1b1, b1a2, a2b2, b2a1;
@@ -52,15 +40,6 @@ namespace KTDH
             Point AL = Point.FakeToReal(CheoA.getLpoint().getX(), CheoA.getLpoint().getY());
             Point BF = Point.FakeToReal(CheoB.getFpoint().getX(), CheoB.getFpoint().getY());
             Point BL = Point.FakeToReal(CheoB.getLpoint().getX(), CheoB.getLpoint().getY());
-
-            AF.setX(Point.round(AF.getX()));
-            AF.setY(Point.round(AF.getY()));
-            AL.setX(Point.round(AL.getX()));
-            AL.setY(Point.round(AL.getY()));
-            BF.setX(Point.round(BF.getX()));
-            BF.setY(Point.round(BF.getY()));
-            BL.setX(Point.round(BL.getX()));
-            BL.setY(Point.round(BL.getY()));
 
             a1b1 = new Line(AF.getX(),AF.getY(),BF.getX(),BF.getY(),System.Drawing.Color.Black);
             b1a2 = new Line(BF.getX(), BF.getY(), AL.getX(), AL.getY(), System.Drawing.Color.Black);

@@ -149,6 +149,7 @@ namespace KTDH
                 label8.Text = ((elip.hinhelip.tam.getX() - 200) / 5).ToString();
                 label9.Text = (-(elip.hinhelip.tam.getY() - 200) / 5).ToString();
             }
+<<<<<<< HEAD
             else if(Form1.hinh == 6)
             {
                 label5.Text = "Hình thoi";
@@ -188,6 +189,8 @@ namespace KTDH
                 label20.Text = ((hbh.CD.getLpoint().getX() - 200) / 5).ToString();
                 label21.Text = ((hbh.BC.getLpoint().getY() - 200) / 5).ToString();
             }
+=======
+>>>>>>> parent of 09e36ea... Bổ sung hình thoi
         }
 
 
@@ -286,11 +289,11 @@ namespace KTDH
         private void jbtnHinhThoi_Click(object sender, EventArgs e)
         {
             Form1.hinh = 6;
-            formHT = new FormHinhThoi();
+            FormHinhThoi formHT = new FormHinhThoi();
             formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
             formHT.ShowDialog();
             if (formHT.getcheckchange() == false) return;
-            labelChange();
+            
         }
 =======
 
