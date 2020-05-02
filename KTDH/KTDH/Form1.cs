@@ -12,31 +12,12 @@ namespace KTDH
     public partial class Form1 : Form
     {
         public static int hinh = -1; // Xác định in hình nào để in thông số tọa độ hình đó ra 
-        Line AB, CD, BC, DA, AE, EB, FH, HK, KG, MQ, QP, PN, NM, ST, TO, OR, RS;
+        Line AB,CD,BC,AD;
         HinhChuNhat hcn;
         HinhTamGiac htg;
         HinhTron hinhtron;
-
-        private void jbtnHinhbh_Click(object sender, EventArgs e)
-        {
-            Form1.hinh = 9;
-            hbh = new HinhBinhHanh();
-            hbh.ShowDialog();
-            if (hbh.checkchange == false) return;
-            hbh.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-            hbh.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-            hbh.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-            hbh.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-            labelChange();
-        }
-
         HinhVuong hinhvuong;
         HinhElip elip;
-<<<<<<< HEAD
-        HinhBinhHanh hbh;
-        FormHinhThoi formHT;
-=======
->>>>>>> parent of 9f943ce... Hình Thoi
         public Form1()
         {
             InitializeComponent();
@@ -141,6 +122,26 @@ namespace KTDH
                 label20.Text = "";
                 label21.Text = "";
             }
+            else if (Form1.hinh == 4)
+            {
+                label5.Text = "HÌNH TRÒN";
+                label6.Text = "xTam:";
+                label7.Text = "yTam:";
+                label8.Text = ((hinhtron.ht.tam.getX() - 200) / 5).ToString();
+                label9.Text = (-(hinhtron.ht.tam.getY() - 200) / 5).ToString();
+                label10.Text = "Bán kính:";
+                label11.Text = "";
+                label12.Text = (hinhtron.ht.getR()/5).ToString();
+                label13.Text = "";
+                label14.Text = "";
+                label15.Text = "";
+                label16.Text = "";
+                label17.Text = "";
+                label18.Text = "";
+                label19.Text = "";
+                label20.Text = "";
+                label21.Text = "";
+            }
             else if (Form1.hinh == 7)
             {
                 label5.Text = "Hình Elip";
@@ -149,48 +150,6 @@ namespace KTDH
                 label8.Text = ((elip.hinhelip.tam.getX() - 200) / 5).ToString();
                 label9.Text = (-(elip.hinhelip.tam.getY() - 200) / 5).ToString();
             }
-<<<<<<< HEAD
-            else if(Form1.hinh == 6)
-            {
-                label5.Text = "Hình thoi";
-                label6.Text = "xA1:";
-                label7.Text = "yA1:";
-                label8.Text = formHT.GetHinhThoi().getCheoA().getFpoint().getX().ToString();
-                label9.Text = formHT.GetHinhThoi().getCheoA().getFpoint().getY().ToString();
-                label10.Text = "xA2:";
-                label11.Text = "yA2:";
-                label12.Text = formHT.GetHinhThoi().getCheoA().getLpoint().getX().ToString();
-                label13.Text = formHT.GetHinhThoi().getCheoA().getLpoint().getY().ToString();
-                label14.Text = "xB1";
-                label15.Text = "yB1";
-                label16.Text = formHT.GetHinhThoi().getCheoB().getFpoint().getX().ToString();
-                label17.Text = formHT.GetHinhThoi().getCheoB().getFpoint().getY().ToString();
-                label18.Text = "xB2";
-                label19.Text = "yB2";
-                label20.Text = formHT.GetHinhThoi().getCheoB().getLpoint().getX().ToString();
-                label21.Text = formHT.GetHinhThoi().getCheoB().getLpoint().getY().ToString();
-            else if (Form1.hinh == 9)
-            {
-                label5.Text = "Hình bình hành";
-                label6.Text = "xA:";
-                label7.Text = "yA:";
-                label8.Text = ((hbh.AB.getFpoint().getX() - 200) / 5).ToString();
-                label9.Text = (-(hbh.AB.getFpoint().getY() - 200) / 5).ToString();
-                label10.Text = "xB:";
-                label11.Text = "yB:";
-                label12.Text = ((hbh.AB.getLpoint().getX() - 200) / 5).ToString();
-                label13.Text = (-(hbh.AB.getLpoint().getY() - 200) / 5).ToString();
-                label14.Text = "xC";
-                label15.Text = "yC";
-                label16.Text = ((hbh.BC.getLpoint().getX() - 200) / 5).ToString();
-                label17.Text = (-(hbh.BC.getLpoint().getY() - 200) / 5).ToString();
-                label18.Text = "xD";
-                label19.Text = "yD";
-                label20.Text = ((hbh.CD.getLpoint().getX() - 200) / 5).ToString();
-                label21.Text = ((hbh.BC.getLpoint().getY() - 200) / 5).ToString();
-            }
-=======
->>>>>>> parent of 09e36ea... Bổ sung hình thoi
         }
 
 
@@ -249,11 +208,6 @@ namespace KTDH
             labelChange();
         }
 
-        private void jbtnHinhTron_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Form1.hinh = 4;
@@ -285,18 +239,67 @@ namespace KTDH
             labelChange();
             //Nam code
         }
-<<<<<<< HEAD
-        private void jbtnHinhThoi_Click(object sender, EventArgs e)
+        private void jbntQuay_Click(object sender, EventArgs e)
         {
-            Form1.hinh = 6;
-            FormHinhThoi formHT = new FormHinhThoi();
-            formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
-            formHT.ShowDialog();
-            if (formHT.getcheckchange() == false) return;
-            
-        }
-=======
+            if (Form1.hinh == 1)
+            {
+                this.Refresh();
+                AB.QuayDT();
+                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 2)
+            {
+                this.Refresh();
+                hcn.AB.QuayDT();
+                hcn.BC.QuayDT();
+                hcn.CD.QuayDT();
+                hcn.AD.QuayDT();
 
->>>>>>> parent of 9f943ce... Hình Thoi
+                hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 3)
+            {
+                this.Refresh();
+                htg.AB.QuayDT();
+                htg.AC.QuayDT();
+                htg.BC.QuayDT();
+                htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 4)
+            {
+                this.Refresh();
+                hinhtron.ht.tam.QuayDiem();
+                hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 5)
+            {
+                this.Refresh();
+                hinhvuong.AB.QuayDT();
+                hinhvuong.BC.QuayDT();
+                hinhvuong.CD.QuayDT();
+                hinhvuong.AD.QuayDT();
+                hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            if (Form1.hinh == 7)
+            {
+                this.Refresh();
+                elip.hinhelip.tam.QuayDiem();
+                elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+        }
     }
 }

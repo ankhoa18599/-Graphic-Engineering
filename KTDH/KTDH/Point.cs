@@ -70,6 +70,20 @@ namespace KTDH
             if (outP > 400) outP = 400; //nếu tọa độ lớn hơn 400 thì trả về 400
             return outP;
         }
+        public void QuayDiem()
+        {
+            double sin = Math.Sin(Math.PI * 60.0 / 180.0);
+            double cos = Math.Cos(Math.PI * 60.0 / 180.0);
+            Point p;
+            p = Point.RealToFake(this.X, this.Y);
+
+            this.X = Convert.ToInt32(p.getX() * cos - sin * p.getY());
+            this.Y = Convert.ToInt32(p.getX() * sin + cos * p.getY());
+
+            p = Point.FakeToReal(this.X, this.Y);
+            this.X = p.getX();
+            this.Y = p.getY();
+        }
         public static Point RealToFake(int x, int y)//lon ra nho
         {
             return new Point(x / 5 - 40, 40 - y / 5);//voi x va y deu chia het cho 5
