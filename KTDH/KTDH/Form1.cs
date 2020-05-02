@@ -12,12 +12,27 @@ namespace KTDH
     public partial class Form1 : Form
     {
         public static int hinh = -1; // Xác định in hình nào để in thông số tọa độ hình đó ra 
-        Line AB,CD,BC,AD;
+        Line AB, CD, BC, DA, AE, EB, FH, HK, KG, MQ, QP, PN, NM, ST, TO, OR, RS;
         HinhChuNhat hcn;
         HinhTamGiac htg;
         HinhTron hinhtron;
+
+        private void jbtnHinhbh_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 9;
+            hbh = new HinhBinhHanh();
+            hbh.ShowDialog();
+            if (hbh.checkchange == false) return;
+            hbh.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hbh.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hbh.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            hbh.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+            labelChange();
+        }
+
         HinhVuong hinhvuong;
         HinhElip elip;
+        HinhBinhHanh hbh;
         FormHinhThoi formHT;
         public Form1()
         {
@@ -150,6 +165,25 @@ namespace KTDH
                 label19.Text = "yB2";
                 label20.Text = formHT.GetHinhThoi().getCheoB().getLpoint().getX().ToString();
                 label21.Text = formHT.GetHinhThoi().getCheoB().getLpoint().getY().ToString();
+            else if (Form1.hinh == 9)
+            {
+                label5.Text = "Hình bình hành";
+                label6.Text = "xA:";
+                label7.Text = "yA:";
+                label8.Text = ((hbh.AB.getFpoint().getX() - 200) / 5).ToString();
+                label9.Text = (-(hbh.AB.getFpoint().getY() - 200) / 5).ToString();
+                label10.Text = "xB:";
+                label11.Text = "yB:";
+                label12.Text = ((hbh.AB.getLpoint().getX() - 200) / 5).ToString();
+                label13.Text = (-(hbh.AB.getLpoint().getY() - 200) / 5).ToString();
+                label14.Text = "xC";
+                label15.Text = "yC";
+                label16.Text = ((hbh.BC.getLpoint().getX() - 200) / 5).ToString();
+                label17.Text = (-(hbh.BC.getLpoint().getY() - 200) / 5).ToString();
+                label18.Text = "xD";
+                label19.Text = "yD";
+                label20.Text = ((hbh.CD.getLpoint().getX() - 200) / 5).ToString();
+                label21.Text = ((hbh.BC.getLpoint().getY() - 200) / 5).ToString();
             }
         }
 
@@ -204,6 +238,12 @@ namespace KTDH
             htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
+
+        private void jbtnHinhTron_Click(object sender, EventArgs e)
+        {
+           
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Form1.hinh = 4;

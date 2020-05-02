@@ -71,6 +71,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.JpnLuoiGiaoDien = new System.Windows.Forms.Panel();
             this.btnVeNha = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -87,7 +88,12 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
+            this.button2.Location = new System.Drawing.Point(232, 50);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.button2.Location = new System.Drawing.Point(231, 41);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 32);
             this.button2.TabIndex = 84;
@@ -98,7 +104,12 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
+            this.button1.Location = new System.Drawing.Point(45, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.button1.Location = new System.Drawing.Point(34, 9);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 64);
             this.button1.TabIndex = 83;
@@ -246,7 +257,12 @@
             // jbtnVe3D
             // 
             this.jbtnVe3D.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
+            this.jbtnVe3D.Location = new System.Drawing.Point(1166, 10);
+            this.jbtnVe3D.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnVe3D.Location = new System.Drawing.Point(808, 9);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnVe3D.Name = "jbtnVe3D";
             this.jbtnVe3D.Size = new System.Drawing.Size(105, 64);
             this.jbtnVe3D.TabIndex = 65;
@@ -256,7 +272,12 @@
             // jbtnHinhElip
             // 
             this.jbtnHinhElip.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
+            this.jbtnHinhElip.Location = new System.Drawing.Point(593, 50);
+            this.jbtnHinhElip.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnHinhElip.Location = new System.Drawing.Point(531, 41);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnHinhElip.Name = "jbtnHinhElip";
             this.jbtnHinhElip.Size = new System.Drawing.Size(114, 32);
             this.jbtnHinhElip.TabIndex = 64;
@@ -266,20 +287,32 @@
             // 
             // jbtnHinhTron
             // 
+<<<<<<< HEAD
+            this.jbtnHinhTron.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.jbtnHinhTron.Location = new System.Drawing.Point(771, 51);
+            this.jbtnHinhTron.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnHinhTron.BackColor = System.Drawing.Color.White;
             this.jbtnHinhTron.Location = new System.Drawing.Point(674, 41);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnHinhTron.Name = "jbtnHinhTron";
             this.jbtnHinhTron.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.jbtnHinhTron.Size = new System.Drawing.Size(114, 32);
             this.jbtnHinhTron.TabIndex = 63;
-            this.jbtnHinhTron.Text = "None2";
+            this.jbtnHinhTron.Text = "Hình bình hành";
             this.jbtnHinhTron.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.jbtnHinhTron.UseVisualStyleBackColor = false;
+            this.jbtnHinhTron.Click += new System.EventHandler(this.jbtnHinhbh_Click);
             // 
             // jbtnHinhThoi
             // 
             this.jbtnHinhThoi.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
+            this.jbtnHinhThoi.Location = new System.Drawing.Point(593, 10);
+            this.jbtnHinhThoi.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnHinhThoi.Location = new System.Drawing.Point(531, 9);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnHinhThoi.Name = "jbtnHinhThoi";
             this.jbtnHinhThoi.Size = new System.Drawing.Size(114, 32);
             this.jbtnHinhThoi.TabIndex = 62;
@@ -290,7 +323,12 @@
             // jbtnHinhTamGiac
             // 
             this.jbtnHinhTamGiac.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
+            this.jbtnHinhTamGiac.Location = new System.Drawing.Point(423, 10);
+            this.jbtnHinhTamGiac.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnHinhTamGiac.Location = new System.Drawing.Point(383, 9);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnHinhTamGiac.Name = "jbtnHinhTamGiac";
             this.jbtnHinhTamGiac.Size = new System.Drawing.Size(114, 32);
             this.jbtnHinhTamGiac.TabIndex = 61;
@@ -301,7 +339,12 @@
             // jbtnHinhVuong
             // 
             this.jbtnHinhVuong.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
+            this.jbtnHinhVuong.Location = new System.Drawing.Point(423, 50);
+            this.jbtnHinhVuong.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnHinhVuong.Location = new System.Drawing.Point(383, 41);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnHinhVuong.Name = "jbtnHinhVuong";
             this.jbtnHinhVuong.Size = new System.Drawing.Size(114, 32);
             this.jbtnHinhVuong.TabIndex = 60;
@@ -312,7 +355,12 @@
             // JbntHInhChuNhat
             // 
             this.JbntHInhChuNhat.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
+            this.JbntHInhChuNhat.Location = new System.Drawing.Point(232, 10);
+            this.JbntHInhChuNhat.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.JbntHInhChuNhat.Location = new System.Drawing.Point(231, 9);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.JbntHInhChuNhat.Name = "JbntHInhChuNhat";
             this.JbntHInhChuNhat.Size = new System.Drawing.Size(121, 32);
             this.JbntHInhChuNhat.TabIndex = 59;
@@ -323,7 +371,12 @@
             // jbtnTamO
             // 
             this.jbtnTamO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+<<<<<<< HEAD
+            this.jbtnTamO.Location = new System.Drawing.Point(308, 144);
+            this.jbtnTamO.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnTamO.Location = new System.Drawing.Point(231, 117);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnTamO.Name = "jbtnTamO";
             this.jbtnTamO.Size = new System.Drawing.Size(143, 32);
             this.jbtnTamO.TabIndex = 58;
@@ -333,7 +386,12 @@
             // jbtnOx
             // 
             this.jbtnOx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+<<<<<<< HEAD
+            this.jbtnOx.Location = new System.Drawing.Point(308, 191);
+            this.jbtnOx.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnOx.Location = new System.Drawing.Point(231, 155);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnOx.Name = "jbtnOx";
             this.jbtnOx.Size = new System.Drawing.Size(143, 32);
             this.jbtnOx.TabIndex = 57;
@@ -343,7 +401,12 @@
             // jbtnOy
             // 
             this.jbtnOy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+<<<<<<< HEAD
+            this.jbtnOy.Location = new System.Drawing.Point(308, 238);
+            this.jbtnOy.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnOy.Location = new System.Drawing.Point(231, 193);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnOy.Name = "jbtnOy";
             this.jbtnOy.Size = new System.Drawing.Size(143, 32);
             this.jbtnOy.TabIndex = 56;
@@ -353,7 +416,12 @@
             // numericUpDown3
             // 
             this.numericUpDown3.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
+            this.numericUpDown3.Location = new System.Drawing.Point(212, 191);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.numericUpDown3.Location = new System.Drawing.Point(159, 155);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(47, 20);
             this.numericUpDown3.TabIndex = 55;
@@ -361,7 +429,12 @@
             // jbtntiLe
             // 
             this.jbtntiLe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+<<<<<<< HEAD
+            this.jbtntiLe.Location = new System.Drawing.Point(45, 187);
+            this.jbtntiLe.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtntiLe.Location = new System.Drawing.Point(34, 152);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtntiLe.Name = "jbtntiLe";
             this.jbtntiLe.Size = new System.Drawing.Size(100, 28);
             this.jbtntiLe.TabIndex = 54;
@@ -371,7 +444,12 @@
             // jbntQuay
             // 
             this.jbntQuay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+<<<<<<< HEAD
+            this.jbntQuay.Location = new System.Drawing.Point(308, 97);
+            this.jbntQuay.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbntQuay.Location = new System.Drawing.Point(231, 79);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbntQuay.Name = "jbntQuay";
             this.jbntQuay.Size = new System.Drawing.Size(143, 32);
             this.jbntQuay.TabIndex = 53;
@@ -399,7 +477,12 @@
             // numericUpDown2
             // 
             this.numericUpDown2.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
+            this.numericUpDown2.Location = new System.Drawing.Point(216, 139);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.numericUpDown2.Location = new System.Drawing.Point(162, 113);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.numericUpDown2.Minimum = new decimal(new int[] {
             100,
             0,
@@ -412,7 +495,12 @@
             // numericUpDown1
             // 
             this.numericUpDown1.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
+            this.numericUpDown1.Location = new System.Drawing.Point(216, 113);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.numericUpDown1.Location = new System.Drawing.Point(162, 92);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.numericUpDown1.Minimum = new decimal(new int[] {
             100,
             0,
@@ -425,7 +513,12 @@
             // jbtnTinhTien
             // 
             this.jbtnTinhTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+<<<<<<< HEAD
+            this.jbtnTinhTien.Location = new System.Drawing.Point(47, 107);
+            this.jbtnTinhTien.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnTinhTien.Location = new System.Drawing.Point(35, 87);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnTinhTien.Name = "jbtnTinhTien";
             this.jbtnTinhTien.Size = new System.Drawing.Size(99, 46);
             this.jbtnTinhTien.TabIndex = 48;
@@ -435,7 +528,12 @@
             // jbtnXoa
             // 
             this.jbtnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+<<<<<<< HEAD
+            this.jbtnXoa.Location = new System.Drawing.Point(216, 305);
+            this.jbtnXoa.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.jbtnXoa.Location = new System.Drawing.Point(162, 248);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.jbtnXoa.Name = "jbtnXoa";
             this.jbtnXoa.Size = new System.Drawing.Size(75, 39);
             this.jbtnXoa.TabIndex = 47;
@@ -464,7 +562,12 @@
             // JpnLuoiGiaoDien
             // 
             this.JpnLuoiGiaoDien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+<<<<<<< HEAD
+            this.JpnLuoiGiaoDien.Location = new System.Drawing.Point(620, 112);
+            this.JpnLuoiGiaoDien.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.JpnLuoiGiaoDien.Location = new System.Drawing.Point(465, 91);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.JpnLuoiGiaoDien.Name = "JpnLuoiGiaoDien";
             this.JpnLuoiGiaoDien.Size = new System.Drawing.Size(401, 401);
             this.JpnLuoiGiaoDien.TabIndex = 44;
@@ -473,18 +576,39 @@
             // btnVeNha
             // 
             this.btnVeNha.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
+            this.btnVeNha.Location = new System.Drawing.Point(771, 11);
+            this.btnVeNha.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.btnVeNha.Location = new System.Drawing.Point(674, 9);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.btnVeNha.Name = "btnVeNha";
             this.btnVeNha.Size = new System.Drawing.Size(114, 32);
             this.btnVeNha.TabIndex = 43;
             this.btnVeNha.Text = "None";
             this.btnVeNha.UseVisualStyleBackColor = false;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(974, 13);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(152, 39);
+            this.button3.TabIndex = 86;
+            this.button3.Text = "None2";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
+            this.ClientSize = new System.Drawing.Size(1312, 629);
+            this.Controls.Add(this.button3);
+=======
             this.ClientSize = new System.Drawing.Size(963, 511);
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.Controls.Add(this.label26);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -528,6 +652,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.JpnLuoiGiaoDien);
             this.Controls.Add(this.btnVeNha);
+<<<<<<< HEAD
+            this.Margin = new System.Windows.Forms.Padding(4);
+=======
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
@@ -583,7 +711,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel JpnLuoiGiaoDien;
         public System.Windows.Forms.Button btnVeNha;
+<<<<<<< HEAD
+        public System.Windows.Forms.Button button3;
+=======
 
+>>>>>>> 9f943ce22c8d103a36371271fd719b99319ccd0a
     }
 }
 
