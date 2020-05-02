@@ -33,11 +33,8 @@ namespace KTDH
         HinhVuong hinhvuong;
         HinhElip elip;
 <<<<<<< HEAD
-<<<<<<< HEAD
         HinhBinhHanh hbh;
         FormHinhThoi formHT;
-=======
->>>>>>> parent of 9f943ce... Hình Thoi
 =======
 >>>>>>> parent of 9f943ce... Hình Thoi
         public Form1()
@@ -289,7 +286,6 @@ namespace KTDH
             //Nam code
         }
 <<<<<<< HEAD
-<<<<<<< HEAD
         private void jbtnHinhThoi_Click(object sender, EventArgs e)
         {
             Form1.hinh = 6;
@@ -299,9 +295,6 @@ namespace KTDH
             if (formHT.getcheckchange() == false) return;
             
         }
-=======
-
->>>>>>> parent of 9f943ce... Hình Thoi
 =======
 
 >>>>>>> parent of 9f943ce... Hình Thoi
