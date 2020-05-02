@@ -18,6 +18,7 @@ namespace KTDH
         HinhTron hinhtron;
         HinhVuong hinhvuong;
         HinhElip elip;
+        FormHinhThoi formHT;
         public Form1()
         {
             InitializeComponent();
@@ -217,6 +218,16 @@ namespace KTDH
             hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
+
+        private void jbtnHinhThoi_Click(object sender, EventArgs e)
+        {
+            Form1.hinh = 6;
+            formHT = new FormHinhThoi();
+            formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
+            formHT.ShowDialog();
+            if (formHT.getcheckchange() == false) return;
+        }
+
         private void jbtnHinhVuong_Click(object sender, EventArgs e)
         {
             Form1.hinh = 5;

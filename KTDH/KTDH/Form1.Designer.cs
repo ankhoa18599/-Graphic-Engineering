@@ -285,6 +285,7 @@
             this.jbtnHinhThoi.TabIndex = 62;
             this.jbtnHinhThoi.Text = "Hình Thoi";
             this.jbtnHinhThoi.UseVisualStyleBackColor = false;
+            this.jbtnHinhThoi.Click += new System.EventHandler(this.jbtnHinhThoi_Click);
             // 
             // jbtnHinhTamGiac
             // 
