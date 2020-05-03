@@ -249,6 +249,7 @@ namespace KTDH
             this.labelChange();
         }
 
+
         private void jbtnHinhVuong_Click(object sender, EventArgs e)
         {
             Form1.hinh = 5;
@@ -331,6 +332,47 @@ namespace KTDH
                 elip.hinhelip.tam.QuayDiem();
                 elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
+            }
+        }
+
+        private void jbtntiLe_Click(object sender, EventArgs e)
+        {
+            if (Form1.hinh == -1) return;
+            else
+            {
+                double Sx, Sy;
+                Sx = (double)this.Sx_numeric.Value;
+                Sy = (double)this.Sy_numeric.Value;
+                if (Form1.hinh == 6)
+                {
+                    this.formHT.GetHinhThoi().getCheoA().TileSy(Sy);
+                    this.formHT.GetHinhThoi().getCheoB().TiLeSx(Sx);
+                    this.formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
+                    this.labelChange();
+                }else if(Form1.hinh == 2)
+                {
+                    //this.Refresh();
+                    hcn.AB.TiLeSx(Sx);
+                    hcn.CD.TiLeSx(Sx);
+                    hcn.BC.TileSy(Sy);
+                    hcn.AD.TileSy(Sy);
+
+                    hcn.AB.getFpoint().setY(hcn.AD.getFpoint().getY());
+                    hcn.AB.getLpoint().setY(hcn.AB.getFpoint().getY());
+                    hcn.CD.getFpoint().setY(hcn.AD.getLpoint().getY());
+                    hcn.CD.getLpoint().setY(hcn.CD.getFpoint().getY());
+                    hcn.BC.getFpoint().setX(hcn.CD.getFpoint().getX());
+                    hcn.BC.getLpoint().setX(hcn.BC.getFpoint().getX());
+                    hcn.AD.getFpoint().setX(hcn.AB.getFpoint().getX());
+                    hcn.AD.getLpoint().setX(hcn.AD.getFpoint().getX());
+
+                    hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+                    this.labelChange();
+                }
             }
         }
     }
