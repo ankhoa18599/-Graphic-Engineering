@@ -101,7 +101,7 @@ namespace KTDH
                 label18.Text = "xD";
                 label19.Text = "yD";
                 label20.Text = ((hcn.CD.getLpoint().getX() - 200) / 5).ToString();
-                label21.Text = ((hcn.BC.getLpoint().getY() - 200) / 5).ToString();
+                label21.Text = (-(hcn.BC.getLpoint().getY() - 200) / 5).ToString();
             }
             else if (Form1.hinh == 3)
             {
@@ -281,7 +281,7 @@ namespace KTDH
                 AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
-            if (Form1.hinh == 2)
+            else if (Form1.hinh == 2)
             {
                 this.Refresh();
                 hcn.AB.QuayDT();
@@ -295,7 +295,7 @@ namespace KTDH
                 hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
-            if (Form1.hinh == 3)
+            else if (Form1.hinh == 3)
             {
                 this.Refresh();
                 htg.AB.QuayDT();
@@ -306,14 +306,14 @@ namespace KTDH
                 htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
-            if (Form1.hinh == 4)
+            else if (Form1.hinh == 4)
             {
                 this.Refresh();
                 hinhtron.ht.tam.QuayDiem();
                 hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
-            if (Form1.hinh == 5)
+            else if (Form1.hinh == 5)
             {
                 this.Refresh();
                 hinhvuong.AB.QuayDT();
@@ -326,7 +326,17 @@ namespace KTDH
                 hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
-            if (Form1.hinh == 7)
+            else if (Form1.hinh == 6)
+            {
+                this.Refresh();
+                formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
+                formHT.GetHinhThoi().getTam().QuayDiem();
+                formHT.GetHinhThoi().getCheoA().QuayDT();
+                formHT.GetHinhThoi().getCheoB().QuayDT();
+                formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 7)
             {
                 this.Refresh();
                 elip.hinhelip.tam.QuayDiem();
