@@ -147,5 +147,7 @@ namespace KTDH
             this.Fpoint = Point.FakeToReal(this.Fpoint.getX(),this.Fpoint.getY());
             this.Lpoint = Point.FakeToReal(this.Lpoint.getX(), this.Lpoint.getY());
         }
+
+      
     }
 }

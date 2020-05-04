@@ -249,6 +249,7 @@ namespace KTDH
             this.labelChange();
         }
 
+
         private void jbtnHinhVuong_Click(object sender, EventArgs e)
         {
             Form1.hinh = 5;
@@ -342,6 +343,154 @@ namespace KTDH
                 elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
                 labelChange();
             }
+        }
+
+        //Nam code module tinh tien
+        public Line TinhTienDT(Line AB)
+        {
+            int xA = AB.getFpoint().getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
+            int yA = AB.getFpoint().getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
+            int xB = AB.getLpoint().getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
+            int yB = AB.getLpoint().getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
+
+            Point A = new Point(xA, yA);
+            Point B = new Point(xB, yB);
+
+            Line dt = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Black);
+
+            return dt;
+        }
+
+        public Point TinhTienDiem(Point A)
+        {
+            int xA = A.getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
+            int yA = A.getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
+
+            Point x = new Point(xA, yA);
+
+            return x;
+        }
+
+        private void jbtnTinhTien_Click(object sender, EventArgs e)
+        {
+            int k1, k2;
+            k1 = Int32.Parse(numericUpDown1.Value.ToString());
+            k2 = Int32.Parse(numericUpDown2.Value.ToString());
+            if (k1 == 0 && k2==0)
+            {
+                MessageBox.Show("Bạn chưa nhập thông tin tịnh tiến", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (Form1.hinh == 1)    //duong thang
+                {
+                    this.Refresh();
+
+                    AB = TinhTienDT(AB);
+
+                    AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+                    labelChange();
+
+                }
+                //hinh chu nhat
+                else if (Form1.hinh == 2)
+                {
+                    this.Refresh();
+
+                    hcn.AB = TinhTienDT(hcn.AB);
+                    hcn.BC = TinhTienDT(hcn.BC);
+                    hcn.CD = TinhTienDT(hcn.CD);
+                    hcn.AD = TinhTienDT(hcn.AD);
+
+                    hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+                    labelChange();
+
+                }
+                //hinh tam giac
+                else if (Form1.hinh == 3)
+                {
+                    this.Refresh();
+
+                    htg.AB = TinhTienDT(htg.AB);
+                    htg.AC = TinhTienDT(htg.AC);
+                    htg.BC = TinhTienDT(htg.BC);
+
+                    htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+                    labelChange();
+                }
+                //hinh tron
+                else if (Form1.hinh == 4)
+                {
+                    this.Refresh();
+
+                    hinhtron.ht.tam = TinhTienDiem(hinhtron.ht.tam);
+
+                    hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+
+                    labelChange();
+                }
+                //hinh vuong
+                else if (Form1.hinh == 5)
+                {
+                    this.Refresh();
+
+                    hinhvuong.AB = TinhTienDT(hinhvuong.AB);
+                    hinhvuong.BC = TinhTienDT(hinhvuong.BC);
+                    hinhvuong.CD = TinhTienDT(hinhvuong.CD);
+                    hinhvuong.AD = TinhTienDT(hinhvuong.AD);
+
+                    hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+                    labelChange();
+                }
+                //hinh thoi
+                else if (Form1.hinh == 6)
+                {
+                    this.Refresh();
+
+                    formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
+
+                    Point tam = formHT.GetHinhThoi().getTam();
+
+                    Line Cheo1=formHT.GetHinhThoi().getCheoA();
+
+                    Line Cheo2 = formHT.GetHinhThoi().getCheoB();
+
+                    tam = TinhTienDiem(tam);
+                    Cheo1 = TinhTienDT(Cheo1);
+                    Cheo2 = TinhTienDT(Cheo2);
+
+                    formHT.GetHinhThoi().setTam(tam.getX(), tam.getY());
+                    formHT.GetHinhThoi().setCheoA(Cheo1);
+                    formHT.GetHinhThoi().setCheoB(Cheo2);
+
+                    formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
+                    labelChange();
+                }
+                //hinh elip
+                else if (Form1.hinh == 7)
+                {
+                    this.Refresh();
+
+                    elip.hinhelip.tam = TinhTienDiem(elip.hinhelip.tam);
+
+                    elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+
+                    labelChange();
+                }
+            }
+            
         }
     }
 }
