@@ -296,7 +296,7 @@ namespace KTDH
             }
             else if (Form1.hinh == 3)
             {
-                this.Refresh();
+                //this.Refresh();
                 htg.AB.QuayDT();
                 htg.AC.QuayDT();
                 htg.BC.QuayDT();
