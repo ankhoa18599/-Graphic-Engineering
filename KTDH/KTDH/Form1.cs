@@ -353,15 +353,34 @@ namespace KTDH
                 double Sx, Sy;
                 Sx = (double)this.Sx_numeric.Value;
                 Sy = (double)this.Sy_numeric.Value;
+                this.Refresh();
                 if (Form1.hinh == 6)
                 {
                     this.formHT.GetHinhThoi().getCheoA().TileSy(Sy);
                     this.formHT.GetHinhThoi().getCheoB().TiLeSx(Sx);
                     this.formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
-                    this.labelChange();
+                }else if(Form1.hinh == 5)
+                {
+                    hinhvuong.AB.TiLeSx(Sx);
+                    hinhvuong.CD.TiLeSx(Sx);
+                    hinhvuong.BC.TileSy(Sy);
+                    hinhvuong.AD.TileSy(Sy);
+
+                    hinhvuong.AB.getFpoint().setY(hinhvuong.AD.getFpoint().getY());
+                    hinhvuong.AB.getLpoint().setY(hinhvuong.AB.getFpoint().getY());
+                    hinhvuong.CD.getFpoint().setY(hinhvuong.AD.getLpoint().getY());
+                    hinhvuong.CD.getLpoint().setY(hinhvuong.CD.getFpoint().getY());
+                    hinhvuong.BC.getFpoint().setX(hinhvuong.CD.getFpoint().getX());
+                    hinhvuong.BC.getLpoint().setX(hinhvuong.BC.getFpoint().getX());
+                    hinhvuong.AD.getFpoint().setX(hinhvuong.AB.getFpoint().getX());
+                    hinhvuong.AD.getLpoint().setX(hinhvuong.AD.getFpoint().getX());
+
+                    hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                 }else if(Form1.hinh == 2)
                 {
-                    //this.Refresh();
                     hcn.AB.TiLeSx(Sx);
                     hcn.CD.TiLeSx(Sx);
                     hcn.BC.TileSy(Sy);
@@ -380,9 +399,33 @@ namespace KTDH
                     hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-
-                    this.labelChange();
+                }else if(Form1.hinh == 7)
+                {
+                    elip.hinhelip.a = Point.round(elip.hinhelip.a * Sx);
+                    elip.hinhelip.b = Point.round(elip.hinhelip.b * Sy);
+                    elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+                }else if(Form1.hinh == 4)
+                {
+                    if (Sx == Sy)
+                    {
+                        hinhtron.ht.R = Point.round(hinhtron.ht.R * Sx);
+                        hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+                    }
+                    else
+                    {
+                        Form1.hinh = 7;
+                        int a = Point.round(hinhtron.ht.R * Sx);
+                        int b = Point.round(hinhtron.ht.R * Sy);
+                        elip = new HinhElip();
+                        elip.hinhelip = new Elip(hinhtron.ht.getTam().getX(), hinhtron.ht.getTam().getY(), a, b);
+                        elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+                    }
+                }else if(Form1.hinh == 3)
+                {
+                    int daymoi = htg.rong;
+                    htg.xA = htg.xA - (daymoi / 2);
                 }
+                this.labelChange();
             }
         }
     }
