@@ -128,6 +128,26 @@ namespace KTDH
 
             }
         }
-        
+
+        public void QuayDT()
+        {
+            double sin = Math.Sin(Math.PI * 60.0 / 180.0);
+            double cos = Math.Cos(Math.PI * 60.0 / 180.0);
+            //Tọa độ trước khi truyền vào là real.
+            //Sau 2 dòng này sẽ thành fake ( thực ra cũng không cần thêm biến có điều hơi rối thôi
+            Point pF = Point.RealToFake(this.Fpoint.getX(), this.Fpoint.getY());
+            Point pL = Point.RealToFake(this.Lpoint.getX(), this.Lpoint.getY());
+            //Quay nó :V 
+            this.Fpoint.setX(Convert.ToInt32(pF.getX() * cos - sin * pF.getY()));
+            this.Fpoint.setY(Convert.ToInt32(pF.getX() * sin + cos * pF.getY()));
+            this.Lpoint.setX(Convert.ToInt32(pL.getX() * cos - sin * pL.getY()));
+            this.Lpoint.setY(Convert.ToInt32(pL.getX() * sin + cos * pL.getY()));
+            
+            //Dổi về tọa độ Real
+            this.Fpoint = Point.FakeToReal(this.Fpoint.getX(),this.Fpoint.getY());
+            this.Lpoint = Point.FakeToReal(this.Lpoint.getX(), this.Lpoint.getY());
+        }
+
+      
     }
 }

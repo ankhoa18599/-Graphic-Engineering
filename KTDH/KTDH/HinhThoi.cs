@@ -11,6 +11,16 @@ namespace KTDH
         private Point Tam;
         private Line CheoA;
         private Line CheoB;
+        private Line cheo1;
+        private Line cheo2;
+
+        //public HinhThoi(Point tam, Line cheo1, Line cheo2)
+        //{
+        //    Tam = tam;
+        //    this.cheo1 = cheo1;
+        //    this.cheo2 = cheo2;
+        //}
+
         public void setTam(int x, int y)
         {
             this.Tam.setX(x);
@@ -28,18 +38,37 @@ namespace KTDH
         {
             this.CheoB = b;
         }
+        public Point getTam()
+        {
+            return this.Tam;
+        }
+        public Line getCheoA()
+        {
+            return this.CheoA;
+        }
+        public Line getCheoB()
+        {
+            return this.CheoB;
+        }
         public void setCheo(Line a, Line b)
         {
             setCheoA(a);
             setCheoB(b);
         }
+       
         public void Draw(Graphics g)
         {
             Line a1b1, b1a2, a2b2, b2a1;
-            Point AF = Point.FakeToReal(CheoA.getFpoint().getX(), CheoA.getFpoint().getY());
-            Point AL = Point.FakeToReal(CheoA.getLpoint().getX(), CheoA.getLpoint().getY());
-            Point BF = Point.FakeToReal(CheoB.getFpoint().getX(), CheoB.getFpoint().getY());
-            Point BL = Point.FakeToReal(CheoB.getLpoint().getX(), CheoB.getLpoint().getY());
+            Point AF, AL, BF, BL;
+            AF = new Point(CheoA.getFpoint().getX(), CheoA.getFpoint().getY());
+            AL = new Point(CheoA.getLpoint().getX(), CheoA.getLpoint().getY());
+            BF = new Point(CheoB.getFpoint().getX(), CheoB.getFpoint().getY());
+            BL = new Point(CheoB.getLpoint().getX(), CheoB.getLpoint().getY());
+
+            AF.setPoint(Point.round(AF.getX()), Point.round(AF.getY()));
+            AL.setPoint(Point.round(AL.getX()), Point.round(AL.getY()));
+            BF.setPoint(Point.round(BF.getX()), Point.round(BF.getY()));
+            BL.setPoint(Point.round(BL.getX()), Point.round(BL.getY()));
 
             a1b1 = new Line(AF.getX(),AF.getY(),BF.getX(),BF.getY(),System.Drawing.Color.Black);
             b1a2 = new Line(BF.getX(), BF.getY(), AL.getX(), AL.getY(), System.Drawing.Color.Black);
