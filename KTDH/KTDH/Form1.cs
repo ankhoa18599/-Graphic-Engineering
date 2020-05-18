@@ -422,8 +422,34 @@ namespace KTDH
                     }
                 }else if(Form1.hinh == 3)
                 {
-                    int daymoi = htg.rong;
-                    htg.xA = htg.xA - (daymoi / 2);
+                    Line canhday = new Line(htg.xA, htg.yA,(int)(htg.xA+htg.rong),htg.yA,Color.Black);
+                    Point midpointday = new Point((htg.xA+htg.rong)/2,htg.yA);
+                    Point midpointcao = new Point(midpointday.getX(), midpointday.getY() + htg.cao);
+                    Line duongcao = new Line(midpointcao.getX(),midpointcao.getY(),midpointday.getX(),midpointday.getY(),Color.Black);
+                    canhday.TiLeSx(Sx);
+                    duongcao.TileSy(Sy);
+                    Point A = new Point(canhday.getFpoint().getX(), duongcao.getLpoint().getY());
+                    Point B = new Point(canhday.getLpoint().getX(), duongcao.getLpoint().getY());
+                    Point C = new Point((canhday.getLpoint().getX() - Math.Abs(canhday.getFpoint().getX())) / 2, duongcao.getFpoint().getY());
+
+                    htg.xA = A.getX();
+                    htg.yA = A.getY();
+                    htg.rong = canhday.getLpoint().getX()-canhday.getFpoint().getX();
+                    htg.cao = duongcao.getFpoint().getY() - duongcao.getLpoint().getY(); ;
+
+                    A = Point.FakeToReal(A.getX(), A.getY());
+                    B = Point.FakeToReal(B.getX(), B.getY());
+                    C = Point.FakeToReal(C.getX(), C.getY());
+
+
+                    Line AB = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Black);
+                    Line BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), Color.Black);
+                    Line CA = new Line(C.getX(), C.getY(), A.getX(), A.getY(), Color.Black);
+
+                    AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    CA.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
                 }
                 this.labelChange();
             }
