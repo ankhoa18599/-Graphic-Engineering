@@ -345,6 +345,11 @@ namespace KTDH
             }
         }
 
+        private void jbtnTamO_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //Nam code module tinh tien
         public Line TinhTienDT(Line AB)
         {
@@ -386,7 +391,8 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    AB = TinhTienDT(AB);
+                    //AB = TinhTienDT(AB);
+                    AB = AB.TinhTienDT(AB,k1, k2);
 
                     AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
 
@@ -398,10 +404,13 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    hcn.AB = TinhTienDT(hcn.AB);
-                    hcn.BC = TinhTienDT(hcn.BC);
-                    hcn.CD = TinhTienDT(hcn.CD);
-                    hcn.AD = TinhTienDT(hcn.AD);
+                    hcn.AB = hcn.AB.TinhTienDT(hcn.AB,k1,k2);
+                    hcn.BC = hcn.BC.TinhTienDT(hcn.BC, k1, k2);
+                    hcn.CD = hcn.CD.TinhTienDT(hcn.CD, k1, k2);
+                    hcn.AD = hcn.AD.TinhTienDT(hcn.AD, k1, k2);
+                   // hcn.bc = tinhtiendt(hcn.bc);
+                   // hcn.cd = tinhtiendt(hcn.cd);
+                   // hcn.ad = tinhtiendt(hcn.ad);
 
                     hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
@@ -416,9 +425,9 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    htg.AB = TinhTienDT(htg.AB);
-                    htg.AC = TinhTienDT(htg.AC);
-                    htg.BC = TinhTienDT(htg.BC);
+                    htg.AB = htg.AB.TinhTienDT(htg.AB,k1,k2);
+                    htg.AC = htg.AC.TinhTienDT(htg.AC,k1,k2);
+                    htg.BC = htg.BC.TinhTienDT(htg.BC,k1,k2);
 
                     htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
@@ -431,7 +440,7 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    hinhtron.ht.tam = TinhTienDiem(hinhtron.ht.tam);
+                    hinhtron.ht.tam = hinhtron.ht.tam.TinhTienDiem(hinhtron.ht.tam,k1,k2);
 
                     hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
 
@@ -442,10 +451,10 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    hinhvuong.AB = TinhTienDT(hinhvuong.AB);
-                    hinhvuong.BC = TinhTienDT(hinhvuong.BC);
-                    hinhvuong.CD = TinhTienDT(hinhvuong.CD);
-                    hinhvuong.AD = TinhTienDT(hinhvuong.AD);
+                    hinhvuong.AB = hinhvuong.AB.TinhTienDT(hinhvuong.AB,k1,k2);
+                    hinhvuong.BC = hinhvuong.BC.TinhTienDT(hinhvuong.BC,k1,k2);
+                    hinhvuong.CD = hinhvuong.CD.TinhTienDT(hinhvuong.CD,k1,k2);
+                    hinhvuong.AD = hinhvuong.AD.TinhTienDT(hinhvuong.AD,k1,k2);
 
                     hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
@@ -467,9 +476,9 @@ namespace KTDH
 
                     Line Cheo2 = formHT.GetHinhThoi().getCheoB();
 
-                    tam = TinhTienDiem(tam);
-                    Cheo1 = TinhTienDT(Cheo1);
-                    Cheo2 = TinhTienDT(Cheo2);
+                    tam = tam.TinhTienDiem(tam,k1,k2);
+                    Cheo1 = Cheo1.TinhTienDT(Cheo1,k1,k2);
+                    Cheo2 = Cheo2.TinhTienDT(Cheo2,k1,k2);
 
                     formHT.GetHinhThoi().setTam(tam.getX(), tam.getY());
                     formHT.GetHinhThoi().setCheoA(Cheo1);
@@ -483,7 +492,7 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    elip.hinhelip.tam = TinhTienDiem(elip.hinhelip.tam);
+                    elip.hinhelip.tam = elip.hinhelip.tam.TinhTienDiem(elip.hinhelip.tam,k1,k2);
 
                     elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
 

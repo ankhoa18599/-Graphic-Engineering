@@ -84,6 +84,16 @@ namespace KTDH
             this.X = p.getX();
             this.Y = p.getY();
         }
+
+        //nam code
+        public Point TinhTienDiem(Point A, int x, int y)
+        {
+            int xA = A.getX() + x* 5;
+            int yA = A.getY() + y* -5;
+
+            Point x1 = new Point(xA, yA);
+            return x1;
+        }
         public static Point RealToFake(int x, int y)//lon ra nho
         {
             return new Point(x / 5 - 40, 40 - y / 5);//voi x va y deu chia het cho 5
