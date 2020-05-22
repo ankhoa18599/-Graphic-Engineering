@@ -249,15 +249,11 @@ namespace KTDH
             this.labelChange();
         }
 
-<<<<<<< HEAD
         private void jbtnVe3D_Click(object sender, EventArgs e)
         {
             Form3D ve3d = new Form3D();
             ve3d.ShowDialog();
         }
-=======
->>>>>>> vinh
-
         private void jbtnHinhVuong_Click(object sender, EventArgs e)
         {
             Form1.hinh = 5;
