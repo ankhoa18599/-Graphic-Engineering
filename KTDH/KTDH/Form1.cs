@@ -249,11 +249,15 @@ namespace KTDH
             this.labelChange();
         }
 
+<<<<<<< HEAD
         private void jbtnVe3D_Click(object sender, EventArgs e)
         {
             Form3D ve3d = new Form3D();
             ve3d.ShowDialog();
         }
+=======
+>>>>>>> vinh
+
         private void jbtnHinhVuong_Click(object sender, EventArgs e)
         {
             Form1.hinh = 5;
@@ -457,162 +461,6 @@ namespace KTDH
                 }
                 this.labelChange();
             }
-        }
-        private void jbtnTamO_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Nam code module tinh tien
-        public Line TinhTienDT(Line AB)
-        {
-            int xA = AB.getFpoint().getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
-            int yA = AB.getFpoint().getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
-            int xB = AB.getLpoint().getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
-            int yB = AB.getLpoint().getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
-
-            Point A = new Point(xA, yA);
-            Point B = new Point(xB, yB);
-
-            Line dt = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Black);
-
-            return dt;
-        }
-
-        public Point TinhTienDiem(Point A)
-        {
-            int xA = A.getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
-            int yA = A.getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
-
-            Point x = new Point(xA, yA);
-
-            return x;
-        }
-
-        private void jbtnTinhTien_Click(object sender, EventArgs e)
-        {
-            int k1, k2;
-            k1 = Int32.Parse(numericUpDown1.Value.ToString());
-            k2 = Int32.Parse(numericUpDown2.Value.ToString());
-            if (k1 == 0 && k2==0)
-            {
-                MessageBox.Show("Bạn chưa nhập thông tin tịnh tiến", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (Form1.hinh == 1)    //duong thang
-                {
-                    this.Refresh();
-
-                    //AB = TinhTienDT(AB);
-                    AB = AB.TinhTienDT(AB,k1, k2);
-
-                    AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-
-                    labelChange();
-
-                }
-                //hinh chu nhat
-                else if (Form1.hinh == 2)
-                {
-                    this.Refresh();
-
-                    hcn.AB = hcn.AB.TinhTienDT(hcn.AB,k1,k2);
-                    hcn.BC = hcn.BC.TinhTienDT(hcn.BC, k1, k2);
-                    hcn.CD = hcn.CD.TinhTienDT(hcn.CD, k1, k2);
-                    hcn.AD = hcn.AD.TinhTienDT(hcn.AD, k1, k2);
-                   // hcn.bc = tinhtiendt(hcn.bc);
-                   // hcn.cd = tinhtiendt(hcn.cd);
-                   // hcn.ad = tinhtiendt(hcn.ad);
-
-                    hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                    hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                    hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                    hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-
-                    labelChange();
-
-                }
-                //hinh tam giac
-                else if (Form1.hinh == 3)
-                {
-                    this.Refresh();
-
-                    htg.AB = htg.AB.TinhTienDT(htg.AB,k1,k2);
-                    htg.AC = htg.AC.TinhTienDT(htg.AC,k1,k2);
-                    htg.BC = htg.BC.TinhTienDT(htg.BC,k1,k2);
-
-                    htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                    htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                    htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-
-                    labelChange();
-                }
-                //hinh tron
-                else if (Form1.hinh == 4)
-                {
-                    this.Refresh();
-
-                    hinhtron.ht.tam = hinhtron.ht.tam.TinhTienDiem(hinhtron.ht.tam,k1,k2);
-
-                    hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
-
-                    labelChange();
-                }
-                //hinh vuong
-                else if (Form1.hinh == 5)
-                {
-                    this.Refresh();
-
-                    hinhvuong.AB = hinhvuong.AB.TinhTienDT(hinhvuong.AB,k1,k2);
-                    hinhvuong.BC = hinhvuong.BC.TinhTienDT(hinhvuong.BC,k1,k2);
-                    hinhvuong.CD = hinhvuong.CD.TinhTienDT(hinhvuong.CD,k1,k2);
-                    hinhvuong.AD = hinhvuong.AD.TinhTienDT(hinhvuong.AD,k1,k2);
-
-                    hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                    hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                    hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                    hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-
-                    labelChange();
-                }
-                //hinh thoi
-                else if (Form1.hinh == 6)
-                {
-                    this.Refresh();
-
-                    formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
-
-                    Point tam = formHT.GetHinhThoi().getTam();
-
-                    Line Cheo1=formHT.GetHinhThoi().getCheoA();
-
-                    Line Cheo2 = formHT.GetHinhThoi().getCheoB();
-
-                    tam = tam.TinhTienDiem(tam,k1,k2);
-                    Cheo1 = Cheo1.TinhTienDT(Cheo1,k1,k2);
-                    Cheo2 = Cheo2.TinhTienDT(Cheo2,k1,k2);
-
-                    formHT.GetHinhThoi().setTam(tam.getX(), tam.getY());
-                    formHT.GetHinhThoi().setCheoA(Cheo1);
-                    formHT.GetHinhThoi().setCheoB(Cheo2);
-
-                    formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
-                    labelChange();
-                }
-                //hinh elip
-                else if (Form1.hinh == 7)
-                {
-                    this.Refresh();
-
-                    elip.hinhelip.tam = elip.hinhelip.tam.TinhTienDiem(elip.hinhelip.tam,k1,k2);
-
-                    elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
-
-                    labelChange();
-                }
-            }
-            
         }
     }
 }
