@@ -378,6 +378,7 @@ namespace KTDH
 
         private void jbtnTinhTien_Click(object sender, EventArgs e)
         {
+            //abc
             int k1, k2;
             k1 = Int32.Parse(numericUpDown1.Value.ToString());
             k2 = Int32.Parse(numericUpDown2.Value.ToString());
