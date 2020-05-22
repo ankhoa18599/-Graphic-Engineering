@@ -12,7 +12,7 @@ namespace KTDH
     public partial class Form1 : Form
     {
         public static int hinh = -1; // Xác định in hình nào để in thông số tọa độ hình đó ra 
-        Line AB,CD,BC,AD;
+        Line AB, CD, BC, AD;
         HinhChuNhat hcn;
         HinhTamGiac htg;
         HinhTron hinhtron;
@@ -132,7 +132,7 @@ namespace KTDH
                 label9.Text = (-(hinhtron.ht.tam.getY() - 200) / 5).ToString();
                 label10.Text = "Bán kính:";
                 label11.Text = "";
-                label12.Text = (hinhtron.ht.getR()/5).ToString();
+                label12.Text = (hinhtron.ht.getR() / 5).ToString();
                 label13.Text = "";
                 label14.Text = "";
                 label15.Text = "";
@@ -265,6 +265,8 @@ namespace KTDH
             hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
+
+        
         private void jbtnHinhElip_Click(object sender, EventArgs e)
         {
             Form1.hinh = 7;
@@ -362,7 +364,8 @@ namespace KTDH
                     this.formHT.GetHinhThoi().getCheoA().TileSy(Sy);
                     this.formHT.GetHinhThoi().getCheoB().TiLeSx(Sx);
                     this.formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
-                }else if(Form1.hinh == 5)
+                }
+                else if (Form1.hinh == 5)
                 {
                     hinhvuong.AB.TiLeSx(Sx);
                     hinhvuong.CD.TiLeSx(Sx);
@@ -382,7 +385,8 @@ namespace KTDH
                     hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                }else if(Form1.hinh == 2)
+                }
+                else if (Form1.hinh == 2)
                 {
                     hcn.AB.TiLeSx(Sx);
                     hcn.CD.TiLeSx(Sx);
@@ -402,12 +406,14 @@ namespace KTDH
                     hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
-                }else if(Form1.hinh == 7)
+                }
+                else if (Form1.hinh == 7)
                 {
                     elip.hinhelip.a = Point.round(elip.hinhelip.a * Sx);
                     elip.hinhelip.b = Point.round(elip.hinhelip.b * Sy);
                     elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
-                }else if(Form1.hinh == 4)
+                }
+                else if (Form1.hinh == 4)
                 {
                     if (Sx == Sy)
                     {
@@ -423,12 +429,13 @@ namespace KTDH
                         elip.hinhelip = new Elip(hinhtron.ht.getTam().getX(), hinhtron.ht.getTam().getY(), a, b);
                         elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
                     }
-                }else if(Form1.hinh == 3)
+                }
+                else if (Form1.hinh == 3)
                 {
-                    Line canhday = new Line(htg.xA, htg.yA,(int)(htg.xA+htg.rong),htg.yA,Color.Black);
-                    Point midpointday = new Point((htg.xA+htg.rong)/2,htg.yA);
+                    Line canhday = new Line(htg.xA, htg.yA, (int)(htg.xA + htg.rong), htg.yA, Color.Black);
+                    Point midpointday = new Point((htg.xA + htg.rong) / 2, htg.yA);
                     Point midpointcao = new Point(midpointday.getX(), midpointday.getY() + htg.cao);
-                    Line duongcao = new Line(midpointcao.getX(),midpointcao.getY(),midpointday.getX(),midpointday.getY(),Color.Black);
+                    Line duongcao = new Line(midpointcao.getX(), midpointcao.getY(), midpointday.getX(), midpointday.getY(), Color.Black);
                     canhday.TiLeSx(Sx);
                     duongcao.TileSy(Sy);
                     Point A = new Point(canhday.getFpoint().getX(), duongcao.getLpoint().getY());
@@ -437,7 +444,7 @@ namespace KTDH
 
                     htg.xA = A.getX();
                     htg.yA = A.getY();
-                    htg.rong = canhday.getLpoint().getX()-canhday.getFpoint().getX();
+                    htg.rong = canhday.getLpoint().getX() - canhday.getFpoint().getX();
                     htg.cao = duongcao.getFpoint().getY() - duongcao.getLpoint().getY(); ;
 
                     A = Point.FakeToReal(A.getX(), A.getY());
@@ -582,4 +589,6 @@ namespace KTDH
                 }
             }
         }
+
+    }
 }

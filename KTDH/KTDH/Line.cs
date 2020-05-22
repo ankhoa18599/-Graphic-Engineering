@@ -147,7 +147,20 @@ namespace KTDH
             this.Fpoint = Point.FakeToReal(this.Fpoint.getX(),this.Fpoint.getY());
             this.Lpoint = Point.FakeToReal(this.Lpoint.getX(), this.Lpoint.getY());
         }
+        public Line TinhTienDT(Line AB, int x, int y)
+        {
+            int xA = AB.getFpoint().getX() + x * 5;
+            int yA = AB.getFpoint().getY() + y * -5;
+            int xB = AB.getLpoint().getX() + x * 5;
+            int yB = AB.getLpoint().getY() + y * -5;
 
+            Point A = new Point(xA, yA);
+            Point B = new Point(xB, yB);
+
+            Line dt = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Black);
+
+            return dt;
+        }
         public void TiLeSx(double Sx)
         {
             int Dx0 = Lpoint.getX() - Fpoint.getX();

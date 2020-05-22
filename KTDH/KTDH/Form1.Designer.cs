@@ -450,6 +450,7 @@
             this.jbtnTinhTien.TabIndex = 48;
             this.jbtnTinhTien.Text = "Tịnh tiến";
             this.jbtnTinhTien.UseVisualStyleBackColor = false;
+            this.jbtnTinhTien.Click += new System.EventHandler(this.jbtnTinhTien_Click);
             // 
             // jbtnXoa
             // 
