@@ -58,7 +58,7 @@
             this.jbtnTamO = new System.Windows.Forms.Button();
             this.jbtnOx = new System.Windows.Forms.Button();
             this.jbtnOy = new System.Windows.Forms.Button();
-            this.Sx_numeric = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.jbtntiLe = new System.Windows.Forms.Button();
             this.jbntQuay = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,13 +71,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.JpnLuoiGiaoDien = new System.Windows.Forms.Panel();
             this.btnVeNha = new System.Windows.Forms.Button();
-            this.Sy_numeric = new System.Windows.Forms.NumericUpDown();
-            this.Sx_Label = new System.Windows.Forms.Label();
-            this.Sy_Label = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Sx_numeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Sy_numeric)).BeginInit();
             this.SuspendLayout();
             // 
             // label26
@@ -385,7 +381,7 @@
             this.jbtnOy.Text = "Đối xứng Qua OY\r\n";
             this.jbtnOy.UseVisualStyleBackColor = false;
             // 
-            // Sx_numeric
+            // numericUpDown3
             // 
             this.numericUpDown3.BackColor = System.Drawing.Color.White;
             this.numericUpDown3.Location = new System.Drawing.Point(216, 191);
@@ -393,23 +389,6 @@
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(63, 22);
             this.numericUpDown3.TabIndex = 55;
-            this.Sx_numeric.BackColor = System.Drawing.Color.White;
-            this.Sx_numeric.DecimalPlaces = 1;
-            this.Sx_numeric.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.Sx_numeric.Location = new System.Drawing.Point(162, 152);
-            this.Sx_numeric.Name = "Sx_numeric";
-            this.Sx_numeric.Size = new System.Drawing.Size(47, 20);
-            this.Sx_numeric.TabIndex = 55;
-            this.Sx_numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Sx_numeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // jbtntiLe
             // 
@@ -418,11 +397,9 @@
             this.jbtntiLe.Margin = new System.Windows.Forms.Padding(4);
             this.jbtntiLe.Name = "jbtntiLe";
             this.jbtntiLe.Size = new System.Drawing.Size(133, 34);
-            this.jbtntiLe.Size = new System.Drawing.Size(100, 46);
             this.jbtntiLe.TabIndex = 54;
             this.jbtntiLe.Text = "Tỉ lệ";
             this.jbtntiLe.UseVisualStyleBackColor = false;
-            this.jbtntiLe.Click += new System.EventHandler(this.jbtntiLe_Click);
             // 
             // jbntQuay
             // 
@@ -549,53 +526,11 @@
             this.btnVeNha.Text = "None";
             this.btnVeNha.UseVisualStyleBackColor = false;
             // 
-            // Sy_numeric
-            // 
-            this.Sy_numeric.BackColor = System.Drawing.Color.White;
-            this.Sy_numeric.DecimalPlaces = 1;
-            this.Sy_numeric.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.Sy_numeric.Location = new System.Drawing.Point(162, 178);
-            this.Sy_numeric.Name = "Sy_numeric";
-            this.Sy_numeric.Size = new System.Drawing.Size(47, 20);
-            this.Sy_numeric.TabIndex = 86;
-            this.Sy_numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Sy_numeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // Sx_Label
-            // 
-            this.Sx_Label.AutoSize = true;
-            this.Sx_Label.Location = new System.Drawing.Point(135, 155);
-            this.Sx_Label.Name = "Sx_Label";
-            this.Sx_Label.Size = new System.Drawing.Size(22, 13);
-            this.Sx_Label.TabIndex = 87;
-            this.Sx_Label.Text = "Sx:";
-            // 
-            // Sy_Label
-            // 
-            this.Sy_Label.AutoSize = true;
-            this.Sy_Label.Location = new System.Drawing.Point(135, 180);
-            this.Sy_Label.Name = "Sy_Label";
-            this.Sy_Label.Size = new System.Drawing.Size(22, 13);
-            this.Sy_Label.TabIndex = 88;
-            this.Sy_Label.Text = "Sy:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 629);
-            this.ClientSize = new System.Drawing.Size(984, 511);
-            this.Controls.Add(this.Sy_Label);
-            this.Controls.Add(this.Sx_Label);
-            this.Controls.Add(this.Sy_numeric);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -626,7 +561,7 @@
             this.Controls.Add(this.jbtnTamO);
             this.Controls.Add(this.jbtnOx);
             this.Controls.Add(this.jbtnOy);
-            this.Controls.Add(this.Sx_numeric);
+            this.Controls.Add(this.numericUpDown3);
             this.Controls.Add(this.jbtntiLe);
             this.Controls.Add(this.jbntQuay);
             this.Controls.Add(this.label4);
@@ -643,10 +578,9 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Sx_numeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Sy_numeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -684,7 +618,7 @@
         private System.Windows.Forms.Button jbtnTamO;
         private System.Windows.Forms.Button jbtnOx;
         private System.Windows.Forms.Button jbtnOy;
-        private System.Windows.Forms.NumericUpDown Sx_numeric;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Button jbtntiLe;
         private System.Windows.Forms.Button jbntQuay;
         private System.Windows.Forms.Label label4;
@@ -697,9 +631,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel JpnLuoiGiaoDien;
         public System.Windows.Forms.Button btnVeNha;
-        private System.Windows.Forms.NumericUpDown Sy_numeric;
-        private System.Windows.Forms.Label Sx_Label;
-        private System.Windows.Forms.Label Sy_Label;
     }
 }
 
