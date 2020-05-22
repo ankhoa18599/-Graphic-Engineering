@@ -163,5 +163,21 @@ namespace KTDH
             return dt;
         }
       
+        public void TiLeSx(double Sx)
+        {
+            int Dx0 = Lpoint.getX() - Fpoint.getX();
+            double Dx = Dx0 * Sx;
+            double dentax = (Dx - Dx0);
+            this.Fpoint.setX(Point.round(Math.Round(Fpoint.getX() - dentax / 2)));
+            this.Lpoint.setX(Point.round(Math.Round(Lpoint.getX() + dentax / 2)));
+        }
+        public void TileSy(double Sy)
+        {
+            int Dy0 = Lpoint.getY() - Fpoint.getY();
+            double Dy = Dy0 * Sy;
+            double dentay = (Dy - Dy0);
+            this.Fpoint.setY(Point.round(Math.Round(Fpoint.getY() - dentay / 2)));
+            this.Lpoint.setY(Point.round(Math.Round(Lpoint.getY() + dentay / 2)));
+        }
     }
 }

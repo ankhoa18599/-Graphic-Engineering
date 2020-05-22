@@ -118,6 +118,8 @@ namespace KTDH
             this.TamX_TextBox.Name = "TamX_TextBox";
             this.TamX_TextBox.Size = new System.Drawing.Size(26, 20);
             this.TamX_TextBox.TabIndex = 0;
+            this.TamX_TextBox.Text = "0";
+            this.TamX_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TamY_TextBox
             // 
@@ -125,6 +127,8 @@ namespace KTDH
             this.TamY_TextBox.Name = "TamY_TextBox";
             this.TamY_TextBox.Size = new System.Drawing.Size(26, 20);
             this.TamY_TextBox.TabIndex = 1;
+            this.TamY_TextBox.Text = "0";
+            this.TamY_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // a_TextBox
             // 
@@ -132,6 +136,8 @@ namespace KTDH
             this.a_TextBox.Name = "a_TextBox";
             this.a_TextBox.Size = new System.Drawing.Size(37, 20);
             this.a_TextBox.TabIndex = 2;
+            this.a_TextBox.Text = "20";
+            this.a_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // b_TextBox
             // 
@@ -139,6 +145,8 @@ namespace KTDH
             this.b_TextBox.Name = "b_TextBox";
             this.b_TextBox.Size = new System.Drawing.Size(37, 20);
             this.b_TextBox.TabIndex = 3;
+            this.b_TextBox.Text = "20";
+            this.b_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Tam_Label
             // 
