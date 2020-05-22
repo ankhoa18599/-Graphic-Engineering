@@ -252,7 +252,6 @@
             this.jbtnVe3D.TabIndex = 65;
             this.jbtnVe3D.Text = "Vẽ 3D";
             this.jbtnVe3D.UseVisualStyleBackColor = false;
-            this.jbtnVe3D.Click += new System.EventHandler(this.jbtnVe3D_Click);
             // 
             // jbtnHinhElip
             // 

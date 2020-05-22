@@ -53,7 +53,3 @@ G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhElip.resources
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhThoi.resources
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhVuong.resources
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhThoi.resources
-G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Form3D.resources
-G:\GitHub\-Graphic-Engineering\KTDH\KTDH\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
-G:\GitHub\-Graphic-Engineering\KTDH\KTDH\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
-G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CopyComplete
