@@ -23,6 +23,7 @@ namespace KTDH
         private Label Alert_Label;
         private Button Draw_Button;
         private HinhThoi hinhthoi;
+        
         public FormHinhThoi()
         {
             InitializeComponent();
