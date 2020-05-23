@@ -56,6 +56,7 @@ namespace KTDH
             ////////////////////////////////////         tô ở đây        | tô ở đây
             grfx.FillRectangle(b, x - 2, y, 2, 2);
             // và ta đã có 1 điểm pixel "fake" cấu thành từ 4 pixel nhỏ.
+           // test grfx.FillRectangle(b, x - 10, y, 5, 5);
         }
         public static int round(double inP)
         {
