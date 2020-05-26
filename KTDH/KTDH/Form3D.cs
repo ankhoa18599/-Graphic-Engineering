@@ -11,6 +11,7 @@ namespace KTDH
 {
     public partial class Form3D : Form
     {
+        HinhHopChuNhat hhcn;
         public Form3D()
         {
             InitializeComponent();
@@ -61,5 +62,37 @@ namespace KTDH
             g.DrawLine(new Pen(Color.Red), 200, 200, 0, 400);
         }
 
+        private void jbtHopCN_Click(object sender, EventArgs e)
+        {
+            //Nam code
+
+            hhcn = new HinhHopChuNhat();
+            hhcn.ShowDialog();
+            if (hhcn.check == false) return;
+            else
+            {
+                //Đáy dưới
+                hhcn.AB.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.BC.Ve_Net_Dut(this.panel1.CreateGraphics());
+                hhcn.CD.Ve_Net_Dut(this.panel1.CreateGraphics());
+                hhcn.DA.DDA_Line(this.panel1.CreateGraphics());
+                //Đáy trên
+                hhcn.EF.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.FG.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.GH.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.HE.DDA_Line(this.panel1.CreateGraphics());
+                //cac duong cao
+                hhcn.AE.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.BF.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.CG.Ve_Net_Dut(this.panel1.CreateGraphics());
+                hhcn.DH.DDA_Line(this.panel1.CreateGraphics());
+            }
+           
+        }
+
+        private void jbtnXoa_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
+        }
     }
 }

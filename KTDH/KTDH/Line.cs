@@ -177,5 +177,56 @@ namespace KTDH
             this.Fpoint.setY(Point.round(Math.Round(Fpoint.getY() - dentay / 2)));
             this.Lpoint.setY(Point.round(Math.Round(Lpoint.getY() + dentay / 2)));
         }
+
+        public void Ve_Net_Dut(Graphics g)
+        {
+            Color m = color;
+            int Dx, Dy, count, temp_1, temp_2, dem = 0;
+            //int temp_3, temp_4;
+            Dx = Lpoint.getX() - Fpoint.getX();
+            Dy = Lpoint.getY() - Fpoint.getY();
+            if (Math.Abs(Dy) > Math.Abs(Dx)) count = Math.Abs(Dy);
+            else count = Math.Abs(Dx);
+            float delta_X, delta_Y, x, y;
+            Point temp = new Point();
+            count /= 5;
+            if (count > 0)
+            {
+                delta_X = Dx;
+                delta_X /= count;
+                delta_Y = Dy;
+                delta_Y /= count;
+                x = Fpoint.getX();
+                y = Fpoint.getY();
+                do
+                {
+                    if (dem == 3)
+                    {
+                        x += delta_X;
+                        y += delta_Y;
+                        --count;
+                        dem = 0;
+                        continue;
+                    }
+                    //if(x%4 == 0)
+                    //{
+                    //    x += delta_X;
+                    //    y += delta_Y;
+                    //    --count;
+                    //    continue;
+                    //}
+                    temp.setX(Point.round(x));
+                    temp.setY(Point.round(y));
+                    Point.putpixel(temp.getX(), temp.getY(), g);
+                    // temp_3 = temp_1;
+                    // temp_4 = temp_2;
+                    x += delta_X;
+                    y += delta_Y;
+                    --count;
+                    dem++;
+                } while (count != -1);
+
+            }
+        }
     }
 }
