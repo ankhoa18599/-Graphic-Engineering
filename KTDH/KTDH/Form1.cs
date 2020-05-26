@@ -12,7 +12,7 @@ namespace KTDH
     public partial class Form1 : Form
     {
         public static int hinh = -1; // Xác định in hình nào để in thông số tọa độ hình đó ra 
-        Line AB,CD,BC,AD;
+        Line AB, CD, BC, AD;
         HinhChuNhat hcn;
         HinhTamGiac htg;
         HinhTron hinhtron;
@@ -132,7 +132,7 @@ namespace KTDH
                 label9.Text = (-(hinhtron.ht.tam.getY() - 200) / 5).ToString();
                 label10.Text = "Bán kính:";
                 label11.Text = "";
-                label12.Text = (hinhtron.ht.getR()/5).ToString();
+                label12.Text = (hinhtron.ht.getR() / 5).ToString();
                 label13.Text = "";
                 label14.Text = "";
                 label15.Text = "";
@@ -248,8 +248,11 @@ namespace KTDH
             if (formHT.getcheckchange() == false) return;
             this.labelChange();
         }
-
-
+        private void jbtnVe3D_Click(object sender, EventArgs e)
+        {
+            Form3D ve3d = new Form3D();
+            ve3d.ShowDialog();
+        }
         private void jbtnHinhVuong_Click(object sender, EventArgs e)
         {
             Form1.hinh = 5;
@@ -262,6 +265,8 @@ namespace KTDH
             hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
             labelChange();
         }
+
+        
         private void jbtnHinhElip_Click(object sender, EventArgs e)
         {
             Form1.hinh = 7;
@@ -297,7 +302,7 @@ namespace KTDH
             }
             else if (Form1.hinh == 3)
             {
-                this.Refresh();
+                //this.Refresh();
                 htg.AB.QuayDT();
                 htg.AC.QuayDT();
                 htg.BC.QuayDT();
@@ -345,44 +350,127 @@ namespace KTDH
             }
         }
 
-        private void jbtnTamO_Click(object sender, EventArgs e)
+        private void jbtntiLe_Click(object sender, EventArgs e)
         {
+            if (Form1.hinh == -1) return;
+            else
+            {
+                double Sx, Sy;
+                Sx = (double)this.Sx_numeric.Value;
+                Sy = (double)this.Sy_numeric.Value;
+                this.Refresh();
+                if (Form1.hinh == 6)
+                {
+                    this.formHT.GetHinhThoi().getCheoA().TileSy(Sy);
+                    this.formHT.GetHinhThoi().getCheoB().TiLeSx(Sx);
+                    this.formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
+                }
+                else if (Form1.hinh == 5)
+                {
+                    hinhvuong.AB.TiLeSx(Sx);
+                    hinhvuong.CD.TiLeSx(Sx);
+                    hinhvuong.BC.TileSy(Sy);
+                    hinhvuong.AD.TileSy(Sy);
 
+                    hinhvuong.AB.getFpoint().setY(hinhvuong.AD.getFpoint().getY());
+                    hinhvuong.AB.getLpoint().setY(hinhvuong.AB.getFpoint().getY());
+                    hinhvuong.CD.getFpoint().setY(hinhvuong.AD.getLpoint().getY());
+                    hinhvuong.CD.getLpoint().setY(hinhvuong.CD.getFpoint().getY());
+                    hinhvuong.BC.getFpoint().setX(hinhvuong.CD.getFpoint().getX());
+                    hinhvuong.BC.getLpoint().setX(hinhvuong.BC.getFpoint().getX());
+                    hinhvuong.AD.getFpoint().setX(hinhvuong.AB.getFpoint().getX());
+                    hinhvuong.AD.getLpoint().setX(hinhvuong.AD.getFpoint().getX());
+
+                    hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                }
+                else if (Form1.hinh == 2)
+                {
+                    hcn.AB.TiLeSx(Sx);
+                    hcn.CD.TiLeSx(Sx);
+                    hcn.BC.TileSy(Sy);
+                    hcn.AD.TileSy(Sy);
+
+                    hcn.AB.getFpoint().setY(hcn.AD.getFpoint().getY());
+                    hcn.AB.getLpoint().setY(hcn.AB.getFpoint().getY());
+                    hcn.CD.getFpoint().setY(hcn.AD.getLpoint().getY());
+                    hcn.CD.getLpoint().setY(hcn.CD.getFpoint().getY());
+                    hcn.BC.getFpoint().setX(hcn.CD.getFpoint().getX());
+                    hcn.BC.getLpoint().setX(hcn.BC.getFpoint().getX());
+                    hcn.AD.getFpoint().setX(hcn.AB.getFpoint().getX());
+                    hcn.AD.getLpoint().setX(hcn.AD.getFpoint().getX());
+
+                    hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                }
+                else if (Form1.hinh == 7)
+                {
+                    elip.hinhelip.a = Point.round(elip.hinhelip.a * Sx);
+                    elip.hinhelip.b = Point.round(elip.hinhelip.b * Sy);
+                    elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+                }
+                else if (Form1.hinh == 4)
+                {
+                    if (Sx == Sy)
+                    {
+                        hinhtron.ht.R = Point.round(hinhtron.ht.R * Sx);
+                        hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+                    }
+                    else
+                    {
+                        Form1.hinh = 7;
+                        int a = Point.round(hinhtron.ht.R * Sx);
+                        int b = Point.round(hinhtron.ht.R * Sy);
+                        elip = new HinhElip();
+                        elip.hinhelip = new Elip(hinhtron.ht.getTam().getX(), hinhtron.ht.getTam().getY(), a, b);
+                        elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+                    }
+                }
+                else if (Form1.hinh == 3)
+                {
+                    Line canhday = new Line(htg.xA, htg.yA, (int)(htg.xA + htg.rong), htg.yA, Color.Black);
+                    Point midpointday = new Point((htg.xA + htg.rong) / 2, htg.yA);
+                    Point midpointcao = new Point(midpointday.getX(), midpointday.getY() + htg.cao);
+                    Line duongcao = new Line(midpointcao.getX(), midpointcao.getY(), midpointday.getX(), midpointday.getY(), Color.Black);
+                    canhday.TiLeSx(Sx);
+                    duongcao.TileSy(Sy);
+                    Point A = new Point(canhday.getFpoint().getX(), duongcao.getLpoint().getY());
+                    Point B = new Point(canhday.getLpoint().getX(), duongcao.getLpoint().getY());
+                    Point C = new Point((canhday.getLpoint().getX() - Math.Abs(canhday.getFpoint().getX())) / 2, duongcao.getFpoint().getY());
+
+                    htg.xA = A.getX();
+                    htg.yA = A.getY();
+                    htg.rong = canhday.getLpoint().getX() - canhday.getFpoint().getX();
+                    htg.cao = duongcao.getFpoint().getY() - duongcao.getLpoint().getY(); ;
+
+                    A = Point.FakeToReal(A.getX(), A.getY());
+                    B = Point.FakeToReal(B.getX(), B.getY());
+                    C = Point.FakeToReal(C.getX(), C.getY());
+
+
+                    Line AB = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Black);
+                    Line BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), Color.Black);
+                    Line CA = new Line(C.getX(), C.getY(), A.getX(), A.getY(), Color.Black);
+
+                    AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                    CA.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+
+                }
+                this.labelChange();
+            }
         }
-
-        //Nam code module tinh tien
-        public Line TinhTienDT(Line AB)
-        {
-            int xA = AB.getFpoint().getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
-            int yA = AB.getFpoint().getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
-            int xB = AB.getLpoint().getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
-            int yB = AB.getLpoint().getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
-
-            Point A = new Point(xA, yA);
-            Point B = new Point(xB, yB);
-
-            Line dt = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Black);
-
-            return dt;
-        }
-
-        public Point TinhTienDiem(Point A)
-        {
-            int xA = A.getX() + Int32.Parse(numericUpDown1.Value.ToString()) * 5;
-            int yA = A.getY() + Int32.Parse(numericUpDown2.Value.ToString()) * -5;
-
-            Point x = new Point(xA, yA);
-
-            return x;
-        }
-
         private void jbtnTinhTien_Click(object sender, EventArgs e)
         {
             //abc
             int k1, k2;
             k1 = Int32.Parse(numericUpDown1.Value.ToString());
             k2 = Int32.Parse(numericUpDown2.Value.ToString());
-            if (k1 == 0 && k2==0)
+            if (k1 == 0 && k2 == 0)
             {
                 MessageBox.Show("Bạn chưa nhập thông tin tịnh tiến", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -393,7 +481,7 @@ namespace KTDH
                     this.Refresh();
 
                     //AB = TinhTienDT(AB);
-                    AB = AB.TinhTienDT(AB,k1, k2);
+                    AB = AB.TinhTienDT(AB, k1, k2);
 
                     AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
 
@@ -405,13 +493,13 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    hcn.AB = hcn.AB.TinhTienDT(hcn.AB,k1,k2);
+                    hcn.AB = hcn.AB.TinhTienDT(hcn.AB, k1, k2);
                     hcn.BC = hcn.BC.TinhTienDT(hcn.BC, k1, k2);
                     hcn.CD = hcn.CD.TinhTienDT(hcn.CD, k1, k2);
                     hcn.AD = hcn.AD.TinhTienDT(hcn.AD, k1, k2);
-                   // hcn.bc = tinhtiendt(hcn.bc);
-                   // hcn.cd = tinhtiendt(hcn.cd);
-                   // hcn.ad = tinhtiendt(hcn.ad);
+                    // hcn.bc = tinhtiendt(hcn.bc);
+                    // hcn.cd = tinhtiendt(hcn.cd);
+                    // hcn.ad = tinhtiendt(hcn.ad);
 
                     hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
@@ -426,9 +514,9 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    htg.AB = htg.AB.TinhTienDT(htg.AB,k1,k2);
-                    htg.AC = htg.AC.TinhTienDT(htg.AC,k1,k2);
-                    htg.BC = htg.BC.TinhTienDT(htg.BC,k1,k2);
+                    htg.AB = htg.AB.TinhTienDT(htg.AB, k1, k2);
+                    htg.AC = htg.AC.TinhTienDT(htg.AC, k1, k2);
+                    htg.BC = htg.BC.TinhTienDT(htg.BC, k1, k2);
 
                     htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
@@ -441,7 +529,7 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    hinhtron.ht.tam = hinhtron.ht.tam.TinhTienDiem(hinhtron.ht.tam,k1,k2);
+                    hinhtron.ht.tam = hinhtron.ht.tam.TinhTienDiem(hinhtron.ht.tam, k1, k2);
 
                     hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
 
@@ -452,10 +540,10 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    hinhvuong.AB = hinhvuong.AB.TinhTienDT(hinhvuong.AB,k1,k2);
-                    hinhvuong.BC = hinhvuong.BC.TinhTienDT(hinhvuong.BC,k1,k2);
-                    hinhvuong.CD = hinhvuong.CD.TinhTienDT(hinhvuong.CD,k1,k2);
-                    hinhvuong.AD = hinhvuong.AD.TinhTienDT(hinhvuong.AD,k1,k2);
+                    hinhvuong.AB = hinhvuong.AB.TinhTienDT(hinhvuong.AB, k1, k2);
+                    hinhvuong.BC = hinhvuong.BC.TinhTienDT(hinhvuong.BC, k1, k2);
+                    hinhvuong.CD = hinhvuong.CD.TinhTienDT(hinhvuong.CD, k1, k2);
+                    hinhvuong.AD = hinhvuong.AD.TinhTienDT(hinhvuong.AD, k1, k2);
 
                     hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
                     hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
@@ -473,13 +561,13 @@ namespace KTDH
 
                     Point tam = formHT.GetHinhThoi().getTam();
 
-                    Line Cheo1=formHT.GetHinhThoi().getCheoA();
+                    Line Cheo1 = formHT.GetHinhThoi().getCheoA();
 
                     Line Cheo2 = formHT.GetHinhThoi().getCheoB();
 
-                    tam = tam.TinhTienDiem(tam,k1,k2);
-                    Cheo1 = Cheo1.TinhTienDT(Cheo1,k1,k2);
-                    Cheo2 = Cheo2.TinhTienDT(Cheo2,k1,k2);
+                    tam = tam.TinhTienDiem(tam, k1, k2);
+                    Cheo1 = Cheo1.TinhTienDT(Cheo1, k1, k2);
+                    Cheo2 = Cheo2.TinhTienDT(Cheo2, k1, k2);
 
                     formHT.GetHinhThoi().setTam(tam.getX(), tam.getY());
                     formHT.GetHinhThoi().setCheoA(Cheo1);
@@ -493,14 +581,14 @@ namespace KTDH
                 {
                     this.Refresh();
 
-                    elip.hinhelip.tam = elip.hinhelip.tam.TinhTienDiem(elip.hinhelip.tam,k1,k2);
+                    elip.hinhelip.tam = elip.hinhelip.tam.TinhTienDiem(elip.hinhelip.tam, k1, k2);
 
                     elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
 
                     labelChange();
                 }
             }
-            
         }
+
     }
 }

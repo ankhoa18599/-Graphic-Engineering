@@ -56,6 +56,7 @@ namespace KTDH
             ////////////////////////////////////         tô ở đây        | tô ở đây
             grfx.FillRectangle(b, x - 2, y, 2, 2);
             // và ta đã có 1 điểm pixel "fake" cấu thành từ 4 pixel nhỏ.
+           // test grfx.FillRectangle(b, x - 10, y, 5, 5);
         }
         public static int round(double inP)
         {
@@ -84,12 +85,10 @@ namespace KTDH
             this.X = p.getX();
             this.Y = p.getY();
         }
-
-        //nam code
         public Point TinhTienDiem(Point A, int x, int y)
         {
-            int xA = A.getX() + x* 5;
-            int yA = A.getY() + y* -5;
+            int xA = A.getX() + x * 5;
+            int yA = A.getY() + y * -5;
 
             Point x1 = new Point(xA, yA);
             return x1;

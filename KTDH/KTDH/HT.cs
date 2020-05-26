@@ -13,7 +13,6 @@ namespace KTDH
         public Color mau;
         public int b;
 
-
         public Point getTam()
         {
             return this.tam;

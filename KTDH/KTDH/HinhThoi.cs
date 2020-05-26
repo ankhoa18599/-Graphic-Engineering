@@ -11,16 +11,6 @@ namespace KTDH
         private Point Tam;
         private Line CheoA;
         private Line CheoB;
-        private Line cheo1;
-        private Line cheo2;
-
-        //public HinhThoi(Point tam, Line cheo1, Line cheo2)
-        //{
-        //    Tam = tam;
-        //    this.cheo1 = cheo1;
-        //    this.cheo2 = cheo2;
-        //}
-
         public void setTam(int x, int y)
         {
             this.Tam.setX(x);
@@ -55,7 +45,6 @@ namespace KTDH
             setCheoA(a);
             setCheoB(b);
         }
-       
         public void Draw(Graphics g)
         {
             Line a1b1, b1a2, a2b2, b2a1;
