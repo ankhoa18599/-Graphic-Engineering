@@ -81,6 +81,12 @@
     <Compile Include="HinhElip.Designer.cs">
       <DependentUpon>HinhElip.cs</DependentUpon>
     </Compile>
+    <Compile Include="HinhHopChuNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HinhHopChuNhat.Designer.cs">
+      <DependentUpon>HinhHopChuNhat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hinhtamgiac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HinhElip.resx">
       <DependentUpon>HinhElip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HinhHopChuNhat.resx">
+      <DependentUpon>HinhHopChuNhat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hinhtamgiac.resx">
       <DependentUpon>Hinhtamgiac.cs</DependentUpon>
