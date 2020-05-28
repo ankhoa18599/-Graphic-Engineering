@@ -79,8 +79,8 @@ namespace KTDH
                 //Đáy trên
                 hhcn.EF.DDA_Line(this.panel1.CreateGraphics());
                 hhcn.FG.DDA_Line(this.panel1.CreateGraphics());
-                hhcn.GH.DDA_Line(this.panel1.CreateGraphics());
-                hhcn.HE.DDA_Line(this.panel1.CreateGraphics());
+               hhcn.GH.DDA_Line(this.panel1.CreateGraphics());
+               hhcn.HE.DDA_Line(this.panel1.CreateGraphics());
                 //cac duong cao
                 hhcn.AE.DDA_Line(this.panel1.CreateGraphics());
                 hhcn.BF.DDA_Line(this.panel1.CreateGraphics());
