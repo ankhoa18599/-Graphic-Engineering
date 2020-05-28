@@ -66,9 +66,16 @@
     <Compile Include="Form3D.Designer.cs">
       <DependentUpon>Form3D.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHinhCau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHinhCau.Designer.cs">
+      <DependentUpon>FormHinhCau.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHinhThoi.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HinhCau.cs" />
     <Compile Include="HinhChuNhat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3D.resx">
       <DependentUpon>Form3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHinhCau.resx">
+      <DependentUpon>FormHinhCau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHinhThoi.resx">
       <DependentUpon>FormHinhThoi.cs</DependentUpon>

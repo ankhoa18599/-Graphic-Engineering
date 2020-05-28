@@ -96,6 +96,7 @@
             this.jbtCau.TabIndex = 10;
             this.jbtCau.Text = "Hình Cầu";
             this.jbtCau.UseVisualStyleBackColor = false;
+            this.jbtCau.Click += new System.EventHandler(this.jbtCau_Click);
             // 
             // jbtHopCN
             // 
