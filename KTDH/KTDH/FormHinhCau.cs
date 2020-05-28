@@ -43,7 +43,7 @@ namespace KTDH
             int Cheoa = r;
             int Cheob = r/2;
             hinhcau.KhotaoElip(tam.getX(), tam.getY(),Cheoa,Cheob);
-            hinhcau.GetElip().VeElip2(luoigiaodien);
+            hinhcau.GetElip().VeElip_netdut(luoigiaodien);
             
 
             //Point point = Line.toado2(x1, y1);
