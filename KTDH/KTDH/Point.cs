@@ -56,6 +56,7 @@ namespace KTDH
             ////////////////////////////////////         tô ở đây        | tô ở đây
             grfx.FillRectangle(b, x - 2, y, 2, 2);
             // và ta đã có 1 điểm pixel "fake" cấu thành từ 4 pixel nhỏ.
+           // test grfx.FillRectangle(b, x - 10, y, 5, 5);
         }
         public static int round(double inP)
         {
@@ -84,6 +85,14 @@ namespace KTDH
             this.X = p.getX();
             this.Y = p.getY();
         }
+        public Point TinhTienDiem(Point A, int x, int y)
+        {
+            int xA = A.getX() + x * 5;
+            int yA = A.getY() + y * -5;
+
+            Point x1 = new Point(xA, yA);
+            return x1;
+        }
         public static Point RealToFake(int x, int y)//lon ra nho
         {
             return new Point(x / 5 - 40, 40 - y / 5);//voi x va y deu chia het cho 5
@@ -92,6 +101,32 @@ namespace KTDH
         {
 
             return new Point((x + 40) * 5, (40 - y) * 5);
+        }
+        public void doiXungDiemO()
+        {
+            Point real = RealToFake(this.X, this.Y);
+            real.X = -1 * real.X;
+            real.Y = -1 * real.Y;
+            real = FakeToReal(real.X, real.Y);
+            this.X = real.X;
+            this.Y = real.Y;
+
+        }
+        public void doiXungTrucOx()
+        {
+            Point real = RealToFake(this.X, this.Y);
+            real.Y = -1 * real.Y;
+            real = FakeToReal(real.X, real.Y);
+            this.X = real.X;
+            this.Y = real.Y;
+        }
+        public void doiXungTrucOy()
+        {
+            Point real = RealToFake(this.X, this.Y);
+            real.X = -1 * real.X;
+            real = FakeToReal(real.X, real.Y);
+            this.X = real.X;
+            this.Y = real.Y;
         }
     }
 }

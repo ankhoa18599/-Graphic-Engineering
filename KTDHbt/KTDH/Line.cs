@@ -220,7 +220,7 @@ namespace KTDH
                     //    dem = 0;
                     //    continue;
                     //}
-                    if ((x % 6 == 4 || x % 6 == 0)&&x!=0) //thiếu pixel đầu nên phải x!=0
+                    if (x % 6 == 4 || x % 6 == 0)
                     {
                         x += delta_X;
                         y += delta_Y;
@@ -280,7 +280,7 @@ namespace KTDH
                     //    dem = 0;
                     //    continue;
                     //}
-                    if ((x % 8 == 4 || x % 8 == 6 || x % 8 == 0)&& x!=0) // cũng thiếu pixel đầu nên x!=0
+                    if ((x % 8 == 4 || x % 8 == 6 || x % 8 == 0) && x != 0)
                     {
                         x += delta_X;
                         y += delta_Y;

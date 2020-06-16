@@ -76,14 +76,22 @@ namespace KTDH
         {
             hinhthoi = new HinhThoi();
             Point Tam = new Point(Int32.Parse(this.TamX_TextBox.Text), Int32.Parse(this.TamY_TextBox.Text));
-            hinhthoi.setTam(Tam);
             int Cheoa = Int32.Parse(this.a_TextBox.Text);
             int Cheob = Int32.Parse(this.b_TextBox.Text);
+
             Point a1, a2, b1, b2;
             a1 = new Point(Tam.getX(), Tam.getY() + Cheoa / 2);
             a2 = new Point(Tam.getX(), Tam.getY() - Cheoa / 2);
             b1 = new Point(Tam.getX() - Cheob / 2, Tam.getY());
             b2 = new Point(Tam.getX() + Cheob / 2, Tam.getY());
+
+            a1 = Point.FakeToReal(a1.getX(), a1.getY());
+            a2 = Point.FakeToReal(a2.getX(), a2.getY());
+            b1 = Point.FakeToReal(b1.getX(), b1.getY());
+            b2 = Point.FakeToReal(b2.getX(), b2.getY());
+            Tam = Point.FakeToReal(Tam.getX(), Tam.getY());
+            hinhthoi.setTam(Tam);
+
             Line DCA = new Line(a1.getX(), a1.getY(), a2.getX(), a2.getY(), Color.Black);
             Line DCB = new Line(b1.getX(), b1.getY(), b2.getX(), b2.getY(), Color.Black);
             hinhthoi.setCheo(DCA, DCB);
@@ -105,17 +113,21 @@ namespace KTDH
             // 
             // TamX_TextBox
             // 
-            this.TamX_TextBox.Location = new System.Drawing.Point(156, 32);
+            this.TamX_TextBox.Location = new System.Drawing.Point(181, 32);
             this.TamX_TextBox.Name = "TamX_TextBox";
-            this.TamX_TextBox.Size = new System.Drawing.Size(37, 20);
+            this.TamX_TextBox.Size = new System.Drawing.Size(26, 20);
             this.TamX_TextBox.TabIndex = 0;
+            this.TamX_TextBox.Text = "0";
+            this.TamX_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TamY_TextBox
             // 
-            this.TamY_TextBox.Location = new System.Drawing.Point(199, 32);
+            this.TamY_TextBox.Location = new System.Drawing.Point(213, 32);
             this.TamY_TextBox.Name = "TamY_TextBox";
-            this.TamY_TextBox.Size = new System.Drawing.Size(37, 20);
+            this.TamY_TextBox.Size = new System.Drawing.Size(26, 20);
             this.TamY_TextBox.TabIndex = 1;
+            this.TamY_TextBox.Text = "0";
+            this.TamY_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // a_TextBox
             // 
@@ -123,6 +135,8 @@ namespace KTDH
             this.a_TextBox.Name = "a_TextBox";
             this.a_TextBox.Size = new System.Drawing.Size(37, 20);
             this.a_TextBox.TabIndex = 2;
+            this.a_TextBox.Text = "20";
+            this.a_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // b_TextBox
             // 
@@ -130,6 +144,8 @@ namespace KTDH
             this.b_TextBox.Name = "b_TextBox";
             this.b_TextBox.Size = new System.Drawing.Size(37, 20);
             this.b_TextBox.TabIndex = 3;
+            this.b_TextBox.Text = "20";
+            this.b_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Tam_Label
             // 
@@ -192,6 +208,10 @@ namespace KTDH
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+        internal HinhThoi GetHinhThoi()
+        {
+            return this.hinhthoi;
         }
 
     }
