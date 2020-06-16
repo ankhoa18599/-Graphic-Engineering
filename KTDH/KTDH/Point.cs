@@ -102,5 +102,31 @@ namespace KTDH
 
             return new Point((x + 40) * 5, (40 - y) * 5);
         }
+        public void doiXungDiemO()
+        {
+            Point real = RealToFake(this.X, this.Y);
+            real.X = -1 * real.X;
+            real.Y = -1 * real.Y;
+            real = FakeToReal(real.X, real.Y);
+            this.X = real.X;
+            this.Y = real.Y;
+
+        }
+        public void doiXungTrucOx()
+        {
+            Point real = RealToFake(this.X, this.Y);
+            real.Y = -1 * real.Y;
+            real = FakeToReal(real.X, real.Y);
+            this.X = real.X;
+            this.Y = real.Y;
+        }
+        public void doiXungTrucOy()
+        {
+            Point real = RealToFake(this.X, this.Y);
+            real.X = -1 * real.X;
+            real = FakeToReal(real.X, real.Y);
+            this.X = real.X;
+            this.Y = real.Y;
+        }
     }
 }

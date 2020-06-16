@@ -277,6 +277,223 @@ namespace KTDH
             labelChange();
             //Nam code
         }
+
+        private void jbtnTamO_Click(object sender, EventArgs e)
+        {
+            if(Form1.hinh == 1)
+            {
+                this.Refresh();
+                AB.doiXungO();
+                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if(Form1.hinh == 2)
+            {
+                this.Refresh();
+                hcn.AB.doiXungO();
+                hcn.BC.doiXungO();
+                hcn.CD.doiXungO();
+                hcn.AD.doiXungO();
+                hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if(Form1.hinh == 3)
+            {
+                this.Refresh();
+                htg.AB.doiXungO();
+                htg.AC.doiXungO();
+                htg.BC.doiXungO();
+                htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if(Form1.hinh == 4)
+            {
+                this.Refresh();
+                hinhtron.ht.tam.doiXungDiemO();
+                hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if(Form1.hinh == 5)
+            {
+                this.Refresh();
+                hinhvuong.AB.doiXungO();
+                hinhvuong.BC.doiXungO();
+                hinhvuong.CD.doiXungO();
+                hinhvuong.AD.doiXungO();
+                hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if(Form1.hinh == 6)
+            {
+                this.Refresh();
+                formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
+                formHT.GetHinhThoi().getTam().doiXungDiemO();
+                formHT.GetHinhThoi().getCheoA().doiXungO();
+                formHT.GetHinhThoi().getCheoB().doiXungO();
+                formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if(Form1.hinh == 7)
+            {
+                this.Refresh();
+                elip.hinhelip.tam.doiXungDiemO();
+                elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+        }
+
+        private void jbtnOx_Click(object sender, EventArgs e)
+        {
+            if (Form1.hinh == 1)
+            {
+                this.Refresh();
+                AB.doiXungOx();
+                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 2)
+            {
+                this.Refresh();
+                hcn.AB.doiXungOx();
+                hcn.BC.doiXungOx();
+                hcn.CD.doiXungOx();
+                hcn.AD.doiXungOx();
+                hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 3)
+            {
+                this.Refresh();
+                htg.AB.doiXungOx();
+                htg.AC.doiXungOx();
+                htg.BC.doiXungOx();
+                htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 4)
+            {
+                this.Refresh();
+                hinhtron.ht.tam.doiXungTrucOx();
+                hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 5)
+            {
+                this.Refresh();
+                hinhvuong.AB.doiXungOx();
+                hinhvuong.BC.doiXungOx();
+                hinhvuong.CD.doiXungOx();
+                hinhvuong.AD.doiXungOx();
+                hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 6)
+            {
+                this.Refresh();
+                formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
+                formHT.GetHinhThoi().getTam().doiXungTrucOx();
+                formHT.GetHinhThoi().getCheoA().doiXungOx();
+                formHT.GetHinhThoi().getCheoB().doiXungOx();
+                formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 7)
+            {
+                this.Refresh();
+                elip.hinhelip.tam.doiXungTrucOx();
+                elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+        }
+
+        private void jbtnOy_Click(object sender, EventArgs e)
+        {
+            if (Form1.hinh == 1)
+            {
+                this.Refresh();
+                AB.doiXungOy();
+                AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 2)
+            {
+                this.Refresh();
+                hcn.AB.doiXungOy();
+                hcn.BC.doiXungOy();
+                hcn.CD.doiXungOy();
+                hcn.AD.doiXungOy();
+                hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hcn.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 3)
+            {
+                this.Refresh();
+                htg.AB.doiXungOy();
+                htg.AC.doiXungOy();
+                htg.BC.doiXungOy();
+                htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                htg.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 4)
+            {
+                this.Refresh();
+                hinhtron.ht.tam.doiXungTrucOy();
+                hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 5)
+            {
+                this.Refresh();
+                hinhvuong.AB.doiXungOy();
+                hinhvuong.BC.doiXungOy();
+                hinhvuong.CD.doiXungOy();
+                hinhvuong.AD.doiXungOy();
+                hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 6)
+            {
+                this.Refresh();
+                formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
+                formHT.GetHinhThoi().getTam().doiXungTrucOy();
+                formHT.GetHinhThoi().getCheoA().doiXungOy();
+                formHT.GetHinhThoi().getCheoB().doiXungOy();
+                formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+            else if (Form1.hinh == 7)
+            {
+                this.Refresh();
+                elip.hinhelip.tam.doiXungTrucOy();
+                elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics());
+                labelChange();
+            }
+        }
+
         private void jbntQuay_Click(object sender, EventArgs e)
         {
             if (Form1.hinh == 1)

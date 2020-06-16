@@ -177,5 +177,20 @@ namespace KTDH
             this.Fpoint.setY(Point.round(Math.Round(Fpoint.getY() - dentay / 2)));
             this.Lpoint.setY(Point.round(Math.Round(Lpoint.getY() + dentay / 2)));
         }
+        public void doiXungO()
+        {
+            this.Fpoint.doiXungDiemO();
+            this.Lpoint.doiXungDiemO();
+        }
+        public void doiXungOx()
+        {
+            this.Fpoint.doiXungTrucOx();
+            this.Lpoint.doiXungTrucOx();
+        }
+        public void doiXungOy()
+        {
+            this.Fpoint.doiXungTrucOy();
+            this.Lpoint.doiXungTrucOy();
+        }
     }
 }
