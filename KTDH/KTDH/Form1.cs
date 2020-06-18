@@ -277,6 +277,7 @@ namespace KTDH
             labelChange();
             //Nam code
         }
+
         private void jbntQuay_Click(object sender, EventArgs e)
         {
             if (Form1.hinh == 1)
@@ -588,7 +589,11 @@ namespace KTDH
                     labelChange();
                 }
             }
+                }
+        private void btnVeNha_Click(object sender, EventArgs e)
+        {
+            XeTang xt = new XeTang(-37,2);
+            xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
         }
-
     }
 }
