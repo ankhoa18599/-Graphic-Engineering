@@ -24,17 +24,13 @@ namespace KTDH
         //    Point.putpixel(kx + x, ky - y, g);
         //    Point.putpixel(kx - x, ky - y, g);
         //}
-        public void put4pixel(int x, int y, int kx, int ky, Graphics g)
+        public void put2pixelduoi(int x, int y, int kx, int ky, Graphics g)
         {
             Point.putpixel(kx + x, ky + y, g);
             Point.putpixel(kx - x, ky + y, g);
-            //Point.putpixel(kx + x, ky - y, g);
-            //Point.putpixel(kx - x, ky - y, g);
         }
-        public void put4pixel2(int x, int y, int kx, int ky, Graphics g)
+        public void put2pixeltren(int x, int y, int kx, int ky, Graphics g)
         {
-            //Point.putpixel(kx + x, ky + y, g);
-            //Point.putpixel(kx - x, ky + y, g);
             Point.putpixel(kx + x, ky - y, g);
             Point.putpixel(kx - x, ky - y, g);
         }
@@ -67,8 +63,8 @@ namespace KTDH
 
             int Dx = 0;
             int Dy = 2 * A * y;
-            put4pixel(x, y, kx, ky, g);
-            put4pixel2(x, y, kx, ky, g);
+            put2pixelduoi(x, y, kx, ky, g);
+            put2pixeltren(x, y, kx, ky, g);
             int dem = 0;
             while (Dx < Dy)
             {
@@ -84,8 +80,8 @@ namespace KTDH
                     p += B * (2 * x + 3) + A * (2 - 2 * y);
                     Dy -= 10 * A;
                 }
-                put4pixel(x, y, kx, ky, g);
-                if(dem++%2==1) put4pixel2(x, y, kx, ky, g);
+                put2pixelduoi(x, y, kx, ky, g);
+                if(dem++%2==1) put2pixeltren(x, y, kx, ky, g);
             }
 
             while (y > 0)
@@ -102,8 +98,8 @@ namespace KTDH
                     Dx += 10 * B;
                     p += B * (2 * x + 2) + A * (3 - 2 * y);
                 }
-                put4pixel(x, y, kx, ky, g);
-                if (dem++ % 2 == 1) put4pixel2(x, y, kx, ky, g);
+                put2pixelduoi(x, y, kx, ky, g);
+                if (dem++ % 2 == 1) put2pixeltren(x, y, kx, ky, g);
             }
         }
         public void MidPoint_Elip1(Graphics g)

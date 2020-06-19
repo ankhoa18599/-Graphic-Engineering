@@ -18,6 +18,10 @@ D:\Tài liệu ĐH\Năm 3\KỸ THUẬT ĐỒ HỌA_INT1328-20200304T154341Z-001\
 D:\Tài liệu ĐH\Năm 3\KỸ THUẬT ĐỒ HỌA_INT1328-20200304T154341Z-001\DoAnKTDH\KTDHbt\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs.cache
 D:\Tài liệu ĐH\Năm 3\KỸ THUẬT ĐỒ HỌA_INT1328-20200304T154341Z-001\DoAnKTDH\KTDHbt\KTDH\obj\Debug\KTDH.exe
 D:\Tài liệu ĐH\Năm 3\KỸ THUẬT ĐỒ HỌA_INT1328-20200304T154341Z-001\DoAnKTDH\KTDHbt\KTDH\obj\Debug\KTDH.pdb
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+>>>>>>> master
 G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\bin\Debug\KTDH.exe
 G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\bin\Debug\KTDH.pdb
 G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.csprojAssemblyReference.cache
@@ -40,6 +44,7 @@ D:\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.csproj.GenerateResource.cache
 D:\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs.cache
 D:\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.exe
 D:\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.pdb
+>>>>>>> Stashed changes
 G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.HinhElip.resources
 G:\GitHub\-Graphic-Engineering\KTDHbt\KTDH\obj\Debug\KTDH.HinhTron.resources
 H:\Github\-Graphic-Engineering\KTDHbt\KTDH\bin\Debug\KTDH.exe
