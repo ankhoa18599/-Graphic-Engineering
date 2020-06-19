@@ -21,16 +21,22 @@ namespace KTDH
         }
 
         //Hàm put4pixel để vẽ elip(hàm trong slice word của GV)
-        public void put4pixel(int x, int y, int kx, int ky, Graphics g)
+        public void put4pixel(int x, int y, int kx, int ky, Graphics g,Color color)
         {
-            Point.putpixel(kx + x, ky + y, g);
-            Point.putpixel(kx - x, ky + y, g);
-            Point.putpixel(kx + x, ky - y, g);
-            Point.putpixel(kx - x, ky - y, g);
+            Point.putpixel(kx + x, ky + y, g,color);
+            Point.putpixel(kx - x, ky + y, g,color);
+            Point.putpixel(kx + x, ky - y, g,color);
+            Point.putpixel(kx - x, ky - y, g,color);
+        }
+        public void put4pixelxoa(int x, int y, int kx, int ky, Graphics g, Color color)
+        {
+            Point.xoapixel(kx + x, ky + y, g, color);
+            Point.xoapixel(kx - x, ky + y, g, color);
+            Point.xoapixel(kx + x, ky - y, g, color);
+            Point.xoapixel(kx - x, ky - y, g, color);
         }
 
-
-       public void VeElip(Graphics g)
+        public void VeElip(Graphics g,Color color)
         {
             int x, y, cx, cy, a, b;
             cx = tam.getX(); cy = tam.getY();
@@ -45,7 +51,7 @@ namespace KTDH
             y = b;
             int Dx = 0;
             int Dy = 2 * A * y;
-            put4pixel(x, y, cx, cy, g);
+            put4pixel(x, y, cx, cy, g,color);
 
             while (Dx < Dy)
             {
@@ -60,7 +66,7 @@ namespace KTDH
                     p += B + Dx - Dy;
                 }
                
-                if (x % 5 == 0) put4pixel(x, Point.round(y), cx, cy, g);
+                if (x % 5 == 0) put4pixel(x, Point.round(y), cx, cy, g,color);
 
 
             }
@@ -78,13 +84,13 @@ namespace KTDH
                     p += A - Dy + Dx;
                 }
               
-                if (x % 5 == 0) put4pixel(x, Point.round(y), cx, cy, g);
+                if (x % 5 == 0) put4pixel(x, Point.round(y), cx, cy, g,color);
 
             }
 
         }
 
-        public void VeElip2(Graphics g)
+        public void VeElip2(Graphics g,Color color)
         {
             int x, y, kx, ky, a, b;
 
@@ -106,7 +112,7 @@ namespace KTDH
 
             int Dx = 0;
             int Dy = 2 * A * y;
-            put4pixel(x, y, kx, ky, g);
+            put4pixel(x, y, kx, ky, g,color);
 
             while (Dx < Dy)
             {
@@ -122,7 +128,7 @@ namespace KTDH
                     p += B * (2 * x + 3) + A * (2 - 2 * y);
                     Dy -= 10 * A;
                 }
-                put4pixel(x, y, kx, ky, g);
+                put4pixel(x, y, kx, ky, g,color);
             }
 
             while (y > 0)
@@ -139,7 +145,65 @@ namespace KTDH
                     Dx += 10 * B;
                     p += B * (2 * x + 2) + A * (3 - 2 * y);
                 }
-                put4pixel(x, y, kx, ky, g);
+                put4pixel(x, y, kx, ky, g,color);
+            }
+        }
+        public void VeElip2xoa(Graphics g, Color color)
+        {
+            int x, y, kx, ky, a, b;
+
+            kx = tam.getX();
+            ky = tam.getY();
+
+            a = this.a;
+            b = this.b;
+
+            x = 0;
+            y = b;
+
+            int A, B;
+
+            A = a * a;
+            B = b * b;
+            double p = B + A / 4 - A * b;
+            p = Point.round(p);
+
+            int Dx = 0;
+            int Dy = 2 * A * y;
+            put4pixelxoa(x, y, kx, ky, g, color);
+
+            while (Dx < Dy)
+            {
+                x += 5;
+                Dx += 10 * B;
+                if (p < 0)
+                {
+                    p += B * (2 * x + 3);
+                }
+                else
+                {
+                    y -= 5;
+                    p += B * (2 * x + 3) + A * (2 - 2 * y);
+                    Dy -= 10 * A;
+                }
+                put4pixelxoa(x, y, kx, ky, g, color);
+            }
+
+            while (y > 0)
+            {
+                y -= 5;
+                Dy -= 10 * A;
+                if (p >= 0)
+                {
+                    p += A * (3 - 2 * y);
+                }
+                else
+                {
+                    x += 5;
+                    Dx += 10 * B;
+                    p += B * (2 * x + 2) + A * (3 - 2 * y);
+                }
+                put4pixelxoa(x, y, kx, ky, g, color);
             }
         }
 

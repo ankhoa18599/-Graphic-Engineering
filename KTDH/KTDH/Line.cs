@@ -93,7 +93,7 @@ namespace KTDH
         //    if (outP > 400) outP = 400; //nếu tọa độ lớn hơn 400 thì trả về 400
         //    return outP;
         //}
-        public void DDA_Line(Graphics g) // Ve duong thang co dinh dang mau
+        public void DDA_Line(Graphics g,Color color) // Ve duong thang co dinh dang mau
         {
             Color m = color;
             int Dx, Dy, count, temp_1, temp_2, dem = 1;
@@ -117,7 +117,7 @@ namespace KTDH
                 {
                     temp.setX(Point.round(x));
                     temp.setY(Point.round(y));
-                    Point.putpixel(temp.getX(), temp.getY(), g);
+                    Point.putpixel(temp.getX(), temp.getY(), g,color);
                     // temp_3 = temp_1;
                     // temp_4 = temp_2;
                     x += delta_X;
@@ -128,7 +128,41 @@ namespace KTDH
 
             }
         }
+        public void DDA_Linexoa(Graphics g, Color color) // Ve duong thang co dinh dang mau
+        {
+            Color m = color;
+            int Dx, Dy, count, temp_1, temp_2, dem = 1;
+            //int temp_3, temp_4;
+            Dx = Lpoint.getX() - Fpoint.getX();
+            Dy = Lpoint.getY() - Fpoint.getY();
+            if (Math.Abs(Dy) > Math.Abs(Dx)) count = Math.Abs(Dy);
+            else count = Math.Abs(Dx);
+            float delta_X, delta_Y, x, y;
+            Point temp = new Point();
+            count /= 5;
+            if (count > 0)
+            {
+                delta_X = Dx;
+                delta_X /= count;
+                delta_Y = Dy;
+                delta_Y /= count;
+                x = Fpoint.getX();
+                y = Fpoint.getY();
+                do
+                {
+                    temp.setX(Point.round(x));
+                    temp.setY(Point.round(y));
+                    Point.xoapixel(temp.getX(), temp.getY(), g, color);
+                    // temp_3 = temp_1;
+                    // temp_4 = temp_2;
+                    x += delta_X;
+                    y += delta_Y;
+                    --count;
+                    dem++;
+                } while (count != -1);
 
+            }
+        }
         public void QuayDT()
         {
             double sin = Math.Sin(Math.PI * 60.0 / 180.0);
@@ -176,6 +210,21 @@ namespace KTDH
             double dentay = (Dy - Dy0);
             this.Fpoint.setY(Point.round(Math.Round(Fpoint.getY() - dentay / 2)));
             this.Lpoint.setY(Point.round(Math.Round(Lpoint.getY() + dentay / 2)));
+        }
+        public void doiXungO()
+        {
+            this.Fpoint.doiXungDiemO();
+            this.Lpoint.doiXungDiemO();
+        }
+        public void doiXungOx()
+        {
+            this.Fpoint.doiXungTrucOx();
+            this.Lpoint.doiXungTrucOx();
+        }
+        public void doiXungOy()
+        {
+            this.Fpoint.doiXungTrucOy();
+            this.Lpoint.doiXungTrucOy();
         }
     }
 }

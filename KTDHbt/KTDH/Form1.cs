@@ -151,6 +151,10 @@ namespace KTDH
             yb = dt.yB;
             Point p1 = Point.FakeToReal(xa, ya); // gan toa do tren Oxy 
             Point p2 = Point.FakeToReal(xb, yb);
+
+            AB = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY(), Color.Red); //tao AB 
+            AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics()); // ve dt AB bang DDA 
+
             AB = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY(), Color.Red); //tao AB
             if (luachonNet == 0) // ve dut khuc
             {
