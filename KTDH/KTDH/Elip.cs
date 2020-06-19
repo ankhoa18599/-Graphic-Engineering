@@ -207,15 +207,15 @@ namespace KTDH
             }
         }
 
-        public void put2pixel(int x, int y, int kx, int ky, Graphics g)
+        public void put2pixel(int x, int y, int kx, int ky, Graphics g,Color color)
         {
-            Point.putpixel(kx + x, ky + y, g);
-            Point.putpixel(kx - x, ky + y, g);
+            Point.putpixel(kx + x, ky + y, g,color);
+            Point.putpixel(kx - x, ky + y, g,color);
             //Point.putpixel(kx + x, ky - y, g);
             //Point.putpixel(kx - x, ky - y, g);
         }
 
-        public void VeElip_netdut(Graphics g)
+        public void VeElip_netdut(Graphics g,Color color)
         {
             int x, y, cx, cy, a, b;
             cx = tam.getX(); cy = tam.getY();
@@ -230,7 +230,7 @@ namespace KTDH
             y = b;
             int Dx = 0;
             int Dy = 2 * A * y;
-            put4pixel(x, y, cx, cy, g);
+            put4pixel(x, y, cx, cy, g,color);
             int count = 0;
             while (Dx < Dy)
             {
@@ -245,8 +245,8 @@ namespace KTDH
                     p += B + Dx - Dy;
                 }
 
-                if (x % 5 == 0 && count % 2 != 0) put4pixel(x, Point.round(y), cx, cy, g);
-                else if (x % 5 == 0 && count % 2 == 0) put2pixel(x, Point.round(y), cx, cy, g);
+                if (x % 5 == 0 && count % 2 != 0) put4pixel(x, Point.round(y), cx, cy, g,color);
+                else if (x % 5 == 0 && count % 2 == 0) put2pixel(x, Point.round(y), cx, cy, g,color);
                 count++;
 
             }
@@ -265,8 +265,8 @@ namespace KTDH
                     p += A - Dy + Dx;
                 }
 
-                if (x % 5 == 0 && count % 2 != 0) put4pixel(x, Point.round(y), cx, cy, g);
-                else if (x % 5 == 0 && count % 2 == 0) put2pixel(x, Point.round(y), cx, cy, g);
+                if (x % 5 == 0 && count % 2 != 0) put4pixel(x, Point.round(y), cx, cy, g,color);
+                else if (x % 5 == 0 && count % 2 == 0) put2pixel(x, Point.round(y), cx, cy, g,color);
                 count++;
             }
 

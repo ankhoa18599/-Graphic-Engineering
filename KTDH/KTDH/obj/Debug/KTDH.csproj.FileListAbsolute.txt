@@ -76,3 +76,4 @@ C:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CoreCompileInputs
 C:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CopyComplete
 C:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.exe
 C:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
+C:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhCau.resources

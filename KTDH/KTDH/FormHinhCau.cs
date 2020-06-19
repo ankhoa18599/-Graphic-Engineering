@@ -13,6 +13,7 @@ namespace KTDH
     {
         private HinhCau hinhcau;
         private Graphics luoigiaodien;
+
         public FormHinhCau()
         {
             InitializeComponent();
@@ -33,17 +34,17 @@ namespace KTDH
 
             x1 = (int)(x - y * a);
             y1 = (int)(z - y * a);
-
+            Color black = Color.Black;
             Point tam = Point.FakeToReal(x1, y1);
 
             hinhcau = new HinhCau();
             hinhcau.KhoitaoHT(tam.getX(), tam.getY(), r);
-            hinhcau.GetHT().Midpoint_htron(luoigiaodien);
+            hinhcau.GetHT().Midpoint_htron(luoigiaodien,black);
 
             int Cheoa = r;
             int Cheob = r/2;
             hinhcau.KhotaoElip(tam.getX(), tam.getY(),Cheoa,Cheob);
-            hinhcau.GetElip().VeElip_netdut(luoigiaodien);
+            hinhcau.GetElip().VeElip_netdut(luoigiaodien,black);
             
 
             //Point point = Line.toado2(x1, y1);
