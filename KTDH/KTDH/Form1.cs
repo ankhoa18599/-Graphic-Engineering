@@ -277,6 +277,21 @@ namespace KTDH
             labelChange();
             //Nam code
         }
+
+        private void btnVeNha_Click(object sender, EventArgs e)
+        {
+            House nha = new House();
+            nha.Sethouse(-20, -30, 40, 20);
+            int denta = 0;
+            for (; denta <= 10; denta++)
+            {
+                nha.VeNha(this.JpnLuoiGiaoDien.CreateGraphics());
+                nha.Ve_Khoi(nha.Gethousex() + nha.Getchieurong_house(), nha.Gethousey() + nha.Getchieucao_house() + nha.Getchieucao_house() / 4 + nha.Getchieucao_house() / 5 + denta, 10, this.JpnLuoiGiaoDien.CreateGraphics());
+                this.Refresh();
+            }
+
+        }
+
         private void jbntQuay_Click(object sender, EventArgs e)
         {
             if (Form1.hinh == 1)

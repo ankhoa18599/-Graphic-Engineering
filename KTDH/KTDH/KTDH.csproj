@@ -107,6 +107,7 @@
     <Compile Include="HinhVuong.Designer.cs">
       <DependentUpon>HinhVuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="House.cs" />
     <Compile Include="HT.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="Point.cs" />

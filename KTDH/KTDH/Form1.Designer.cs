@@ -499,6 +499,7 @@
             this.btnVeNha.TabIndex = 43;
             this.btnVeNha.Text = "None";
             this.btnVeNha.UseVisualStyleBackColor = false;
+            this.btnVeNha.Click += new System.EventHandler(this.btnVeNha_Click);
             // 
             // Sy_numeric
             // 
