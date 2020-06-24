@@ -147,5 +147,17 @@ namespace KTDH
             this.X = real.X;
             this.Y = real.Y;
         }
+        public void TileDiem(double Sx, double Sy)
+        {
+            this.X = (int)Math.Round(this.X * Sx);
+            this.Y = (int)Math.Round(this.Y * Sy);
+        }
+        public void TinhTienDiem(double dx,double dy)
+        {
+            dx = Math.Round(dx);
+            dy = Math.Round(dy);
+            this.X = this.X + (int)dx;
+            this.Y = this.Y + (int)dy;
+        }
     }
 }

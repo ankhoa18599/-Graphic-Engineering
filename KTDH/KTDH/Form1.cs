@@ -596,6 +596,38 @@ namespace KTDH
             }
         }
 
+        private void btnVeNha_Click(object sender, EventArgs e)
+        {
+            Graphics g = this.JpnLuoiGiaoDien.CreateGraphics();
+            House nha = new House();
+            int nhax=0, nhay=0, nhacao=20, nharong=20;
+            nha.setThanNha(nhax, nhay, nhacao, nharong);
+            nha.setFull();
+            nha.VeFull(g,Color.Black);
+
+            nha.setThanNha(nhax, nhay, nhacao, nharong);
+            nha.getThanNha().TiLe(1, 0.9, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
+            nha.setFull();
+            nha.VeFull(g, Color.Red);
+
+            nha.setThanNha(nhax, nhay, nhacao, nharong);
+            nha.getThanNha().TiLe(1, 0.8, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
+            nha.setFull();
+            nha.VeFull(g, Color.Pink);
+
+            nha.setThanNha(nhax, nhay, nhacao, nharong);
+            nha.getThanNha().TiLe(1, 0.7, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
+            nha.setFull();
+            nha.VeFull(g, Color.Red);
+
+            nha.setThanNha(nhax, nhay, nhacao, nharong);
+            nha.getThanNha().TiLe(1, 0.6, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
+            nha.setFull();
+            nha.VeFull(g, Color.Pink);
+
+
+        }
+
         private void jbtntiLe_Click(object sender, EventArgs e)
         {
             if (Form1.hinh == -1) return;

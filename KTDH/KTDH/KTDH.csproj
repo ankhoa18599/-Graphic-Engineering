@@ -75,6 +75,7 @@
     <Compile Include="FormHinhThoi.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HCN.cs" />
     <Compile Include="HinhCau.cs" />
     <Compile Include="HinhChuNhat.cs">
       <SubType>Form</SubType>
@@ -107,6 +108,7 @@
     <Compile Include="HinhVuong.Designer.cs">
       <DependentUpon>HinhVuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="House.cs" />
     <Compile Include="HT.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="Point.cs" />

@@ -77,3 +77,7 @@ C:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CopyComplete
 C:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.exe
 C:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.pdb
 C:\Github\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhCau.resources
+D:\-Graphic-Engineering\KTDH\KTDH\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Form3D.resources
+D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhCau.resources
+D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CopyComplete

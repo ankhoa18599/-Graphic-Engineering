@@ -226,5 +226,10 @@ namespace KTDH
             this.Fpoint.doiXungTrucOy();
             this.Lpoint.doiXungTrucOy();
         }
+        public void TiLe(double Sx,double Sy)
+        {
+            this.Fpoint.TileDiem(Sx, Sy);
+            this.Lpoint.TileDiem(Sx, Sy);
+        }
     }
 }
