@@ -65,27 +65,27 @@ namespace KTDH
         private void jbtHopCN_Click(object sender, EventArgs e)
         {
             //Nam code
-
+            Color c = Color.Black;
             hhcn = new HinhHopChuNhat();
             hhcn.ShowDialog();
             if (hhcn.check == false) return;
             else
             {
                 //Đáy dưới
-                hhcn.AB.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.AB.DDA_Line(this.panel1.CreateGraphics(),c);
                 hhcn.BC.Ve_Net_Dut(this.panel1.CreateGraphics());
                 hhcn.CD.Ve_Net_Dut(this.panel1.CreateGraphics());
-                hhcn.DA.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.DA.DDA_Line(this.panel1.CreateGraphics(),c);
                 //Đáy trên
-                hhcn.EF.DDA_Line(this.panel1.CreateGraphics());
-                hhcn.FG.DDA_Line(this.panel1.CreateGraphics());
-               hhcn.GH.DDA_Line(this.panel1.CreateGraphics());
-               hhcn.HE.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.EF.DDA_Line(this.panel1.CreateGraphics(),c);
+                hhcn.FG.DDA_Line(this.panel1.CreateGraphics(),c);
+               hhcn.GH.DDA_Line(this.panel1.CreateGraphics(),c);
+               hhcn.HE.DDA_Line(this.panel1.CreateGraphics(),c);
                 //cac duong cao
-                hhcn.AE.DDA_Line(this.panel1.CreateGraphics());
-                hhcn.BF.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.AE.DDA_Line(this.panel1.CreateGraphics(),c);
+                hhcn.BF.DDA_Line(this.panel1.CreateGraphics(),c);
                 hhcn.CG.Ve_Net_Dut(this.panel1.CreateGraphics());
-                hhcn.DH.DDA_Line(this.panel1.CreateGraphics());
+                hhcn.DH.DDA_Line(this.panel1.CreateGraphics(),c);
             }
            
         }
@@ -93,6 +93,7 @@ namespace KTDH
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             this.Refresh();
+        }
         private void jbtCau_Click(object sender, EventArgs e)
         {
             FormHinhCau formhc = new FormHinhCau();
