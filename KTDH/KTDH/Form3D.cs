@@ -93,6 +93,11 @@ namespace KTDH
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             this.Refresh();
+        private void jbtCau_Click(object sender, EventArgs e)
+        {
+            FormHinhCau formhc = new FormHinhCau();
+            formhc.Setluoigiaodien(this.panel1.CreateGraphics());
+            formhc.ShowDialog();
         }
     }
 }

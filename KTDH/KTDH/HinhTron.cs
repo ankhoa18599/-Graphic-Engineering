@@ -28,6 +28,7 @@ namespace KTDH
             Point A = Point.FakeToReal(x, y);
             //MessageBox.Show(r.ToString());
             ht = new HT(A.getX(), A.getY(), r);
+            this.DialogResult = DialogResult.OK;
             this.checkchange = true;
             this.Close();
         }
