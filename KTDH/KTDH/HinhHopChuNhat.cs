@@ -76,7 +76,7 @@ namespace KTDH
                 yH = (int)(z + cc - (y - cr / 2) * a);
 
                 Point A = Point.FakeToReal(xA, yA);
-                Point B= Point.FakeToReal(xB, yB);
+                Point B = Point.FakeToReal(xB, yB);
                 Point C = Point.FakeToReal(xC, yC);
                 Point D = Point.FakeToReal(xD, yD);
                 Point E = Point.FakeToReal(xE, yE);
