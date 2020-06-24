@@ -163,6 +163,41 @@ namespace KTDH
 
             }
         }
+        public void DDA_Linexoa(Graphics g, Color color,bool noTruc) // Ve duong thang co dinh dang mau
+        {
+            Color m = color;
+            int Dx, Dy, count, temp_1, temp_2, dem = 1;
+            //int temp_3, temp_4;
+            Dx = Lpoint.getX() - Fpoint.getX();
+            Dy = Lpoint.getY() - Fpoint.getY();
+            if (Math.Abs(Dy) > Math.Abs(Dx)) count = Math.Abs(Dy);
+            else count = Math.Abs(Dx);
+            float delta_X, delta_Y, x, y;
+            Point temp = new Point();
+            count /= 5;
+            if (count > 0)
+            {
+                delta_X = Dx;
+                delta_X /= count;
+                delta_Y = Dy;
+                delta_Y /= count;
+                x = Fpoint.getX();
+                y = Fpoint.getY();
+                do
+                {
+                    temp.setX(Point.round(x));
+                    temp.setY(Point.round(y));
+                    Point.xoapixel(temp.getX(), temp.getY(), g, color,noTruc);
+                    // temp_3 = temp_1;
+                    // temp_4 = temp_2;
+                    x += delta_X;
+                    y += delta_Y;
+                    --count;
+                    dem++;
+                } while (count != -1);
+
+            }
+        }
         public void QuayDT()
         {
             double sin = Math.Sin(Math.PI * 60.0 / 180.0);

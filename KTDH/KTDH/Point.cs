@@ -29,6 +29,30 @@ namespace KTDH
         {
             setX(x); setY(y);
         }
+        public void putpixel(Graphics grfx, Color color)
+        {
+            if (X < 0 || X > 400 || Y < 0 || Y > 400) return;
+            Pen p = new Pen(color);
+            SolidBrush b = new SolidBrush(color);
+            grfx.FillRectangle(b, X - 2, Y - 2, 5, 5);
+        }
+        public void xoapixel(Graphics grfx, Color color,bool noToado)
+        {
+            if (X < 0 || X > 400 || Y < 0 || Y > 400) return;
+            Pen p = new Pen(color);
+            SolidBrush b = new SolidBrush(color);// Brush dùng để tô vùng bên trong của một hình 
+            SolidBrush b3 = new SolidBrush(Color.White);
+            grfx.FillRectangle(b, X - 2, Y - 2, 5, 5);
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    for (int j = 0; j < 5; j++)
+            //    {
+            //        if ((X + i - 2) % 5 != 0 && (Y + j - 2) % 5 != 0)
+            //            grfx.FillRectangle(b, X + i - 2, Y + j - 2, 1, 1);
+            //        else grfx.FillRectangle(b3, X + i - 2, Y + j - 2, 1, 1);
+            //    }
+            //}
+        }
         public static void putpixel(int x, int y, Graphics grfx,Color color)
         {
             if (x < 0 || x > 400 || y < 0 || y > 400) return;
@@ -76,6 +100,24 @@ namespace KTDH
                     else grfx.FillRectangle(b3, x + i - 2, y + j - 2, 1, 1);
                 }
             }    
+        }
+        public static void xoapixel(int x, int y, Graphics grfx, Color color,bool noToado)
+        {
+            if (x < 0 || x > 400 || y < 0 || y > 400) return;
+            Pen p = new Pen(color);
+            SolidBrush b = new SolidBrush(color);// Brush dùng để tô vùng bên trong của một hình 
+            SolidBrush b3 = new SolidBrush(Color.White);
+            grfx.FillRectangle(b, x - 2, y - 2, 5, 5);
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    for (int j = 0; j < 5; j++)
+            //    {
+
+            //        if ((x + i - 2) % 5 != 0 && (y + j - 2) % 5 != 0)
+            //            grfx.FillRectangle(b, x + i - 2, y + j - 2, 1, 1);
+            //        else grfx.FillRectangle(b3, x + i - 2, y + j - 2, 1, 1);
+            //    }
+            //}
         }
         public static int round(double inP)
         {
