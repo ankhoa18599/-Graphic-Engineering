@@ -174,6 +174,12 @@ namespace KTDH
                 label7.Text = "yTam: ";
                 label8.Text = ((elip.hinhelip.tam.getX() - 200) / 5).ToString();
                 label9.Text = (-(elip.hinhelip.tam.getY() - 200) / 5).ToString();
+                label10.Text = "Bán kính 1: ";
+                label11.Text = "Bán kính 2: ";
+                label12.Text = (elip.hinhelip.a/ 5).ToString();
+                label13.Text = (elip.hinhelip.b/5).ToString();
+                
+
             }
             else if (Form1.hinh == 6)
             {
