@@ -65,10 +65,11 @@ namespace KTDH
         private void Draw_Button_Click(object sender, EventArgs e)
         {
             checkchange = true;
+            this.DialogResult = DialogResult.OK;
             this.Alert_Label.Text = "";
             if (Isvalid() == true)
             {
-                DrawHinhThoi(this.luoigiaodien, Color.Red);
+                DrawHinhThoi(this.luoigiaodien, Color.Black);
                 this.Close();
             }
         }

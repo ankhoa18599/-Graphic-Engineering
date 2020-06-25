@@ -40,6 +40,7 @@ namespace KTDH
             CD = new Line(C.getX(), C.getY(), D.getX(), D.getY(), Color.Red);
             AD = new Line(A.getX(), A.getY(), D.getX(), D.getY(), Color.Red);
             this.checkchange = true;
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

@@ -200,7 +200,7 @@ namespace KTDH
             xoahinh();
             Form1.hinh = 1;
             DuongThang dt = new DuongThang();
-            dt.ShowDialog();
+            if (dt.ShowDialog() == DialogResult.Ignore) Form1.hinh = -1;
             int xa, xb, ya, yb;
             xa = dt.xA;
             ya = dt.yA;
@@ -230,7 +230,7 @@ namespace KTDH
             xoahinh();
             Form1.hinh = 2;
             hcn = new HinhChuNhat();
-            hcn.ShowDialog();
+            if (hcn.ShowDialog() == DialogResult.Cancel) Form1.hinh =-1;
             if (hcn.checkchange == false) return;
             hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
             hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
@@ -245,7 +245,7 @@ namespace KTDH
             xoahinh();
             Form1.hinh = 3;
             htg = new HinhTamGiac();
-            htg.ShowDialog();
+            if (htg.ShowDialog() == DialogResult.Cancel) Form1.hinh = -1;
             if (htg.checkchange == false) return;
             htg.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
             htg.AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
@@ -258,7 +258,7 @@ namespace KTDH
             xoahinh();
             Form1.hinh = 4;
             hinhtron = new HinhTron();
-            hinhtron.ShowDialog();
+            if (hinhtron.ShowDialog() == DialogResult.Cancel) Form1.hinh = -1;
             if (hinhtron.checkchange == false) return;
             hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics(), color);
             labelChange();
@@ -270,7 +270,7 @@ namespace KTDH
             Form1.hinh = 6;
             formHT = new FormHinhThoi();
             formHT.setluoigiaodien(this.JpnLuoiGiaoDien.CreateGraphics());
-            formHT.ShowDialog();
+            if (formHT.ShowDialog() == DialogResult.Cancel) Form1.hinh = -1;
             if (formHT.getcheckchange() == false) return;
             this.labelChange();
         }
@@ -284,7 +284,7 @@ namespace KTDH
             xoahinh();
             Form1.hinh = 5;
             hinhvuong = new HinhVuong();
-            hinhvuong.ShowDialog();
+            if (hinhvuong.ShowDialog() == DialogResult.Cancel) Form1.hinh = -1;
             if (hinhvuong.checkchange == false) return;
             hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
             hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
@@ -299,7 +299,7 @@ namespace KTDH
             xoahinh();
             Form1.hinh = 7;
             elip = new HinhElip();
-            elip.ShowDialog();
+            if (elip.ShowDialog() == DialogResult.Cancel) Form1.hinh = -1;
             if (elip.checkchange == false) return;
             elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics(), color);
             labelChange();
@@ -548,7 +548,7 @@ namespace KTDH
             }
             else if (Form1.hinh == 3)
             {
-                //xoahinh();
+                xoahinh();
                 htg.AB.QuayDT();
                 htg.AC.QuayDT();
                 htg.BC.QuayDT();
@@ -860,6 +860,7 @@ namespace KTDH
         private void xoahinh()
         {
             Color xoa = Color.FromArgb(224, 224, 224);
+            
             if (Form1.hinh == 1)
             {
                 AB.DDA_Linexoa(this.JpnLuoiGiaoDien.CreateGraphics(), xoa);
