@@ -89,6 +89,27 @@ namespace KTDH
             Ve_CuaNha(g, c);
             Ve_OngKhoi(g, c);
         }
+        public void Ve_NhaSap(Graphics g,Color c)
+        {
+            Point motmot = new Point(ThanNha.getA().getX(), ThanNha.getA().getY());
+            Point mothai = new Point(ThanNha.getB().getX(), ThanNha.getB().getY() + 5);
+            Point haimot = new Point(ThanNha.getB().getX(), ThanNha.getB().getY());
+            Point haihai = new Point(ThanNha.getA().getX(), ThanNha.getA().getY() + 5);
+            Point bamot = new Point((int)Math.Round((ThanNha.getB().getX()-ThanNha.getA().getX())/2.0),ThanNha.getA().getY());
+            Point bahai = new Point((int)Math.Round((ThanNha.getB().getX() - ThanNha.getA().getX()) / 2.0), ThanNha.getA().getY()+5);
+            motmot = Point.FakeToReal(motmot.getX(), motmot.getY());
+            mothai = Point.FakeToReal(mothai.getX(), mothai.getY());
+            haimot = Point.FakeToReal(haimot.getX(), haimot.getY());
+            haihai = Point.FakeToReal(haihai.getX(), haihai.getY());
+            bamot = Point.FakeToReal(bamot.getX(), bamot.getY());
+            bahai = Point.FakeToReal(bahai.getX(), bahai.getY());
+            Line mot = new Line(motmot.getX(),motmot.getY(),mothai.getX(),mothai.getY(),c);
+            Line hai = new Line(haimot.getX(),haimot.getY(),haihai.getX(),haihai.getY(),c);
+            Line ba = new Line(bamot.getX(), bamot.getY(), bahai.getX(), bahai.getY(), c);
 
+            mot.DDA_Line(g, c);
+            hai.DDA_Line(g, c);
+            ba.DDA_Line(g, c);
+        }
     }
 }

@@ -605,25 +605,14 @@ namespace KTDH
             nha.setFull();
             nha.VeFull(g,Color.Black);
 
-            nha.setThanNha(nhax, nhay, nhacao, nharong);
-            nha.getThanNha().TiLe(1, 0.9, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
-            nha.setFull();
-            nha.VeFull(g, Color.Red);
-
-            nha.setThanNha(nhax, nhay, nhacao, nharong);
-            nha.getThanNha().TiLe(1, 0.8, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
-            nha.setFull();
-            nha.VeFull(g, Color.Pink);
-
-            nha.setThanNha(nhax, nhay, nhacao, nharong);
-            nha.getThanNha().TiLe(1, 0.7, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
-            nha.setFull();
-            nha.VeFull(g, Color.Red);
-
-            nha.setThanNha(nhax, nhay, nhacao, nharong);
-            nha.getThanNha().TiLe(1, 0.6, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
-            nha.setFull();
-            nha.VeFull(g, Color.Pink);
+            for(double i = 1; i > 0; i -= 0.1)
+            {
+                nha.setThanNha(nhax, nhay, nhacao, nharong);
+                nha.getThanNha().TiLe(1, i, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
+                nha.setFull();
+                nha.VeFull(g, Color.Black);
+                this.Refresh();
+            }
 
 
         }
