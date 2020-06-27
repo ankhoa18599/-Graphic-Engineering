@@ -10,7 +10,6 @@ D:\Tài liệu ĐH\Năm 3\KỸ THUẬT ĐỒ HỌA_INT1328-20200304T154341Z-001\
 D:\Tài liệu ĐH\Năm 3\KỸ THUẬT ĐỒ HỌA_INT1328-20200304T154341Z-001\DoAnKTDH\KTDH\KTDH\obj\Debug\KTDH.DuongThang.resources
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\bin\Debug\KTDH.exe
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\bin\Debug\KTDH.pdb
-G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csprojAssemblyReference.cache
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.DuongThang.resources
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Form1.resources
 G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Properties.Resources.resources
@@ -81,3 +80,5 @@ D:\-Graphic-Engineering\KTDH\KTDH\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Form3D.resources
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhCau.resources
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CopyComplete
+G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhCau.resources
+G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csprojAssemblyReference.cache

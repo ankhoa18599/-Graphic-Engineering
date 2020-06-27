@@ -22,10 +22,10 @@ namespace KTDH
             Point Z = Point.FakeToReal(xe.getX(), xe.getY());
             HT banhxe1 = new HT(Z.getX(), Z.getY(), 15);
             HT banhxe2 = new HT(Z.getX()+33*5, Z.getY(), 15);
-            banhxe1.Midpoint_htron(g);
-            banhxe2.Midpoint_htron(g);
+            banhxe1.Midpoint_htron(g,Color.Black);
+            banhxe2.Midpoint_htron(g,Color.Black);
             Elip xich = new Elip(Z.getX() + 16 * 5, Z.getY(), 14 * 5, 2 * 5);
-            xich.VeElip(g);
+            xich.VeElip(g,Color.Green);
             Line AB, BC, CD, DA;
             int xa, xb, xc, xd, ya, yb, yc, yd;
             xa = xe.getX()+19;
@@ -45,10 +45,10 @@ namespace KTDH
             BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), Color.Red);
             CD = new Line(C.getX(), C.getY(), D.getX(), D.getY(), Color.Red);
             DA = new Line(A.getX(), A.getY(), D.getX(), D.getY(), Color.Red);
-            AB.DDA_Line(g);
-            CD.DDA_Line(g);
-            BC.DDA_Line(g);
-            DA.DDA_Line(g);
+            AB.DDA_Line(g, Color.Red);
+            CD.DDA_Line(g, Color.Red);
+            BC.DDA_Line(g, Color.Red);
+            DA.DDA_Line(g, Color.Red);
             xa = xe.getX() + 7;
             ya = xe.getY() + 3;
             xb = xa + 18;
@@ -65,12 +65,12 @@ namespace KTDH
             BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), Color.Red);
             CD = new Line(C.getX(), C.getY(), D.getX(), D.getY(), Color.Red);
             DA = new Line(A.getX(), A.getY(), D.getX(), D.getY(), Color.Red);
-            AB.DDA_Line(g);
-            CD.DDA_Line(g);
-            BC.DDA_Line(g);
-            DA.DDA_Line(g);
+            AB.DDA_Line(g, Color.Red);
+            CD.DDA_Line(g, Color.Red);
+            BC.DDA_Line(g, Color.Red);
+            DA.DDA_Line(g, Color.Red);
             HT nap = new HT(Z.getX() + 16 * 5, Z.getY()-13*5,7*5);
-            nap.Midpoint_htron2(g);
+            nap.Midpoint_htron2(g, Color.BlueViolet);
         }
 
     }
