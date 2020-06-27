@@ -65,14 +65,15 @@ namespace KTDH
         private void Draw_Button_Click(object sender, EventArgs e)
         {
             checkchange = true;
+            this.DialogResult = DialogResult.OK;
             this.Alert_Label.Text = "";
             if (Isvalid() == true)
             {
-                DrawHinhThoi(this.luoigiaodien);
+                DrawHinhThoi(this.luoigiaodien, Color.Black);
                 this.Close();
             }
         }
-        public void DrawHinhThoi(Graphics g)
+        public void DrawHinhThoi(Graphics g,Color color)
         {
             hinhthoi = new HinhThoi();
             Point Tam = new Point(Int32.Parse(this.TamX_TextBox.Text), Int32.Parse(this.TamY_TextBox.Text));
@@ -95,7 +96,7 @@ namespace KTDH
             Line DCA = new Line(a1.getX(), a1.getY(), a2.getX(), a2.getY(), Color.Black);
             Line DCB = new Line(b1.getX(), b1.getY(), b2.getX(), b2.getY(), Color.Black);
             hinhthoi.setCheo(DCA, DCB);
-            hinhthoi.Draw(g);
+            hinhthoi.Draw(g, color);
         }
 
         private void InitializeComponent()

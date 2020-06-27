@@ -61,5 +61,11 @@ namespace KTDH
             g.DrawLine(new Pen(Color.Red), 200, 200, 0, 400);
         }
 
+        private void jbtCau_Click(object sender, EventArgs e)
+        {
+            FormHinhCau formhc = new FormHinhCau();
+            formhc.Setluoigiaodien(this.panel1.CreateGraphics());
+            formhc.ShowDialog();
+        }
     }
 }

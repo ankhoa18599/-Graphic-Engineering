@@ -24,6 +24,7 @@ namespace KTDH
 
             A = Point.FakeToReal(x, y);
             hinhelip = new Elip(A.getX(), A.getY(), a, b);
+            this.DialogResult = DialogResult.OK;
             checkchange = true;
             this.Close();
         }

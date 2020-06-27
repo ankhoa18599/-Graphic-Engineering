@@ -334,6 +334,7 @@
             this.jbtnTamO.TabIndex = 58;
             this.jbtnTamO.Text = "Đối Xứng Qua O\r\n";
             this.jbtnTamO.UseVisualStyleBackColor = false;
+            this.jbtnTamO.Click += new System.EventHandler(this.jbtnTamO_Click);
             // 
             // jbtnOx
             // 
@@ -344,6 +345,7 @@
             this.jbtnOx.TabIndex = 57;
             this.jbtnOx.Text = "Đối Xứng Qua OX\r\n\r\n";
             this.jbtnOx.UseVisualStyleBackColor = false;
+            this.jbtnOx.Click += new System.EventHandler(this.jbtnOx_Click);
             // 
             // jbtnOy
             // 
@@ -354,6 +356,7 @@
             this.jbtnOy.TabIndex = 56;
             this.jbtnOy.Text = "Đối xứng Qua OY\r\n";
             this.jbtnOy.UseVisualStyleBackColor = false;
+            this.jbtnOy.Click += new System.EventHandler(this.jbtnOy_Click);
             // 
             // Sx_numeric
             // 
@@ -543,7 +546,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 511);
+            this.ClientSize = new System.Drawing.Size(856, 456);
             this.Controls.Add(this.Sy_Label);
             this.Controls.Add(this.Sx_Label);
             this.Controls.Add(this.Sy_numeric);
