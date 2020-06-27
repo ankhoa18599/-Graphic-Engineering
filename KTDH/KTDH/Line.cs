@@ -231,5 +231,20 @@ namespace KTDH
             this.Fpoint.TileDiem(Sx, Sy);
             this.Lpoint.TileDiem(Sx, Sy);
         }
+        public void TinhTien(double x, double y)
+        {
+            Fpoint.TinhTienDiem(x, y);
+            Lpoint.TinhTienDiem(x, y);
+        }
+        public void RealtoFake()
+        {
+            Fpoint = Point.RealToFake(Fpoint.getX(), Fpoint.getY());
+            Lpoint = Point.RealToFake(Lpoint.getX(), Lpoint.getY());
+        }
+        public void FaketoReal()
+        {
+            Fpoint = Point.FakeToReal(Fpoint.getX(), Fpoint.getY());
+            Lpoint = Point.FakeToReal(Lpoint.getX(), Lpoint.getY());
+        }
     }
 }

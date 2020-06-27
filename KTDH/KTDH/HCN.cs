@@ -49,21 +49,21 @@ namespace KTDH
             double GocX = GocX0 * Sx;
             double GocY = GocY0 * Sy;
             //Độ lệch so với gốc tọa độ cũ
-            double DentaX = Math.Abs(GocX - GocX0);
-            double DentaY = Math.Abs(GocY - GocY0);
+            double DentaX = GocX - GocX0;
+            double DentaY = GocY - GocY0;
             //Tỉ lệ các điểm của hình
             this.A.TileDiem(Sx, Sy);
             this.B.TileDiem(Sx, Sy);
             this.C.TileDiem(Sx, Sy);
             this.D.TileDiem(Sx, Sy);
             //Nếu phóng to thì dịch tâm ngược lại, phóng nhỏ thì dịch tăng
-            if (Sx > 1) DentaX = -DentaX;
-            if (Sy > 1) DentaY = -DentaY;
+            //if (Sx > 1) DentaX = -DentaX;
+            //if (Sy > 1) DentaY = -DentaY;
             //// Dịch chuyển các điểm
-            this.A.TinhTienDiem(DentaX, DentaY);
-            this.B.TinhTienDiem(DentaX, DentaY);
-            this.C.TinhTienDiem(DentaX, DentaY);
-            this.D.TinhTienDiem(DentaX, DentaY);
+            this.A.TinhTienDiem(-DentaX, -DentaY);
+            this.B.TinhTienDiem(-DentaX, -DentaY);
+            this.C.TinhTienDiem(-DentaX, -DentaY);
+            this.D.TinhTienDiem(-DentaX, -DentaY);
         }
     }
 }

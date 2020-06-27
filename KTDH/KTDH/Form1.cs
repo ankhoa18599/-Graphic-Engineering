@@ -608,7 +608,7 @@ namespace KTDH
             for(double i = 1; i > 0; i -= 0.1)
             {
                 nha.setThanNha(nhax, nhay, nhacao, nharong);
-                nha.getThanNha().TiLe(1, i, (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
+                nha.getThanNha().TiLe(1, i, nha.getThanNha().getA().getX()+(nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
                 nha.setFull();
                 nha.VeFull(g, Color.Black);
                 this.Refresh();
@@ -628,46 +628,81 @@ namespace KTDH
                 xoahinh();
                 if (Form1.hinh == 6)
                 {
-                    this.formHT.GetHinhThoi().getCheoA().TileSy(Sy);
-                    this.formHT.GetHinhThoi().getCheoB().TiLeSx(Sx);
-                    this.formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics(), color);
+                    //tỉ lệ làm theo cách mới
+                    this.formHT.GetHinhThoi().getCheoA().TiLe(Sx, Sy);
+                    this.formHT.GetHinhThoi().getCheoB().TiLe(Sx, Sy);
+                    double GocX = formHT.GetHinhThoi().getTam().getX() * Sx;
+                    double GocY = formHT.GetHinhThoi().getTam().getY() * Sy;
+                    double Dentax = GocX - formHT.GetHinhThoi().getTam().getX();
+                    double Dentay = GocY - formHT.GetHinhThoi().getTam().getY();
+                    formHT.GetHinhThoi().getCheoA().TinhTien(-Dentax, -Dentay);
+                    formHT.GetHinhThoi().getCheoB().TinhTien(-Dentax, -Dentay);
+                    formHT.GetHinhThoi().Draw(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                 }
                 else if (Form1.hinh == 5)
                 {
-                    hinhvuong.AB.TiLeSx(Sx);
-                    hinhvuong.CD.TiLeSx(Sx);
-                    hinhvuong.BC.TileSy(Sy);
-                    hinhvuong.AD.TileSy(Sy);
+                    //tỉ lệ theo cách mới
+                    hinhvuong.AB.RealtoFake();
+                    hinhvuong.BC.RealtoFake();
+                    hinhvuong.CD.RealtoFake();
+                    hinhvuong.AD.RealtoFake();
 
-                    hinhvuong.AB.getFpoint().setY(hinhvuong.AD.getFpoint().getY());
-                    hinhvuong.AB.getLpoint().setY(hinhvuong.AB.getFpoint().getY());
-                    hinhvuong.CD.getFpoint().setY(hinhvuong.AD.getLpoint().getY());
-                    hinhvuong.CD.getLpoint().setY(hinhvuong.CD.getFpoint().getY());
-                    hinhvuong.BC.getFpoint().setX(hinhvuong.CD.getFpoint().getX());
-                    hinhvuong.BC.getLpoint().setX(hinhvuong.BC.getFpoint().getX());
-                    hinhvuong.AD.getFpoint().setX(hinhvuong.AB.getFpoint().getX());
-                    hinhvuong.AD.getLpoint().setX(hinhvuong.AD.getFpoint().getX());
+                    double GocX0 = hinhvuong.AB.getFpoint().getX()+(hinhvuong.AB.getLpoint().getX() - hinhvuong.AB.getFpoint().getX()) / 2.0;
+                    double GocY0 = hinhvuong.BC.getFpoint().getY()+(hinhvuong.BC.getLpoint().getY() - hinhvuong.BC.getFpoint().getY()) / 2.0;
+                    double GocX = GocX0 * Sx;
+                    double GocY = GocY0 * Sy;
+                    double DentaX = GocX - GocX0;
+                    double DentaY = GocY - GocY0;
+
+                    hinhvuong.AB.TiLe(Sx, Sy);
+                    hinhvuong.BC.TiLe(Sx, Sy);
+                    hinhvuong.CD.TiLe(Sx, Sy);
+                    hinhvuong.AD.TiLe(Sx, Sy);
+
+                    hinhvuong.AB.TinhTien(-DentaX, -DentaY);
+                    hinhvuong.BC.TinhTien(-DentaX, -DentaY);
+                    hinhvuong.CD.TinhTien(-DentaX, -DentaY);
+                    hinhvuong.AD.TinhTien(-DentaX, -DentaY);
+
+                    hinhvuong.AB.FaketoReal();
+                    hinhvuong.BC.FaketoReal();
+                    hinhvuong.CD.FaketoReal();
+                    hinhvuong.AD.FaketoReal();
 
                     hinhvuong.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                     hinhvuong.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                     hinhvuong.BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                     hinhvuong.AD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
+
                 }
                 else if (Form1.hinh == 2)
                 {
-                    hcn.AB.TiLeSx(Sx);
-                    hcn.CD.TiLeSx(Sx);
-                    hcn.BC.TileSy(Sy);
-                    hcn.AD.TileSy(Sy);
+                    hcn.AB.RealtoFake();
+                    hcn.BC.RealtoFake();
+                    hcn.CD.RealtoFake();
+                    hcn.AD.RealtoFake();
 
-                    hcn.AB.getFpoint().setY(hcn.AD.getFpoint().getY());
-                    hcn.AB.getLpoint().setY(hcn.AB.getFpoint().getY());
-                    hcn.CD.getFpoint().setY(hcn.AD.getLpoint().getY());
-                    hcn.CD.getLpoint().setY(hcn.CD.getFpoint().getY());
-                    hcn.BC.getFpoint().setX(hcn.CD.getFpoint().getX());
-                    hcn.BC.getLpoint().setX(hcn.BC.getFpoint().getX());
-                    hcn.AD.getFpoint().setX(hcn.AB.getFpoint().getX());
-                    hcn.AD.getLpoint().setX(hcn.AD.getFpoint().getX());
+                    double GocX0 = hcn.AB.getFpoint().getX() + (hcn.AB.getLpoint().getX() - hcn.AB.getFpoint().getX()) / 2.0;
+                    double GocY0 = hcn.BC.getFpoint().getY() + (hcn.BC.getLpoint().getY() - hcn.BC.getFpoint().getY()) / 2.0;
+                    double GocX = GocX0 * Sx;
+                    double GocY = GocY0 * Sy;
+                    double DentaX = GocX - GocX0;
+                    double DentaY = GocY - GocY0;
+
+                    hcn.AB.TiLe(Sx, Sy);
+                    hcn.BC.TiLe(Sx, Sy);
+                    hcn.CD.TiLe(Sx, Sy);
+                    hcn.AD.TiLe(Sx, Sy);
+
+                    hcn.AB.TinhTien(-DentaX, -DentaY);
+                    hcn.BC.TinhTien(-DentaX, -DentaY);
+                    hcn.CD.TinhTien(-DentaX, -DentaY);
+                    hcn.AD.TinhTien(-DentaX, -DentaY);
+
+                    hcn.AB.FaketoReal();
+                    hcn.BC.FaketoReal();
+                    hcn.CD.FaketoReal();
+                    hcn.AD.FaketoReal();
 
                     hcn.AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                     hcn.CD.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
@@ -676,56 +711,93 @@ namespace KTDH
                 }
                 else if (Form1.hinh == 7)
                 {
-                    elip.hinhelip.a = Point.round(elip.hinhelip.a * Sx);
-                    elip.hinhelip.b = Point.round(elip.hinhelip.b * Sy);
+                    Point A1 = new Point(elip.hinhelip.tam.getX() - elip.hinhelip.a, elip.hinhelip.tam.getY());
+                    Point A2 = new Point(elip.hinhelip.tam.getX() + elip.hinhelip.a, elip.hinhelip.tam.getY());
+                    Point B1 = new Point(elip.hinhelip.tam.getX(), elip.hinhelip.tam.getY() - elip.hinhelip.b);
+                    Point B2 = new Point(elip.hinhelip.tam.getX(), elip.hinhelip.tam.getY() + elip.hinhelip.b);
+                    Line A1A2 = new Line(A1.getX(), A1.getY(), A2.getX(), A2.getY(), Color.Black);
+                    Line B1B2 = new Line(B1.getX(), B1.getY(), B2.getX(), B2.getY(), Color.Black);
+                    A1A2.TiLe(Sx, Sy);
+                    B1B2.TiLe(Sx, Sy);
+                    double GocX = elip.hinhelip.tam.getX() * Sx;
+                    double GocY = elip.hinhelip.tam.getY() * Sy;
+                    double DentaX = GocX - elip.hinhelip.tam.getX();
+                    double DentaY = GocY - elip.hinhelip.tam.getY();
+                    A1A2.TinhTien(-DentaX, -DentaY);
+                    B1B2.TinhTien(-DentaX, -DentaY);
+                    // tính lại ab
+                    elip.hinhelip.a = (int)Math.Round((A1A2.getLpoint().getX() - A1A2.getFpoint().getX())/2.0);
+                    elip.hinhelip.b = (int)Math.Round((B1B2.getLpoint().getY() - B1B2.getFpoint().getY())/ 2.0);
                     elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                 }
                 else if (Form1.hinh == 4)
                 {
                     if (Sx == Sy)
                     {
+
                         hinhtron.ht.R = Point.round(hinhtron.ht.R * Sx);
                         hinhtron.ht.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                     }
                     else
                     {
                         Form1.hinh = 7;
-                        int a = Point.round(hinhtron.ht.R * Sx);
-                        int b = Point.round(hinhtron.ht.R * Sy);
+                        Point A1 = new Point(hinhtron.ht.getTam().getX() - hinhtron.ht.getR(), hinhtron.ht.getTam().getY());
+                        Point A2 = new Point(hinhtron.ht.getTam().getX() + hinhtron.ht.getR(), hinhtron.ht.getTam().getY());
+                        Point B1 = new Point(hinhtron.ht.getTam().getX(), hinhtron.ht.getTam().getY() - hinhtron.ht.getR());
+                        Point B2 = new Point(hinhtron.ht.getTam().getX(), hinhtron.ht.getTam().getY() + hinhtron.ht.getR());
+                        Line A1A2 = new Line(A1.getX(), A1.getY(), A2.getX(), A2.getY(), Color.Black);
+                        Line B1B2 = new Line(B1.getX(), B1.getY(), B2.getX(), B2.getY(), Color.Black);
+                        A1A2.TiLe(Sx, Sy);
+                        B1B2.TiLe(Sx, Sy);
+                        double GocX = hinhtron.ht.getTam().getX() * Sx;
+                        double GocY = hinhtron.ht.getTam().getY() * Sy;
+                        double DentaX = GocX - hinhtron.ht.getTam().getX();
+                        double DentaY = GocY - hinhtron.ht.getTam().getY();
+                        A1A2.TinhTien(-DentaX, -DentaY);
+                        B1B2.TinhTien(-DentaX, -DentaY);
+                        // tính lại ab
                         elip = new HinhElip();
-                        elip.hinhelip = new Elip(hinhtron.ht.getTam().getX(), hinhtron.ht.getTam().getY(), a, b);
+                        elip.hinhelip = new Elip(hinhtron.ht.getTam().getX(), hinhtron.ht.getTam().getY(), 0, 0);
+                        elip.hinhelip.a = (int)Math.Round((A1A2.getLpoint().getX() - A1A2.getFpoint().getX()) / 2.0);
+                        elip.hinhelip.b = (int)Math.Round((B1B2.getLpoint().getY() - B1B2.getFpoint().getY()) / 2.0);
                         elip.hinhelip.VeElip2(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                     }
                 }
                 else if (Form1.hinh == 3)
                 {
-                    Line canhday = new Line(htg.xA, htg.yA, (int)(htg.xA + htg.rong), htg.yA, color);
-                    Point midpointday = new Point((htg.xA + htg.rong) / 2, htg.yA);
-                    Point midpointcao = new Point(midpointday.getX(), midpointday.getY() + htg.cao);
-                    Line duongcao = new Line(midpointcao.getX(), midpointcao.getY(), midpointday.getX(), midpointday.getY(), color);
-                    canhday.TiLeSx(Sx);
-                    duongcao.TileSy(Sy);
-                    Point A = new Point(canhday.getFpoint().getX(), duongcao.getLpoint().getY());
-                    Point B = new Point(canhday.getLpoint().getX(), duongcao.getLpoint().getY());
-                    Point C = new Point((canhday.getLpoint().getX() - Math.Abs(canhday.getFpoint().getX())) / 2, duongcao.getFpoint().getY());
-
-                    htg.xA = A.getX();
-                    htg.yA = A.getY();
-                    htg.rong = canhday.getLpoint().getX() - canhday.getFpoint().getX();
-                    htg.cao = duongcao.getFpoint().getY() - duongcao.getLpoint().getY(); ;
-
-                    A = Point.FakeToReal(A.getX(), A.getY());
-                    B = Point.FakeToReal(B.getX(), B.getY());
-                    C = Point.FakeToReal(C.getX(), C.getY());
-
-
+                    Point A = new Point(htg.xA, htg.yA);
+                    Point B = new Point(htg.xA + htg.rong, htg.yA);
+                    Point C = new Point(htg.xA + (int)Math.Round(htg.rong / 2.0), htg.yA + htg.cao);
+                    A.TileDiem(Sx, Sy);
+                    B.TileDiem(Sx, Sy);
+                    C.TileDiem(Sx, Sy);
+                    double GocX0 = htg.xA + (int)Math.Round(htg.rong / 2.0);
+                    double GocY0 = htg.yA + (int)Math.Round(htg.cao / 2.0);
+                    double GocX = GocX0 * Sx;
+                    double GocY = GocY0 * Sy;
+                    double DentaX = GocX - GocX0;
+                    double DentaY = GocY - GocY0;
+                    A.TinhTienDiem(-DentaX, -DentaY);
+                    B.TinhTienDiem(-DentaX, -DentaY);
+                    C.TinhTienDiem(-DentaX, -DentaY);
                     Line AB = new Line(A.getX(), A.getY(), B.getX(), B.getY(), color);
                     Line BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), color);
-                    Line CA = new Line(C.getX(), C.getY(), A.getX(), A.getY(), color);
-
+                    Line AC = new Line(A.getX(), A.getY(), C.getX(), C.getY(), color);
+                    //reset tamgiac
+                    htg.AB = AB;
+                    htg.AC = AC;
+                    htg.BC = BC;
+                    htg.xA = A.getX();
+                    htg.yA = A.getY();
+                    htg.cao = C.getY() - A.getY();
+                    htg.rong = B.getX() - A.getX();
+                    //vẽ
+                    AB.FaketoReal();
+                    BC.FaketoReal();
+                    AC.FaketoReal();
                     AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                     BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
-                    CA.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
+                    AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
 
                 }
                 this.labelChange();

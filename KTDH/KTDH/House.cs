@@ -106,7 +106,6 @@ namespace KTDH
             Line mot = new Line(motmot.getX(),motmot.getY(),mothai.getX(),mothai.getY(),c);
             Line hai = new Line(haimot.getX(),haimot.getY(),haihai.getX(),haihai.getY(),c);
             Line ba = new Line(bamot.getX(), bamot.getY(), bahai.getX(), bahai.getY(), c);
-
             mot.DDA_Line(g, c);
             hai.DDA_Line(g, c);
             ba.DDA_Line(g, c);
