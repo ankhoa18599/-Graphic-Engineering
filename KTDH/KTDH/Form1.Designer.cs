@@ -50,7 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.jbtnVe3D = new System.Windows.Forms.Button();
             this.jbtnHinhElip = new System.Windows.Forms.Button();
-            this.jbtnHinhTron = new System.Windows.Forms.Button();
+            this.jbtnHinhCa = new System.Windows.Forms.Button();
             this.jbtnHinhThoi = new System.Windows.Forms.Button();
             this.jbtnHinhTamGiac = new System.Windows.Forms.Button();
             this.jbtnHinhVuong = new System.Windows.Forms.Button();
@@ -269,17 +269,19 @@
             this.jbtnHinhElip.UseVisualStyleBackColor = false;
             this.jbtnHinhElip.Click += new System.EventHandler(this.jbtnHinhElip_Click);
             // 
-            // jbtnHinhTron
+            // jbtnHinhCa
             // 
-            this.jbtnHinhTron.BackColor = System.Drawing.Color.White;
-            this.jbtnHinhTron.Location = new System.Drawing.Point(674, 41);
-            this.jbtnHinhTron.Name = "jbtnHinhTron";
-            this.jbtnHinhTron.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.jbtnHinhTron.Size = new System.Drawing.Size(114, 32);
-            this.jbtnHinhTron.TabIndex = 63;
-            this.jbtnHinhTron.Text = "None2";
-            this.jbtnHinhTron.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.jbtnHinhTron.UseVisualStyleBackColor = false;
+            this.jbtnHinhCa.BackColor = System.Drawing.Color.White;
+            this.jbtnHinhCa.Location = new System.Drawing.Point(1011, 63);
+            this.jbtnHinhCa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.jbtnHinhCa.Name = "jbtnHinhCa";
+            this.jbtnHinhCa.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.jbtnHinhCa.Size = new System.Drawing.Size(171, 49);
+            this.jbtnHinhCa.TabIndex = 63;
+            this.jbtnHinhCa.Text = "Bể Cá";
+            this.jbtnHinhCa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.jbtnHinhCa.UseVisualStyleBackColor = false;
+            this.jbtnHinhCa.Click += new System.EventHandler(this.jbtnHinhCa_Click);
             // 
             // jbtnHinhThoi
             // 
@@ -572,7 +574,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.jbtnVe3D);
             this.Controls.Add(this.jbtnHinhElip);
-            this.Controls.Add(this.jbtnHinhTron);
+            this.Controls.Add(this.jbtnHinhCa);
             this.Controls.Add(this.jbtnHinhThoi);
             this.Controls.Add(this.jbtnHinhTamGiac);
             this.Controls.Add(this.jbtnHinhVuong);
@@ -629,7 +631,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button jbtnVe3D;
         private System.Windows.Forms.Button jbtnHinhElip;
-        private System.Windows.Forms.Button jbtnHinhTron;
+        private System.Windows.Forms.Button jbtnHinhCa;
         private System.Windows.Forms.Button jbtnHinhThoi;
         private System.Windows.Forms.Button jbtnHinhTamGiac;
         private System.Windows.Forms.Button jbtnHinhVuong;
