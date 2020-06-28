@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace KTDH
 {
@@ -19,6 +21,7 @@ namespace KTDH
         HinhVuong hinhvuong;
         HinhElip elip;
         FormHinhThoi formHT;
+        int so_ca = 0;
         Color color = Color.Black;
         public Form1()
         {
@@ -171,6 +174,12 @@ namespace KTDH
                 label7.Text = "yTam: ";
                 label8.Text = ((elip.hinhelip.tam.getX() - 200) / 5).ToString();
                 label9.Text = (-(elip.hinhelip.tam.getY() - 200) / 5).ToString();
+                label10.Text = "Bán kính 1: ";
+                label11.Text = "Bán kính 2: ";
+                label12.Text = (elip.hinhelip.a/ 5).ToString();
+                label13.Text = (elip.hinhelip.b/5).ToString();
+                
+
             }
             else if (Form1.hinh == 6)
             {
@@ -652,6 +661,33 @@ namespace KTDH
         //        this.Refresh();
         //    }
         //}
+
+        private void jbtnHinhCa_Click(object sender, EventArgs e)
+        {
+            
+            so_ca += 1;
+            Graphics g = this.JpnLuoiGiaoDien.CreateGraphics();
+            for (int i = 0; i <= 80; i++)
+            {
+                g.DrawLine(new Pen(Color.FromArgb(224, 224, 224)), 5 * i, 0, 5 * i, 400);
+                g.DrawLine(new Pen(Color.FromArgb(224, 224, 224)), 0, 5 * i, 400, 5 * i);
+            }
+            xoahinh();
+            Form1.hinh = 100;
+            Random r = new Random();
+            Random r2 = new Random();
+            Fish a = new Fish(r.Next(-30, 30), r2.Next(-30, 0), r.Next(3, 6));
+            Thread threadCa = new Thread(() => a.boi_ca(this.JpnLuoiGiaoDien.CreateGraphics(), color, r.Next(7, 20)));
+            threadCa.Start();
+            if (so_ca == 1)
+            {
+                Thread threadSong1 = new Thread(() => a.song1_chay(this.JpnLuoiGiaoDien.CreateGraphics(), color, 10));
+                threadSong1.Start();
+                Thread threadSong2 = new Thread(() => a.song2_chay(this.JpnLuoiGiaoDien.CreateGraphics(), color, 5));
+                threadSong2.Start();
+            }
+            // a.ve_ca(color, this.JpnLuoiGiaoDien.CreateGraphics());
+        }
 
         private void jbtntiLe_Click(object sender, EventArgs e)
         {
