@@ -86,6 +86,7 @@
             this.jbtnXoa.TabIndex = 11;
             this.jbtnXoa.Text = "Xóa";
             this.jbtnXoa.UseVisualStyleBackColor = false;
+            this.jbtnXoa.Click += new System.EventHandler(this.jbtnXoa_Click);
             // 
             // jbtCau
             // 

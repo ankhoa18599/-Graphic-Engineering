@@ -67,5 +67,10 @@ namespace KTDH
             formhc.Setluoigiaodien(this.panel1.CreateGraphics());
             formhc.ShowDialog();
         }
+
+        private void jbtnXoa_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
+        }
     }
 }
