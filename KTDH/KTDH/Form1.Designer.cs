@@ -272,11 +272,11 @@
             // jbtnHinhCa
             // 
             this.jbtnHinhCa.BackColor = System.Drawing.Color.White;
-            this.jbtnHinhCa.Location = new System.Drawing.Point(1011, 63);
+            this.jbtnHinhCa.Location = new System.Drawing.Point(674, 42);
             this.jbtnHinhCa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.jbtnHinhCa.Name = "jbtnHinhCa";
             this.jbtnHinhCa.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.jbtnHinhCa.Size = new System.Drawing.Size(171, 49);
+            this.jbtnHinhCa.Size = new System.Drawing.Size(114, 31);
             this.jbtnHinhCa.TabIndex = 63;
             this.jbtnHinhCa.Text = "Bể Cá";
             this.jbtnHinhCa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -548,7 +548,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 456);
+            this.ClientSize = new System.Drawing.Size(939, 529);
             this.Controls.Add(this.Sy_Label);
             this.Controls.Add(this.Sx_Label);
             this.Controls.Add(this.Sy_numeric);

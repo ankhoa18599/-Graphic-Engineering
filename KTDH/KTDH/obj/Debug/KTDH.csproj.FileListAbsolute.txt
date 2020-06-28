@@ -81,3 +81,5 @@ D:\-Graphic-Engineering\KTDH\KTDH\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.Form3D.resources
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhCau.resources
 D:\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.csproj.CopyComplete
+G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.FormHinhCau.resources
+G:\GitHub\-Graphic-Engineering\KTDH\KTDH\obj\Debug\KTDH.HinhHopChuNhat.resources
