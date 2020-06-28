@@ -6,8 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace KTDH
 {
@@ -21,7 +19,6 @@ namespace KTDH
         HinhVuong hinhvuong;
         HinhElip elip;
         FormHinhThoi formHT;
-        int so_ca = 0;
         Color color = Color.Black;
         public Form1()
         {
@@ -174,12 +171,6 @@ namespace KTDH
                 label7.Text = "yTam: ";
                 label8.Text = ((elip.hinhelip.tam.getX() - 200) / 5).ToString();
                 label9.Text = (-(elip.hinhelip.tam.getY() - 200) / 5).ToString();
-                label10.Text = "Bán kính 1: ";
-                label11.Text = "Bán kính 2: ";
-                label12.Text = (elip.hinhelip.a/ 5).ToString();
-                label13.Text = (elip.hinhelip.b/5).ToString();
-                
-
             }
             else if (Form1.hinh == 6)
             {
@@ -607,22 +598,37 @@ namespace KTDH
 
         private void btnVeNha_Click(object sender, EventArgs e)
         {
+            XeTang xt = new XeTang(-37, 2);
             Graphics g = this.JpnLuoiGiaoDien.CreateGraphics();
             House nha = new House();
-            int nhax=0, nhay=0, nhacao=20, nharong=20;
+            HT viendan = new HT(120,95,2);
+            int nhax=15, nhay=0, nhacao=25, nharong=20;
             nha.setThanNha(nhax, nhay, nhacao, nharong);
             nha.setFull();
             nha.VeFull(g,Color.Black);
+            xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
 
+            int demx = 0, demy=0;
+            while (demx<8)
+            {
+                nha.VeFull(g, Color.Black);
+                xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
+                viendan.tam = viendan.tam.TinhTienDiem(viendan.tam, demx, demy);
+                viendan.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics(), Color.Red);
+                demx++;
+                this.Refresh();
+            }
             for(double i = 1; i > 0; i -= 0.1)
             {
                 nha.setThanNha(nhax, nhay, nhacao, nharong);
                 nha.getThanNha().TiLe(1, i, nha.getThanNha().getA().getX()+(nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
                 nha.setFull();
                 nha.VeFull(g, Color.Black);
+                xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
                 this.Refresh();
             }
-
+            xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
+            this.Refresh();
         }
         private void jbtnHinhCa_Click(object sender, EventArgs e)
         {
@@ -650,6 +656,28 @@ namespace KTDH
             }
             // a.ve_ca(color, this.JpnLuoiGiaoDien.CreateGraphics());
         }
+
+        //private void btnVeNha_Click_1(object sender, EventArgs e)
+        //{
+        //    
+        //    //
+        //    Graphics g = this.JpnLuoiGiaoDien.CreateGraphics();
+        //    House nha = new House();
+        //    int nhax = 15, nhay = 0, nhacao = 20, nharong = 20;
+        //    nha.setThanNha(nhax, nhay, nhacao, nharong);
+        //    nha.setFull();
+        //    nha.VeFull(g, Color.Black);
+
+        //    for (double i = 1; i > 0; i -= 0.1)
+        //    {
+        //        nha.setThanNha(nhax, nhay, nhacao, nharong);
+        //        nha.getThanNha().TiLe(1, i, nha.getThanNha().getA().getX() + (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
+        //        nha.setFull();
+        //        nha.VeFull(g, Color.Black);
+        //        xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
+        //        this.Refresh();
+        //    }
+        //}
 
         private void jbtntiLe_Click(object sender, EventArgs e)
         {
@@ -962,7 +990,6 @@ namespace KTDH
                 }
             }
         }
-
         private void xoahinh()
         {
             Color xoa = Color.FromArgb(224, 224, 224);

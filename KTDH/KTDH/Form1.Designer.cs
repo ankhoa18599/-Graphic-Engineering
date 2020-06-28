@@ -50,7 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.jbtnVe3D = new System.Windows.Forms.Button();
             this.jbtnHinhElip = new System.Windows.Forms.Button();
-            this.jbtnHinhCa = new System.Windows.Forms.Button();
+            this.jbtnHinhTron = new System.Windows.Forms.Button();
             this.jbtnHinhThoi = new System.Windows.Forms.Button();
             this.jbtnHinhTamGiac = new System.Windows.Forms.Button();
             this.jbtnHinhVuong = new System.Windows.Forms.Button();
@@ -574,7 +574,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.jbtnVe3D);
             this.Controls.Add(this.jbtnHinhElip);
-            this.Controls.Add(this.jbtnHinhCa);
+            this.Controls.Add(this.jbtnHinhTron);
             this.Controls.Add(this.jbtnHinhThoi);
             this.Controls.Add(this.jbtnHinhTamGiac);
             this.Controls.Add(this.jbtnHinhVuong);
@@ -631,7 +631,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button jbtnVe3D;
         private System.Windows.Forms.Button jbtnHinhElip;
-        private System.Windows.Forms.Button jbtnHinhCa;
+        private System.Windows.Forms.Button jbtnHinhTron;
         private System.Windows.Forms.Button jbtnHinhThoi;
         private System.Windows.Forms.Button jbtnHinhTamGiac;
         private System.Windows.Forms.Button jbtnHinhVuong;
