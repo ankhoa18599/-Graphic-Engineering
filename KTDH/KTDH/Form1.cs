@@ -607,22 +607,36 @@ namespace KTDH
 
         private void btnVeNha_Click(object sender, EventArgs e)
         {
+            XeTang xt = new XeTang(-37, 2);
             Graphics g = this.JpnLuoiGiaoDien.CreateGraphics();
             House nha = new House();
-            int nhax=0, nhay=0, nhacao=20, nharong=20;
+            HT viendan = new HT(120, 95, 2);
+            int nhax = 15, nhay = 0, nhacao = 25, nharong = 20;
             nha.setThanNha(nhax, nhay, nhacao, nharong);
             nha.setFull();
-            nha.VeFull(g,Color.Black);
+            nha.VeFull(g, Color.Black);
+            xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
 
-            for(double i = 1; i > 0; i -= 0.1)
+            int demx = 0, demy = 0;
+            while (demx < 8)
             {
-                nha.setThanNha(nhax, nhay, nhacao, nharong);
-                nha.getThanNha().TiLe(1, i, nha.getThanNha().getA().getX()+(nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
-                nha.setFull();
                 nha.VeFull(g, Color.Black);
+                xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
+                viendan.tam = viendan.tam.TinhTienDiem(viendan.tam, demx, demy);
+                viendan.Midpoint_htron(this.JpnLuoiGiaoDien.CreateGraphics(), Color.Red);
+                demx++;
                 this.Refresh();
             }
-
+            for (double i = 1; i > 0; i -= 0.1)
+            {
+                nha.setThanNha(nhax, nhay, nhacao, nharong);
+                nha.getThanNha().TiLe(1, i, nha.getThanNha().getA().getX() + (nha.getThanNha().getB().getX() - nha.getThanNha().getA().getX()) / 2.0, nha.getThanNha().getA().getY());
+                nha.setFull();
+                nha.VeFull(g, Color.Black);
+                xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
+                this.Refresh();
+            }
+            xt.VeXeTang(this.JpnLuoiGiaoDien.CreateGraphics());
         }
         private void jbtnHinhCa_Click(object sender, EventArgs e)
         {
