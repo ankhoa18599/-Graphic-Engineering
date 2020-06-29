@@ -129,7 +129,7 @@ namespace KTDH
                 else outP = (int)(inP - sodu); // làm tròn xuống 272 % 5 = 2 => out 272 -2  =270
             }
             else outP = (int)inP; // 275 vẫn là 275
-            if (outP > 400) outP = 400; //nếu tọa độ lớn hơn 400 thì trả về 400
+            //if (outP > 400) outP = 400; //nếu tọa độ lớn hơn 400 thì trả về 400
             return outP;
         }
         public void QuayDiem()

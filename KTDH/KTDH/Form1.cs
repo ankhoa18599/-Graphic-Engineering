@@ -20,6 +20,9 @@ namespace KTDH
         HinhTron hinhtron;
         HinhVuong hinhvuong;
         HinhElip elip;
+        Thread[] threadCa = new Thread[5];
+        Thread[] threadSong = new Thread[2];
+        bool co_ca = false;
         FormHinhThoi formHT;
         int so_ca = 0;
         Color color = Color.Black;
@@ -206,6 +209,7 @@ namespace KTDH
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             xoahinh();
             Form1.hinh = 1;
             DuongThang dt = new DuongThang();
@@ -230,6 +234,7 @@ namespace KTDH
         private void jbtnXoa_Click(object sender, EventArgs e)
         {
             Form1.hinh = -1;
+            this.stop_ca();
             labelChange();
             this.Refresh();
         }
@@ -640,27 +645,35 @@ namespace KTDH
         }
         private void jbtnHinhCa_Click(object sender, EventArgs e)
         {
-            
-            so_ca += 1;
+            this.co_ca = false;
+            xoahinh();
             Graphics g = this.JpnLuoiGiaoDien.CreateGraphics();
             for (int i = 0; i <= 80; i++)
             {
                 g.DrawLine(new Pen(Color.FromArgb(224, 224, 224)), 5 * i, 0, 5 * i, 400);
                 g.DrawLine(new Pen(Color.FromArgb(224, 224, 224)), 0, 5 * i, 400, 5 * i);
             }
-            xoahinh();
+            so_ca += 1;
+            this.co_ca = true;
+            
             Form1.hinh = 100;
             Random r = new Random();
             Random r2 = new Random();
-            Fish a = new Fish(r.Next(-30, 30), r2.Next(-30, 0), r.Next(3, 6));
-            Thread threadCa = new Thread(() => a.boi_ca(this.JpnLuoiGiaoDien.CreateGraphics(), color, r.Next(7, 20)));
-            threadCa.Start();
+            Fish fish = new Fish(r.Next(-40,40), r2.Next(-38, -5), r.Next(3, 6));
+            fish.ve_mattroi(this.JpnLuoiGiaoDien.CreateGraphics(), Color.Red);
+            if (so_ca > 5)
+            {
+                so_ca = 5;
+                return;
+            }
+            threadCa[so_ca - 1] = new Thread(() => fish.boi_ca(this.JpnLuoiGiaoDien.CreateGraphics(), color, r.Next(1, 6)));
+            threadCa[so_ca - 1].Start();
             if (so_ca == 1)
             {
-                Thread threadSong1 = new Thread(() => a.song1_chay(this.JpnLuoiGiaoDien.CreateGraphics(), color, 10));
-                threadSong1.Start();
-                Thread threadSong2 = new Thread(() => a.song2_chay(this.JpnLuoiGiaoDien.CreateGraphics(), color, 5));
-                threadSong2.Start();
+                threadSong[0] = new Thread(() => fish.song1_chay(this.JpnLuoiGiaoDien.CreateGraphics(), color, 5));
+                threadSong[0].Start();
+                threadSong[1] = new Thread(() => fish.song2_chay(this.JpnLuoiGiaoDien.CreateGraphics(), color, 3));
+                threadSong[1].Start();
             }
             // a.ve_ca(color, this.JpnLuoiGiaoDien.CreateGraphics());
         }
@@ -980,6 +993,7 @@ namespace KTDH
         private void xoahinh()
         {
             Color xoa = Color.FromArgb(224, 224, 224);
+            this.stop_ca();
             
             if (Form1.hinh == 1)
             {
@@ -1019,6 +1033,22 @@ namespace KTDH
                 elip.hinhelip.VeElip2xoa(this.JpnLuoiGiaoDien.CreateGraphics(), xoa);
             }
         }
-
+        private void stop_ca()
+        {
+            if (so_ca != 0&&co_ca)
+            {
+                for (int i = 0; i < so_ca; i++)
+                {
+                    this.threadCa[i].Abort();
+                }
+                for (int i = 0; i < 2; i++)
+                {
+                    this.threadSong[i].Abort();
+                }
+                this.Refresh();
+                so_ca = 0;
+                co_ca = false;
+            }
+        }
     }
 }

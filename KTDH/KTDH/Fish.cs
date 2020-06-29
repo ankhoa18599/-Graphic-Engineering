@@ -15,6 +15,7 @@ namespace KTDH
         int x, y, size;
         int x1, y1, x2, y2;
         bool R2L;
+        bool isStop = true;
         public Fish(int x, int y, int size)
         {
             Point a = Point.FakeToReal(x, y);
@@ -77,6 +78,7 @@ namespace KTDH
         public void xoa_ca(Graphics g)
         {
             Color xoa = Color.FromArgb(224, 224, 224);
+            //Color xoa = Color.Blue;
             than.VeElip2xoa(g, xoa,true);
             duoi1.DDA_Linexoa(g, xoa, true);
             duoi2.DDA_Linexoa(g, xoa, true);
@@ -123,8 +125,7 @@ namespace KTDH
         {
             x1 = 0;
             y1 = 200;
-            ve_mattroi(g, Color.Red);
-            while (true)
+            while (this.isStop)
             {
                 Thread.Sleep(speed * 100);
                 xoa_song1(g, x1, y1);
@@ -136,8 +137,7 @@ namespace KTDH
         {
             x2 = 20;
             y2 = 150;
-            ve_mattroi(g, Color.Red);
-            while (true)
+            while (this.isStop)
             {
                 Thread.Sleep(speed * 100);
                 xoa_song(g, x2, y2);
@@ -147,9 +147,8 @@ namespace KTDH
         }
         public void boi_ca(Graphics g, Color c,int speed)
         {
-            ve_mattroi(g, Color.Red);
             ve_ca1(g,c);
-            while (true)
+            while (this.isStop)
             {
                 Thread.Sleep(speed*100);
                 xoa_ca(g);
@@ -295,6 +294,10 @@ namespace KTDH
         }
         public void ve_mattroi(Graphics g, Color c)
         {
+            //SolidBrush solid = new SolidBrush(Color.Blue);
+            //SolidBrush solid2 = new SolidBrush(Color.Aqua);
+            //g.FillRectangle(solid, 0, 200, 400, 200);
+            //g.FillRectangle(solid2, 0, 0, 400, 100);
             HT mattroi = new HT(0, 0, 10*5);
             mattroi.Midpoint_htron(g, c);
             Line a = new Line(50 + 2 * 5, 25, 50 + 2 * 5 + 5 * 5, 25 + 3 * 5, c);
@@ -307,6 +310,12 @@ namespace KTDH
             e.DDA_Line(g, c);
             d.DDA_Line(g, c);
             f.DDA_Line(g, c);
+            
+
+        }
+        public void set_isStop(bool isStop)
+        {
+            this.isStop = isStop;
         }
     }
 }
