@@ -77,8 +77,8 @@ namespace KTDH
         }
         public void xoa_ca(Graphics g)
         {
-            Color xoa = Color.FromArgb(224, 224, 224);
-            //Color xoa = Color.Blue;
+            //Color xoa = Color.FromArgb(224, 224, 224);
+            Color xoa = Color.FromArgb(43, 13, 162);
             than.VeElip2xoa(g, xoa,true);
             duoi1.DDA_Linexoa(g, xoa, true);
             duoi2.DDA_Linexoa(g, xoa, true);
@@ -137,6 +137,12 @@ namespace KTDH
         {
             x2 = 20;
             y2 = 150;
+            for (int i = 0; i < 16; i++)
+            {
+                xoa_song(g, x2, y2);
+                update_song2(g, c);
+                //ve_song(g, Color.Blue, x2, y2);
+            }
             while (this.isStop)
             {
                 Thread.Sleep(speed * 100);
@@ -226,41 +232,46 @@ namespace KTDH
         }
         public void xoa_song(Graphics g, int x, int y)
         {
-            Color xoa = Color.FromArgb(224, 224, 224);
+            //Color xoa = Color.FromArgb(224, 224, 224);
+            Color xoa1 = Color.Aqua;
+            Color xoa2 = Color.FromArgb(43, 13, 162);
             Line[] a = new Line[10];
-            if (x != 0 && x <= 40)
+            if (x >= 0 && x < 40)
             {
-                Line b = new Line(x, y, x - 40, y - 40, xoa);
-                b.DDA_Linexoa(g, xoa,true);
+                Line b = new Line(x, y, x - 40, y - 40, xoa2);
+                b.DDA_Linexoa(g, xoa2,true);
             }
-            if (x != 0 && x > 40)
+            if (x >= 40)
             {
-                Line b = new Line(x, y, x - 40, y - 40, xoa);
-                b.DDA_Linexoa(g, xoa,true);
-                Line e = new Line(x - 40, y - 40, x - 80, y, xoa);
-                e.DDA_Linexoa(g, xoa,true);
+                Line b = new Line(x, y, x - 40, y - 40, xoa2);
+                b.DDA_Linexoa(g, xoa2,true);
+                Line e = new Line(x - 40, y - 40, x - 80, y, xoa1);
+                e.DDA_Linexoa(g, xoa1,true);
             }
             for (int i = 0; i < 10; i++)
             {
                 if (i % 2 == 0)
                 {
-                    a[i] = new Line(x, y, x + 5 * 8, y - 5 * 8, Color.Black);
+                    a[i] = new Line(x+5, y-5, x + 5 * 8, y - 5 * 8, Color.Black);
                     x = x + 5 * 8;
                     y = y - 5 * 8;
+                    a[i].DDA_Linexoa(g, xoa1, true);
                 }
                 else
                 {
-                    a[i] = new Line(x, y, x + 5 * 8, y + 5 * 8, Color.Black);
+                    a[i] = new Line(x+5, y+5, x + 5 * 8, y + 5 * 8, Color.Black);
                     x = x + 5 * 8;
                     y = y + 5 * 8;
+                    a[i].DDA_Linexoa(g, xoa2, true);
                 }
-                a[i].DDA_Linexoa(g, xoa, true);
+                //a[i].DDA_Linexoa(g, xoa2, true);
 
             }
         }
         public void xoa_song1(Graphics g, int x, int y)
         {
-            Color xoa = Color.FromArgb(224, 224, 224);
+            //Color xoa = Color.FromArgb(224, 224, 224);
+            Color xoa = Color.FromArgb(43, 13, 162);
             Line[] a = new Line[10];
             if (x != 0 && x <= 40)
             {
@@ -294,12 +305,18 @@ namespace KTDH
         }
         public void ve_mattroi(Graphics g, Color c)
         {
-            //SolidBrush solid = new SolidBrush(Color.Blue);
-            //SolidBrush solid2 = new SolidBrush(Color.Aqua);
-            //g.FillRectangle(solid, 0, 200, 400, 200);
-            //g.FillRectangle(solid2, 0, 0, 400, 100);
+            SolidBrush solid = new SolidBrush(Color.FromArgb(43, 13, 162));
+            SolidBrush solid2 = new SolidBrush(Color.Aqua);
+            g.FillRectangle(solid, 0, 150, 405, 250);
+            g.FillRectangle(solid2, 0, 0, 405, 110);
             HT mattroi = new HT(0, 0, 10*5);
             mattroi.Midpoint_htron(g, c);
+            for(int i = 0; i< 10; i++)
+            {
+                mattroi.getTam().TinhTienDiem(0, -5);
+                mattroi.Midpoint_htron(g, c);
+            }
+
             Line a = new Line(50 + 2 * 5, 25, 50 + 2 * 5 + 5 * 5, 25 + 3 * 5, c);
             Line b = new Line(50 + 2 * 5 - 5, 25 + 5 * 4, 50 + 2 * 5 + 5 * 2, 25 + 3 * 5 + 5 * 4, c);
             Line e = new Line(30, 55, 40, 75, c);

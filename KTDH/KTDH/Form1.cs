@@ -648,10 +648,13 @@ namespace KTDH
             this.co_ca = false;
             xoahinh();
             Graphics g = this.JpnLuoiGiaoDien.CreateGraphics();
-            for (int i = 0; i <= 80; i++)
+            if (so_ca == 0)
             {
-                g.DrawLine(new Pen(Color.FromArgb(224, 224, 224)), 5 * i, 0, 5 * i, 400);
-                g.DrawLine(new Pen(Color.FromArgb(224, 224, 224)), 0, 5 * i, 400, 5 * i);
+                for (int i = 0; i <= 80; i++)
+                {
+                    g.DrawLine(new Pen(Color.FromArgb(224, 224, 224)), 5 * i, 0, 5 * i, 400);
+                    g.DrawLine(new Pen(Color.FromArgb(224, 224, 224)), 0, 5 * i, 400, 5 * i);
+                }
             }
             so_ca += 1;
             this.co_ca = true;
