@@ -38,12 +38,12 @@ namespace KTDH
             Point tam = Point.FakeToReal(x1, y1);
 
             hinhcau = new HinhCau();
-            hinhcau.KhoitaoHT(tam.getX(), tam.getY(), r);
+            hinhcau.KhoitaoHT(tam.getX(), tam.getY(), r*5);
             hinhcau.GetHT().Midpoint_htron(luoigiaodien,black);
 
             int Cheoa = r;
             int Cheob = r/2;
-            hinhcau.KhotaoElip(tam.getX(), tam.getY(),Cheoa,Cheob);
+            hinhcau.KhotaoElip(tam.getX(), tam.getY(),Cheoa*5,Cheob*5);
             hinhcau.GetElip().VeElip_netdut(luoigiaodien,black);
             
 
