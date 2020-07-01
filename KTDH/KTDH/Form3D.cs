@@ -13,6 +13,7 @@ namespace KTDH
     {
         public static int hinh = -1;
         HinhHopChuNhat hhcn;
+        private FormHinhCau formhc;
         public Form3D()
         {
             InitializeComponent();
@@ -140,6 +141,21 @@ namespace KTDH
                 label36.Text = "yH: ";
                 label37.Text = (-(hhcn.GH.getLpoint().getY() - 200) / 5).ToString();
             }
+            else if (Form3D.hinh == 2)
+            {
+                Point Tam = formhc.hinhcau.GetHT().getTam();
+                Tam = Point.RealToFake(Tam.getX(),Tam.getY());
+                label38.Text = "Hình Cầu";
+                label40.Text = "Tâm X: ";
+                label7.Text = formhc.GetX().ToString();
+                label8.Text = "Tâm Y: ";
+                label9.Text = formhc.GetY().ToString();
+                label10.Text = "Tâm Z: ";
+                label11.Text = formhc.GetZ().ToString();
+                label12.Text = "Bán Kính Cầu: ";
+                label13.Text = formhc.GetR().ToString();
+
+            }
         }
 
         private void jbtHopCN_Click(object sender, EventArgs e)
@@ -181,9 +197,13 @@ namespace KTDH
         }
         private void jbtCau_Click(object sender, EventArgs e)
         {
-            FormHinhCau formhc = new FormHinhCau();
+            formhc = new FormHinhCau();
             formhc.Setluoigiaodien(this.panel1.CreateGraphics());
             formhc.ShowDialog();
+            if (formhc.check == false) return;
+            else
+                Form3D.hinh = 2;
+            labelChange();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -11,8 +11,10 @@ namespace KTDH
 {
     public partial class FormHinhCau : Form
     {
-        private HinhCau hinhcau;
+        internal HinhCau hinhcau;
         private Graphics luoigiaodien;
+        private int x, y, z, r;
+        public Boolean check = false;
 
         public FormHinhCau()
         {
@@ -24,9 +26,9 @@ namespace KTDH
         }
         private void Ve_Button_Click(object sender, EventArgs e)
         {
+            check = true;
             Double a = Math.Sqrt(2.0) / 2;
             int x1, y1;
-            int x, y, z, r;
             x = Int32.Parse(X_numericUpDown.Value.ToString());
             y = Int32.Parse(Y_numericUpDown.Value.ToString());
             z = Int32.Parse(Z_numericUpDown.Value.ToString());
@@ -52,5 +54,11 @@ namespace KTDH
             //el = new Hinhelip(p1.X, p1.Y, r, r / 2);
             this.Close();
         }
+        public int GetX() { return this.x; }
+        public int GetY() { return this.y; }
+        public int GetZ() { return this.z; }
+        public int GetR() { return this.r; }
+
+
     }
 }
