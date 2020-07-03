@@ -204,6 +204,26 @@ namespace KTDH
                 label20.Text = ((formHT.GetHinhThoi().getCheoB().getLpoint().getX() - 200) / 5).ToString();
                 label21.Text = ((formHT.GetHinhThoi().getCheoB().getLpoint().getY() - 200) / 5).ToString();
             }
+            else if (Form1.hinh == 5)
+            {
+                label5.Text = "Hình vuông";
+                label6.Text = "xA:";
+                label7.Text = "yA:";
+                label8.Text = ((hinhvuong.AB.getFpoint().getX() - 200) / 5).ToString();
+                label9.Text = (-(hinhvuong.AB.getFpoint().getY() - 200) / 5).ToString();
+                label10.Text = "xB:";
+                label11.Text = "yB:";
+                label12.Text = ((hinhvuong.AB.getLpoint().getX() - 200) / 5).ToString();
+                label13.Text = (-(hinhvuong.AB.getLpoint().getY() - 200) / 5).ToString();
+                label14.Text = "xC";
+                label15.Text = "yC";
+                label16.Text = ((hinhvuong.BC.getLpoint().getX() - 200) / 5).ToString();
+                label17.Text = (-(hinhvuong.BC.getLpoint().getY() - 200) / 5).ToString();
+                label18.Text = "xD";
+                label19.Text = "yD";
+                label20.Text = ((hinhvuong.CD.getLpoint().getX() - 200) / 5).ToString();
+                label21.Text = (-(hinhvuong.BC.getLpoint().getY() - 200) / 5).ToString();
+            }
         }
 
 
