@@ -34,7 +34,7 @@ namespace KTDH
 
             AB = new Line(A.getX(), A.getY(), B.getX(), B.getY(), Color.Red);
             BC = new Line(B.getX(), B.getY(), C.getX(), C.getY(), Color.Red);
-            AC = new Line(C.getX(), C.getY(), A.getX(), A.getY(), Color.Red);
+            AC = new Line(A.getX(), A.getY(), C.getX(), C.getY(), Color.Red);
             this.checkchange = true;
             this.DialogResult = DialogResult.OK;
             this.Close();

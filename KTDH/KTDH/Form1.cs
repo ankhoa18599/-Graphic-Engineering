@@ -731,8 +731,10 @@ namespace KTDH
                     hinhvuong.CD.RealtoFake();
                     hinhvuong.AD.RealtoFake();
 
-                    double GocX0 = hinhvuong.AB.getFpoint().getX()+(hinhvuong.AB.getLpoint().getX() - hinhvuong.AB.getFpoint().getX()) / 2.0;
-                    double GocY0 = hinhvuong.BC.getFpoint().getY()+(hinhvuong.BC.getLpoint().getY() - hinhvuong.BC.getFpoint().getY()) / 2.0;
+                    //double GocX0 = hinhvuong.AB.getFpoint().getX()+(hinhvuong.AB.getLpoint().getX() - hinhvuong.AB.getFpoint().getX()) / 2.0;
+                    //double GocY0 = hinhvuong.BC.getFpoint().getY()+(hinhvuong.BC.getLpoint().getY() - hinhvuong.BC.getFpoint().getY()) / 2.0;\
+                    double GocX0 = hinhvuong.AB.getFpoint().getX();
+                    double GocY0 = hinhvuong.AB.getLpoint().getY();
                     double GocX = GocX0 * Sx;
                     double GocY = GocY0 * Sy;
                     double DentaX = GocX - GocX0;
@@ -766,8 +768,10 @@ namespace KTDH
                     hcn.CD.RealtoFake();
                     hcn.AD.RealtoFake();
 
-                    double GocX0 = hcn.AB.getFpoint().getX() + (hcn.AB.getLpoint().getX() - hcn.AB.getFpoint().getX()) / 2.0;
-                    double GocY0 = hcn.BC.getFpoint().getY() + (hcn.BC.getLpoint().getY() - hcn.BC.getFpoint().getY()) / 2.0;
+                    //double GocX0 = hcn.AB.getFpoint().getX() + (hcn.AB.getLpoint().getX() - hcn.AB.getFpoint().getX()) / 2.0;
+                    //double GocY0 = hcn.BC.getFpoint().getY() + (hcn.BC.getLpoint().getY() - hcn.BC.getFpoint().getY()) / 2.0;
+                    double GocX0 = hinhvuong.AB.getFpoint().getX();
+                    double GocY0 = hinhvuong.AB.getLpoint().getY();
                     double GocX = GocX0 * Sx;
                     double GocY = GocY0 * Sy;
                     double DentaX = GocX - GocX0;
@@ -849,14 +853,18 @@ namespace KTDH
                 }
                 else if (Form1.hinh == 3)
                 {
-                    Point A = new Point(htg.xA, htg.yA);
-                    Point B = new Point(htg.xA + htg.rong, htg.yA);
-                    Point C = new Point(htg.xA + (int)Math.Round(htg.rong / 2.0), htg.yA + htg.cao);
+                    Point A = new Point(htg.AB.getFpoint().getX(),htg.AB.getFpoint().getY());
+                    Point B = new Point(htg.AB.getLpoint().getX(), htg.AB.getLpoint().getY());
+                    Point C = new Point(htg.AC.getLpoint().getX(),htg.AC.getLpoint().getY());
+                    A = Point.RealToFake(A.getX(), A.getY());
+                    B = Point.RealToFake(B.getX(), B.getY());
+                    C = Point.RealToFake(C.getX(), C.getY());
                     A.TileDiem(Sx, Sy);
                     B.TileDiem(Sx, Sy);
                     C.TileDiem(Sx, Sy);
-                    double GocX0 = htg.xA + (int)Math.Round(htg.rong / 2.0);
-                    double GocY0 = htg.yA + (int)Math.Round(htg.cao / 2.0);
+
+                    double GocX0 = A.getX();
+                    double GocY0 = A.getY();
                     double GocX = GocX0 * Sx;
                     double GocY = GocY0 * Sy;
                     double DentaX = GocX - GocX0;
@@ -882,7 +890,6 @@ namespace KTDH
                     AB.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                     BC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
                     AC.DDA_Line(this.JpnLuoiGiaoDien.CreateGraphics(), color);
-
                 }
                 this.labelChange();
             }
