@@ -17,8 +17,7 @@ namespace KTDH
         {
             check = true;
             //nam code
-            //Su dung phep chieu Cabinet
-            //D = cr/2
+            //Su dung phep chieu Cavalier
             Double a = Math.Sqrt(2.0) / 2;
             int x, y, z, cd, cr, cc;
             
